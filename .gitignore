@@ -1,0 +1,17 @@
+# Project specifics
+/es2018
+
+# You should use Yarn on this project
+package-lock.json
+
+# Yarn 2 Zero-Installs
+# https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# Storybook
+/storybook-static
