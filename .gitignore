@@ -1,6 +1,9 @@
 # Project specifics
 /es2018
 
+# JS
+node_modules
+
 # You should use Yarn on this project
 package-lock.json
 
