@@ -1630,6 +1630,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@figspec/components@npm:^0.1.1":
+  version: 0.1.9
+  resolution: "@figspec/components@npm:0.1.9"
+  dependencies:
+    copy-to-clipboard: ^3.0.0
+    lit-element: ^2.4.0
+  checksum: 4621a8d664654053284382023b7b4a13497fd87275f7bdb8917f405562a4b9fac37f4a0964847921ce1fcd9e75338106337ac1eb9dd4e20d94be3eeb671af3d5
+  languageName: node
+  linkType: hard
+
+"@figspec/react@npm:^0.1.6":
+  version: 0.1.6
+  resolution: "@figspec/react@npm:0.1.6"
+  dependencies:
+    "@figspec/components": ^0.1.1
+  peerDependencies:
+    react: ^16.14.0 || ^17.0.0
+  checksum: 2768734809e40776c75f063aaa79efd8bf7e7289145c1bca64a8479807abc8194e12d27fa8b6a6053402cec704bfdfb2925f04efdf346ea43c59f3416956fe2d
+  languageName: node
+  linkType: hard
+
 "@istanbuljs/load-nyc-config@npm:^1.0.0":
   version: 1.1.0
   resolution: "@istanbuljs/load-nyc-config@npm:1.1.0"
@@ -2859,7 +2880,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/theming@npm:6.3.4":
+"@storybook/theming@npm:6.3.4, @storybook/theming@npm:^6.3.4":
   version: 6.3.4
   resolution: "@storybook/theming@npm:6.3.4"
   dependencies:
@@ -2972,6 +2993,7 @@ __metadata:
     "@storybook/addon-links": ^6.3.4
     "@storybook/builder-webpack5": ^6.3.4
     "@storybook/manager-webpack5": ^6.3.4
+    "@storybook/theming": ^6.3.4
     "@storybook/web-components": ^6.3.4
     babel-loader: ^8.2.2
     lit: ^2.0.0-rc.2
@@ -2980,6 +3002,8 @@ __metadata:
     prettier: ^2.3.2
     react: ^17.0.2
     react-dom: ^17.0.2
+    storybook-addon-designs: ^6.0.1
+    storybook-dark-mode: ^1.0.8
     ts-loader: ^9.2.3
     typescript: ^4.3.5
     web-component-analyzer: ^1.1.6
@@ -5306,7 +5330,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"copy-to-clipboard@npm:^3.3.1":
+"copy-to-clipboard@npm:^3.0.0, copy-to-clipboard@npm:^3.3.1":
   version: 3.3.1
   resolution: "copy-to-clipboard@npm:3.3.1"
   dependencies:
@@ -6460,7 +6484,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-deep-equal@npm:^3.1.1, fast-deep-equal@npm:^3.1.3":
+"fast-deep-equal@npm:^3.0.0, fast-deep-equal@npm:^3.1.1, fast-deep-equal@npm:^3.1.3":
   version: 3.1.3
   resolution: "fast-deep-equal@npm:3.1.3"
   checksum: 451526766b219503131d11e823eaadd1533080b0be4860e316670b039dcaf31cd1007c2fe036a9b922abba7c040dfad5e942ed79d21f2ff849e50049f36e0fb7
@@ -8587,7 +8611,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"lit-element@npm:*":
+"lit-element@npm:*, lit-element@npm:^2.4.0":
   version: 2.5.1
   resolution: "lit-element@npm:2.5.1"
   dependencies:
@@ -11921,6 +11945,15 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"storybook-addon-designs@npm:^6.0.1":
+  version: 6.0.1
+  resolution: "storybook-addon-designs@npm:6.0.1"
+  dependencies:
+    "@figspec/react": ^0.1.6
+  checksum: 13df02836479660f8ae293d361d226b10f5d4cfa186bfc9bbd5e1893365658f9b60731d31b364bc653d865fde6b85d4a10952a90a173d79d271a872d919b3f20
+  languageName: node
+  linkType: hard
+
 "storybook-addon-outline@npm:^1.4.1":
   version: 1.4.1
   resolution: "storybook-addon-outline@npm:1.4.1"
@@ -11934,6 +11967,22 @@ fsevents@^1.2.7:
     react: ^16.8.0 || ^17.0.0
     react-dom: ^16.8.0 || ^17.0.0
   checksum: 8cdd168a9d1c0950bb72959581ab7ea32c02f33a95ab97b553a80853a2ca4e239333b574690e555f57b5a73bc4e09002605ddc3d3008d22907ce702e7bd39c89
+  languageName: node
+  linkType: hard
+
+"storybook-dark-mode@npm:^1.0.8":
+  version: 1.0.8
+  resolution: "storybook-dark-mode@npm:1.0.8"
+  dependencies:
+    fast-deep-equal: ^3.0.0
+    memoizerific: ^1.11.3
+  peerDependencies:
+    "@storybook/addons": ^6.0.0
+    "@storybook/api": ^6.0.0
+    "@storybook/components": ^6.0.0
+    "@storybook/core-events": ^6.0.0
+    "@storybook/theming": ^6.0.0
+  checksum: f439f75e83146c29e6f5fb42e87c6f4d54a00d354206421231e007708a45c065819a8bbc8d3283ee83a77eabdc7456c83382a7a2a56d84d6073f23aa00128e10
   languageName: node
   linkType: hard
 

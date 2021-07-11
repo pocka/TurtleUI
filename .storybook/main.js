@@ -1,6 +1,12 @@
 module.exports = {
   stories: ["../src/**/*.stories.@(ts|mdx)"],
-  addons: ["@storybook/addon-links", "@storybook/addon-essentials"],
+  addons: [
+    "@storybook/addon-a11y",
+    "@storybook/addon-links",
+    "@storybook/addon-essentials",
+    "storybook-dark-mode",
+    "storybook-addon-designs",
+  ],
   core: {
     builder: "webpack5",
   },

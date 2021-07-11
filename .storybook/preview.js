@@ -1,3 +1,4 @@
+import { themes } from "@storybook/theming";
 import { setCustomElements } from "@storybook/web-components";
 
 import TurtleButton from "../src/turtle-button?spec";
@@ -13,4 +14,8 @@ setCustomElements(spec);
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
+  darkMode: {
+    dark: { ...themes.dark },
+    light: { ...themes.light },
+  },
 };
