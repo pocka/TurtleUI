@@ -37,13 +37,14 @@ export class TurtleButton extends LitElement {
           font-size: 1em;
           line-height: 1.5;
           border: 1px solid var(--border-color);
+          padding: calc(var(--base-font-size) / 2)
+            calc(var(--base-font-size) * 0.75);
 
           background-color: var(--bg);
           border-radius: 8px;
           color: var(--fg);
           cursor: pointer;
           font-weight: bold;
-          padding: calc(var(--base-font-size) / 2);
           text-align: center;
         }
       `,
