@@ -14,3 +14,11 @@ $ yarn
 # Start Storybook on http://localhost:6006
 $ yarn storybook
 ```
+
+### Editor/IDE integration
+
+See [the Yarn's official docs](https://yarnpkg.com/getting-started/editor-sdks).
+
+```sh
+$ yarn dlx @yarnpkg/pnpify --sdk <SDKs>
+```
