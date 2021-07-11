@@ -26,26 +26,41 @@ export class TurtleButton extends LitElement {
       css`
         :host {
           --base-font-size: var(--turtle-ui--base-font-size, 1rem);
-          --border-color: var(--turtle-ui--color--border, #ccc);
-          --bg: var(--turtle-ui--color--bg, #fff);
-          --fg: var(--turtle-ui--color--fg, #000);
 
           font-size: var(--base-font-size);
         }
 
         .button {
+          appearance: none;
           font-size: 1em;
           line-height: 1.5;
-          border: 1px solid var(--border-color);
+          border: 1px solid var(--turtle-ui--color--border);
           padding: calc(var(--base-font-size) / 2)
             calc(var(--base-font-size) * 0.75);
 
-          background-color: var(--bg);
+          background-color: var(--turtle-ui--color--background);
           border-radius: 8px;
-          color: var(--fg);
+          color: var(--turtle-ui--color--text);
           cursor: pointer;
           font-weight: bold;
           text-align: center;
+        }
+        .button:hover {
+          background-color: hsl(
+            var(--turtle-ui--color--tone--mono),
+            var(--turtle-ui--color--level--9)
+          );
+        }
+        .button:active {
+          background-color: hsl(
+            var(--turtle-ui--color--tone--mono),
+            var(--turtle-ui--color--level--8)
+          );
+        }
+        .button:focus {
+          box-shadow: 0 0 0 4px var(--turtle-ui--color--highlight--shadow) inset;
+          border-color: var(--turtle-ui--color--highlight);
+          outline: none;
         }
       `,
     ];
