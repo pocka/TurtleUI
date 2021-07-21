@@ -48,6 +48,7 @@ export class TurtleDesignSystem extends LitElement {
         --turtle-ui--color--level--9: 90%;
         --turtle-ui--color--level--10: 100%;
         --turtle-ui--color--level--safe: 34%;
+        --turtle-ui--color--level--danger: 44%;
         --turtle-ui--color--level--primary: 40%;
         --turtle-ui--level--modifier--darker: -1;
         --turtle-ui--level--modifier--lighter: 1;
@@ -55,6 +56,7 @@ export class TurtleDesignSystem extends LitElement {
 
         --turtle-ui--color--tone--mono: 0, 0%;
         --turtle-ui--color--tone--safe: 123, 46%;
+        --turtle-ui--color--tone--danger: 14, 100%;
         --turtle-ui--color--tone--primary: 204, 100%;
 
         --turtle-ui--color--background: hsl(
@@ -87,6 +89,54 @@ export class TurtleDesignSystem extends LitElement {
           var(--turtle-ui--color--tone--safe),
           calc(
             var(--turtle-ui--color--level--safe) +
+              (
+                var(--turtle-ui--level--modifier--darker) *
+                  var(--turtle-ui--level--modifier--amount)
+              )
+          )
+        );
+        --turtle-ui--color--primary: hsl(
+          var(--turtle-ui--color--tone--primary),
+          var(--turtle-ui--color--level--primary)
+        );
+        --turtle-ui--color--primary--light: hsl(
+          var(--turtle-ui--color--tone--primary),
+          calc(
+            var(--turtle-ui--color--level--primary) +
+              (
+                var(--turtle-ui--level--modifier--lighter) *
+                  var(--turtle-ui--level--modifier--amount)
+              )
+          )
+        );
+        --turtle-ui--color--primary--dark: hsl(
+          var(--turtle-ui--color--tone--primary),
+          calc(
+            var(--turtle-ui--color--level--primary) +
+              (
+                var(--turtle-ui--level--modifier--darker) *
+                  var(--turtle-ui--level--modifier--amount)
+              )
+          )
+        );
+        --turtle-ui--color--danger: hsl(
+          var(--turtle-ui--color--tone--danger),
+          var(--turtle-ui--color--level--danger)
+        );
+        --turtle-ui--color--danger--light: hsl(
+          var(--turtle-ui--color--tone--danger),
+          calc(
+            var(--turtle-ui--color--level--danger) +
+              (
+                var(--turtle-ui--level--modifier--lighter) *
+                  var(--turtle-ui--level--modifier--amount)
+              )
+          )
+        );
+        --turtle-ui--color--danger--dark: hsl(
+          var(--turtle-ui--color--tone--danger),
+          calc(
+            var(--turtle-ui--color--level--danger) +
               (
                 var(--turtle-ui--level--modifier--darker) *
                   var(--turtle-ui--level--modifier--amount)

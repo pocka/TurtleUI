@@ -12,6 +12,7 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 import { css, LitElement, html } from "lit";
+import { property } from "lit/decorators/property";
 import { minireset } from "minireset.css/minireset.css.lit.js";
 
 export const TAG_NAME = "turtle-button";
@@ -20,46 +21,106 @@ export const TAG_NAME = "turtle-button";
  * A basic button element.
  */
 export class TurtleButton extends LitElement {
+  /**
+   * Color variant
+   *
+   * Unsupported value will be treated as `"normal"`.
+   */
+  @property({
+    type: String,
+  })
+  variant: "normal" | "danger" | "primary" = "normal";
+
   static override get styles() {
     return [
       minireset,
       css`
         :host {
           --base-font-size: var(--turtle-ui--base-font-size, 1rem);
+          --turtle-ui--button--border-color: var(--turtle-ui--color--border);
+          --turtle-ui--button--fg: var(--turtle-ui--color--text);
+          --turtle-ui--button--bg: var(--turtle-ui--color--background);
+          --turtle-ui--button--bg--hover: hsl(
+            var(--turtle-ui--color--tone--mono),
+            var(--turtle-ui--color--level--9)
+          );
+          --turtle-ui--button--bg--active: hsl(
+            var(--turtle-ui--color--tone--mono),
+            var(--turtle-ui--color--level--8)
+          );
+          --turtle-ui--button--highlight-color: var(
+            --turtle-ui--color--highlight
+          );
+          --turtle-ui--button--highlight-shadow-color: var(
+            --turtle-ui--color--highlight--shadow
+          );
 
           font-size: var(--base-font-size);
+          width: auto;
+          box-sizing: border-box;
+        }
+
+        :host([variant="primary"]) {
+          --turtle-ui--button--border-color: transparent;
+          --turtle-ui--button--fg: hsl(
+            var(--turtle-ui--color--tone--mono),
+            100%
+          );
+          --turtle-ui--button--bg: var(--turtle-ui--color--primary);
+          --turtle-ui--button--bg--hover: var(
+            --turtle-ui--color--primary--light
+          );
+          --turtle-ui--button--bg--active: var(
+            --turtle-ui--color--primary--dark
+          );
+          --turtle-ui--button--highlight-color: rgba(0, 0, 0, 0.4);
+          --turtle-ui--button--highlight-shadow-color: rgba(0, 0, 0, 0.4);
+        }
+
+        :host([variant="danger"]) {
+          --turtle-ui--button--border-color: transparent;
+          --turtle-ui--button--fg: hsl(
+            var(--turtle-ui--color--tone--mono),
+            100%
+          );
+          --turtle-ui--button--bg: var(--turtle-ui--color--danger);
+          --turtle-ui--button--bg--hover: var(
+            --turtle-ui--color--danger--light
+          );
+          --turtle-ui--button--bg--active: var(
+            --turtle-ui--color--danger--dark
+          );
+          --turtle-ui--button--highlight-color: rgba(0, 0, 0, 0.4);
+          --turtle-ui--button--highlight-shadow-color: rgba(0, 0, 0, 0.4);
         }
 
         .button {
           appearance: none;
+          display: block;
+          width: inherit;
           font-size: 1em;
           line-height: 1.5;
-          border: 1px solid var(--turtle-ui--color--border);
+          border: 1px solid var(--turtle-ui--button--border-color);
           padding: calc(var(--base-font-size) / 2)
             calc(var(--base-font-size) * 0.75);
 
-          background-color: var(--turtle-ui--color--background);
+          background-color: var(--turtle-ui--button--bg);
           border-radius: 8px;
-          color: var(--turtle-ui--color--text);
+          color: var(--turtle-ui--button--fg);
           cursor: pointer;
           font-weight: bold;
           text-align: center;
         }
         .button:hover {
-          background-color: hsl(
-            var(--turtle-ui--color--tone--mono),
-            var(--turtle-ui--color--level--9)
-          );
+          background-color: var(--turtle-ui--button--bg--hover);
         }
         .button:active {
-          background-color: hsl(
-            var(--turtle-ui--color--tone--mono),
-            var(--turtle-ui--color--level--8)
-          );
+          background-color: var(--turtle-ui--button--bg--active);
         }
         .button:focus {
-          box-shadow: 0 0 0 4px var(--turtle-ui--color--highlight--shadow) inset;
-          border-color: var(--turtle-ui--color--highlight);
+          box-shadow: 0 0 0 4px var(--turtle-ui--button--highlight-shadow-color)
+            inset;
+          border-color: var(--turtle-ui--button--highlight-color);
           outline: none;
         }
       `,
