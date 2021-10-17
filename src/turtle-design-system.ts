@@ -206,6 +206,7 @@ export class TurtleDesignSystem extends LitElement {
 
       :host {
         display: block;
+        font-family: "Ubuntu", sans-serif;
 
         background-color: var(--turtle-ui--color--background);
         color: var(--turtle-ui--color--text);

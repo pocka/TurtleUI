@@ -3,6 +3,7 @@ import { setCustomElements } from "@storybook/web-components";
 import { html } from "lit-html";
 import { styleMap } from "lit-html/directives/style-map";
 
+import "./fonts/fonts.css";
 import "../src/turtle-design-system";
 
 import TurtleButton from "../src/turtle-button?spec";

@@ -1,5 +1,6 @@
 import type { Meta, Story } from "@storybook/web-components";
 import { html } from "lit-html";
+import { ifDefined } from "lit-html/directives/if-defined";
 import { config } from "storybook-addon-designs";
 
 import { TAG_NAME } from "./turtle-design-system";
@@ -28,6 +29,6 @@ export default {
 } as Meta<Args>;
 
 export const Default: Story<Args> = ({ theme }) =>
-  html`<turtle-design-system theme=${theme}>
+  html`<turtle-design-system theme=${ifDefined(theme)}>
     <p>Hello, World!</p>
   </turtle-design-system>`;
