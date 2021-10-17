@@ -31,6 +31,21 @@ export class TurtleButton extends LitElement {
   })
   variant: "normal" | "danger" | "primary" = "normal";
 
+  /**
+   * Whether to use a slotted element as a button element.
+   * You need to provide an Element to slot, instead of a TextFragment.
+   *
+   * @example
+   * <turtle-button lightdom>
+   *   <button type="submit">Button</button>
+   * </turtle-button>
+   */
+  @property({
+    type: Boolean,
+    attribute: "lightdom",
+  })
+  lightDOM: boolean = false;
+
   static override get styles() {
     return [
       minireset,
@@ -55,6 +70,7 @@ export class TurtleButton extends LitElement {
             --turtle-ui--color--highlight--shadow
           );
 
+          display: inline-block;
           font-size: var(--base-font-size);
           width: auto;
           box-sizing: border-box;
@@ -94,10 +110,12 @@ export class TurtleButton extends LitElement {
           --turtle-ui--button--highlight-shadow-color: rgba(0, 0, 0, 0.4);
         }
 
-        .button {
+        .button,
+        ::slotted(*) {
           appearance: none;
           display: block;
           width: inherit;
+          font: inherit;
           font-size: 1em;
           line-height: 1.5;
           border: 1px solid var(--turtle-ui--button--border-color);
@@ -110,14 +128,18 @@ export class TurtleButton extends LitElement {
           cursor: pointer;
           font-weight: bold;
           text-align: center;
+          text-decoration: inherit;
         }
-        .button:hover {
+        .button:hover,
+        ::slotted(:hover) {
           background-color: var(--turtle-ui--button--bg--hover);
         }
-        .button:active {
+        .button:active,
+        ::slotted(:active) {
           background-color: var(--turtle-ui--button--bg--active);
         }
-        .button:focus {
+        .button:focus,
+        ::slotted(:focus) {
           box-shadow: 0 0 0 4px var(--turtle-ui--button--highlight-shadow-color)
             inset;
           border-color: var(--turtle-ui--button--highlight-color);
@@ -128,7 +150,9 @@ export class TurtleButton extends LitElement {
   }
 
   override render() {
-    return html` <button class="button"><slot></slot></button> `;
+    return this.lightDOM
+      ? html`<slot></slot>`
+      : html` <button class="button"><slot></slot></button> `;
   }
 }
 

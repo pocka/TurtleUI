@@ -52,3 +52,15 @@ export const FullWidth: Story<Args> = ({ variant }) =>
     style=${styleMap({ display: "block", width: "100%" })}
     >Button</turtle-button
   >`;
+
+export const LightDOM: Story<Args> = ({ variant }) =>
+  html`
+    <div>
+      <turtle-button lightdom variant=${variant}>
+        <button>Button</button>
+      </turtle-button>
+      <turtle-button lightdom variant=${variant}>
+        <a href="#">Anchor</a>
+      </turtle-button>
+    </div>
+  `;
