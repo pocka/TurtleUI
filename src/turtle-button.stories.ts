@@ -3,6 +3,8 @@ import { html } from "lit-html";
 import { styleMap } from "lit-html/directives/style-map";
 import { config } from "storybook-addon-designs";
 
+import { disableControls } from "../.storybook/helpers";
+
 import { TAG_NAME, TurtleButton } from "./turtle-button";
 
 interface Args {
@@ -27,11 +29,12 @@ export default {
   },
   argTypes: {
     variant: {
+      options: ["normal", "danger", "primary"] as TurtleButton["variant"][],
       control: {
         type: "radio",
-        options: ["normal", "danger", "primary"] as TurtleButton["variant"][],
       },
     },
+    ...disableControls(["lightDOM", "lightdom", "sync-attributes"]),
   },
 } as Meta<Args>;
 

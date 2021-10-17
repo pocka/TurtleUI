@@ -11,7 +11,7 @@
     "moduleResolution": "Node",
     "skipDefaultLibCheck": true,
     "skipLibCheck": true,
-    "target": "ES2018",
+    "target": "ES2019",
     "declaration": false,
     "noEmit": true
   },
