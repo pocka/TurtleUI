@@ -7,6 +7,8 @@ import { TAG_NAME, TurtleButton } from "./turtle-button";
 
 interface Args {
   variant: TurtleButton["variant"];
+  disabled: boolean;
+  syncAttributes: boolean;
 }
 
 export default {
@@ -20,6 +22,8 @@ export default {
   },
   args: {
     variant: "normal",
+    disabled: false,
+    syncAttributes: true,
   },
   argTypes: {
     variant: {
@@ -31,8 +35,13 @@ export default {
   },
 } as Meta<Args>;
 
-const Template: Story<Args> = ({ variant }) =>
-  html`<turtle-button variant=${variant}>Button</turtle-button>`;
+const Template: Story<Args> = ({ disabled, syncAttributes, variant }) =>
+  html`<turtle-button
+    variant=${variant}
+    .syncAttributes=${syncAttributes}
+    ?disabled=${disabled}
+    >Button</turtle-button
+  >`;
 
 export const Default = Template.bind({});
 
@@ -46,6 +55,11 @@ Danger.args = {
   variant: "danger",
 };
 
+export const Disabled = Template.bind({});
+Disabled.args = {
+  disabled: true,
+};
+
 export const FullWidth: Story<Args> = ({ variant }) =>
   html`<turtle-button
     variant=${variant}
@@ -53,13 +67,23 @@ export const FullWidth: Story<Args> = ({ variant }) =>
     >Button</turtle-button
   >`;
 
-export const LightDOM: Story<Args> = ({ variant }) =>
+export const LightDOM: Story<Args> = ({ variant, disabled, syncAttributes }) =>
   html`
     <div>
-      <turtle-button lightdom variant=${variant}>
+      <turtle-button
+        lightdom
+        variant=${variant}
+        ?disabled=${disabled}
+        .syncAttributes=${syncAttributes}
+      >
         <button>Button</button>
       </turtle-button>
-      <turtle-button lightdom variant=${variant}>
+      <turtle-button
+        lightdom
+        variant=${variant}
+        ?disabled=${disabled}
+        .syncAttributes=${syncAttributes}
+      >
         <a href="#">Anchor</a>
       </turtle-button>
     </div>
