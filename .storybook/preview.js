@@ -6,8 +6,12 @@ import { styleMap } from "lit-html/directives/style-map";
 import "./fonts/fonts.css";
 import "../src/turtle-design-system";
 
+import { allComponents, registerTurtleUIComponents } from "../src";
+
 import TurtleButton from "../src/turtle-button?spec";
 import TurtleDesignSystem from "../src/turtle-design-system?spec";
+
+registerTurtleUIComponents(allComponents);
 
 const components = [TurtleButton, TurtleDesignSystem];
 

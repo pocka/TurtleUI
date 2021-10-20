@@ -5,7 +5,7 @@ import { config } from "storybook-addon-designs";
 
 import { disableControls } from "../.storybook/helpers";
 
-import { TAG_NAME, TurtleButton } from "./turtle-button";
+import { TurtleButton } from "./turtle-button";
 
 interface Args {
   variant: TurtleButton["variant"];
@@ -15,7 +15,7 @@ interface Args {
 
 export default {
   title: "Components/turtle-button",
-  component: TAG_NAME,
+  component: TurtleButton.defaultTagName,
   parameters: {
     design: config({
       type: "figma",

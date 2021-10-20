@@ -14,7 +14,11 @@
 import { css, LitElement, html } from "lit";
 import { property } from "lit/decorators/property";
 
-export const TAG_NAME = "turtle-design-system";
+declare global {
+  interface HTMLElementTagNameMap {
+    [TurtleDesignSystem.defaultTagName]: TurtleDesignSystem;
+  }
+}
 
 /**
  * Design System wrapper
@@ -22,6 +26,8 @@ export const TAG_NAME = "turtle-design-system";
  * This component provides CSS custom properties and set basic styles to itself.
  */
 export class TurtleDesignSystem extends LitElement {
+  static defaultTagName = "turtle-design-system" as const;
+
   /**
    * Explicitly set the color theme.
    */
@@ -217,8 +223,4 @@ export class TurtleDesignSystem extends LitElement {
   override render() {
     return html`<slot></slot>`;
   }
-}
-
-if (!customElements.get(TAG_NAME)) {
-  customElements.define(TAG_NAME, TurtleDesignSystem);
 }

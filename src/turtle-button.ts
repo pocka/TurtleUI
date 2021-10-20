@@ -15,12 +15,18 @@ import { css, LitElement, html, PropertyValues } from "lit";
 import { property } from "lit/decorators/property";
 import { minireset } from "minireset.css/minireset.css.lit.js";
 
-export const TAG_NAME = "turtle-button";
+declare global {
+  interface HTMLElementTagNameMap {
+    [TurtleButton.defaultTagName]: TurtleButton;
+  }
+}
 
 /**
  * A basic button element.
  */
 export class TurtleButton extends LitElement {
+  static defaultTagName = "turtle-button" as const;
+
   /**
    * Color variant
    *
@@ -276,8 +282,4 @@ export class TurtleButton extends LitElement {
     ev.preventDefault();
     ev.stopPropagation();
   }
-}
-
-if (!customElements.get(TAG_NAME)) {
-  customElements.define(TAG_NAME, TurtleButton);
 }

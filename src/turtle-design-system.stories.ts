@@ -3,7 +3,7 @@ import { html } from "lit-html";
 import { ifDefined } from "lit-html/directives/if-defined";
 import { config } from "storybook-addon-designs";
 
-import { TAG_NAME } from "./turtle-design-system";
+import { TurtleDesignSystem } from "./turtle-design-system";
 
 interface Args {
   theme?: "dark" | "light";
@@ -11,7 +11,7 @@ interface Args {
 
 export default {
   title: "Components/turtle-design-system",
-  component: TAG_NAME,
+  component: TurtleDesignSystem.defaultTagName,
   parameters: {
     design: config({
       type: "figma",
