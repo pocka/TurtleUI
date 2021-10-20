@@ -6,8 +6,9 @@
   "type": "module",
   "exports": {
     "./package.json": "./package.json",
-    "./*": "./es2018/*"
+    "./*": "./es2019/*"
   },
+  "main": "./es2019/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/pocka/TurtleUI"
