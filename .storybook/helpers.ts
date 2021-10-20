@@ -11,6 +11,7 @@ export function disableControls(
     ? {
         override: { table: { disable: true } },
         styles: { table: { disable: true } },
+        defaultTagName: { table: { disable: true } },
       }
     : {};
 

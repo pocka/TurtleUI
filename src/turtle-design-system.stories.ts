@@ -3,6 +3,8 @@ import { html } from "lit-html";
 import { ifDefined } from "lit-html/directives/if-defined";
 import { config } from "storybook-addon-designs";
 
+import { disableControls } from "../.storybook/helpers";
+
 import { TurtleDesignSystem } from "./turtle-design-system";
 
 interface Args {
@@ -25,6 +27,7 @@ export default {
         options: ["light", "dark"],
       },
     },
+    ...disableControls([]),
   },
 } as Meta<Args>;
 

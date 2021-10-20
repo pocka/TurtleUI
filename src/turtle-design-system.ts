@@ -24,6 +24,8 @@ declare global {
  * Design System wrapper
  *
  * This component provides CSS custom properties and set basic styles to itself.
+ *
+ * @element turtle-design-system
  */
 export class TurtleDesignSystem extends LitElement {
   static defaultTagName = "turtle-design-system" as const;
@@ -40,7 +42,8 @@ export class TurtleDesignSystem extends LitElement {
   static override get styles() {
     return css`
       :host {
-        --turtle-ui--base-font-size: 1rem;
+        --turtle-ui--unit: 10px;
+        --turtle-ui--base-font-size: calc(1.6 * var(--turtle-ui--unit));
 
         --turtle-ui--color--level--0: 0%;
         --turtle-ui--color--level--1: 10%;
@@ -158,6 +161,8 @@ export class TurtleDesignSystem extends LitElement {
           var(--turtle-ui--color--level--primary),
           0.32
         );
+
+        --turtle-ui--shadow--1: 0px 4px 16px rgba(0, 0, 0, 0.08);
       }
 
       @media (prefers-color-scheme: dark) {

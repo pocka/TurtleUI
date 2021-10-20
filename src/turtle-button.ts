@@ -23,6 +23,8 @@ declare global {
 
 /**
  * A basic button element.
+ *
+ * @element turtle-button
  */
 export class TurtleButton extends LitElement {
   static defaultTagName = "turtle-button" as const;

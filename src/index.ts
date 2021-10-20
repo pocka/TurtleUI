@@ -1,7 +1,8 @@
 import { TurtleButton } from "./turtle-button";
+import { TurtleCard } from "./turtle-card";
 import { TurtleDesignSystem } from "./turtle-design-system";
 
-export { TurtleButton, TurtleDesignSystem };
+export { TurtleButton, TurtleCard, TurtleDesignSystem };
 
 /**
  * All of TurtleUI components.
@@ -9,7 +10,7 @@ export { TurtleButton, TurtleDesignSystem };
  * Convenient but prevents module bundler from tree-shaking.
  * Use this only when you use every components included in this list.
  */
-export const allComponents = [TurtleButton, TurtleDesignSystem];
+export const allComponents = [TurtleButton, TurtleCard, TurtleDesignSystem];
 
 export interface TurtleComponent {
   defaultTagName: string;

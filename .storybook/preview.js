@@ -3,17 +3,18 @@ import { setCustomElements } from "@storybook/web-components";
 import { html } from "lit-html";
 import { styleMap } from "lit-html/directives/style-map";
 
+import "./global.css";
 import "./fonts/fonts.css";
-import "../src/turtle-design-system";
 
 import { allComponents, registerTurtleUIComponents } from "../src";
 
 import TurtleButton from "../src/turtle-button?spec";
+import TurtleCard from "../src/turtle-card?spec";
 import TurtleDesignSystem from "../src/turtle-design-system?spec";
 
 registerTurtleUIComponents(allComponents);
 
-const components = [TurtleButton, TurtleDesignSystem];
+const components = [TurtleButton, TurtleCard, TurtleDesignSystem];
 
 const spec = components.reduce(
   (a, b) => ({ ...a, ...b, tags: [...a.tags, ...b.tags] }),
@@ -34,6 +35,7 @@ export const decorators = [
   (story, { parameters }) =>
     html`<turtle-design-system
       style=${styleMap({
+        "--turtle-ui--unit": "1rem",
         position: "absolute",
         top: "0",
         left: "0",
