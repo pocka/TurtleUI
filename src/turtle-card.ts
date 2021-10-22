@@ -61,8 +61,10 @@ export class TurtleCard extends LitElement {
       minireset,
       css`
         :host {
+          --turtle-ui--card--radius: 8px;
+
           display: block;
-          border-radius: 8px;
+          border-radius: var(--turtle-ui--card--radius);
 
           background-color: hsl(
             var(--turtle-ui--color--tone--mono),
@@ -140,6 +142,20 @@ export class TurtleCard extends LitElement {
         }
         .actions:not([assigned]) {
           display: none;
+        }
+
+        ::slotted([slot="action"]:not(:first-of-type)) {
+          border-left: 1px solid
+            hsl(
+              var(--turtle-ui--color--tone--mono),
+              var(--turtle-ui--color--level--7)
+            );
+        }
+        ::slotted([slot="action"]:first-of-type) {
+          border-bottom-left-radius: var(--turtle-ui--card--radius);
+        }
+        ::slotted([slot="action"]:last-of-type) {
+          border-bottom-right-radius: var(--turtle-ui--card--radius);
         }
       `,
     ];

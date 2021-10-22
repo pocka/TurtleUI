@@ -9,6 +9,7 @@ import portraitWebp from "../.storybook/assets/portrait.webp";
 import { disableControls } from "../.storybook/helpers";
 
 import { TurtleCard } from "./turtle-card";
+import { TurtleCardAction } from "./turtle-card-action";
 
 interface Args {
   shadowed: boolean;
@@ -18,6 +19,9 @@ interface Args {
 export default {
   title: "Components/turtle-card",
   component: TurtleCard.defaultTagName,
+  subcomponents: {
+    TurtleCardAction: TurtleCardAction.defaultTagName,
+  },
   parameters: {
     design: config({
       type: "figma",
@@ -122,4 +126,48 @@ export const WithImg: Story<Args> = ({ shadowed, bordered }) => html`
 `;
 WithImg.args = {
   bordered: true,
+};
+
+export const WithSingleAction: Story<Args> = ({ shadowed, bordered }) => html`
+  <turtle-card
+    ?shadowed=${shadowed}
+    ?bordered=${bordered}
+    aria-labelledby="title"
+  >
+    <span id="title" slot="title">Title</span>
+
+    Body text
+
+    <turtle-card-action slot="action">Dismiss</turtle-card-action>
+  </turtle-card>
+`;
+WithSingleAction.args = {
+  bordered: true,
+};
+
+export const WithActions: Story<Args & { disabled: boolean }> = ({
+  shadowed,
+  bordered,
+  disabled,
+}) => html`
+  <turtle-card
+    ?shadowed=${shadowed}
+    ?bordered=${bordered}
+    aria-labelledby="title"
+  >
+    <span id="title" slot="title">Title</span>
+
+    Body text
+
+    <turtle-card-action slot="action" ?disabled=${disabled}
+      >Dismiss</turtle-card-action
+    >
+    <turtle-card-action slot="action" lightdom ?disabled=${disabled}>
+      <a href="#">Action</a>
+    </turtle-card-action>
+  </turtle-card>
+`;
+WithActions.args = {
+  bordered: true,
+  disabled: false,
 };

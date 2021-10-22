@@ -10,11 +10,17 @@ import { allComponents, registerTurtleUIComponents } from "../src";
 
 import TurtleButton from "../src/turtle-button?spec";
 import TurtleCard from "../src/turtle-card?spec";
+import TurtleCardAction from "../src/turtle-card-action?spec";
 import TurtleDesignSystem from "../src/turtle-design-system?spec";
 
 registerTurtleUIComponents(allComponents);
 
-const components = [TurtleButton, TurtleCard, TurtleDesignSystem];
+const components = [
+  TurtleButton,
+  TurtleCard,
+  TurtleCardAction,
+  TurtleDesignSystem,
+];
 
 const spec = components.reduce(
   (a, b) => ({ ...a, ...b, tags: [...a.tags, ...b.tags] }),
