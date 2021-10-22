@@ -2,6 +2,10 @@ import type { Meta, Story } from "@storybook/web-components";
 import { html } from "lit-html";
 import { config } from "storybook-addon-designs";
 
+import landscapeJpg from "../.storybook/assets/landscape.jpg";
+import landscapeWebp from "../.storybook/assets/landscape.webp";
+import portraitJpg from "../.storybook/assets/portrait.jpg";
+import portraitWebp from "../.storybook/assets/portrait.webp";
 import { disableControls } from "../.storybook/helpers";
 
 import { TurtleCard } from "./turtle-card";
@@ -60,5 +64,62 @@ export const WithTitle: Story<Args> = ({ shadowed, bordered }) => html`
   </turtle-card>
 `;
 WithTitle.args = {
+  bordered: true,
+};
+
+const WithPicture: Story<Args & { jpg: string; webp: string }> = ({
+  jpg,
+  webp,
+  shadowed,
+  bordered,
+}) => html`
+  <turtle-card
+    ?shadowed=${shadowed}
+    ?bordered=${bordered}
+    aria-labelledby="title"
+  >
+    <picture slot="image">
+      <source srcset=${jpg} type="image/webp" />
+      <img
+        src=${webp}
+        style="width: 100%; height: 100%; object-fit: cover;"
+        alt=""
+      />
+    </picture>
+
+    <span id="title" slot="title">Title</span>
+
+    Body text
+  </turtle-card>
+`;
+
+export const WithLandscapePicture = WithPicture.bind({});
+WithLandscapePicture.args = {
+  bordered: true,
+  jpg: landscapeJpg,
+  webp: landscapeWebp,
+};
+
+export const WithPortraitPicture = WithPicture.bind({});
+WithPortraitPicture.args = {
+  bordered: true,
+  jpg: portraitJpg,
+  webp: portraitWebp,
+};
+
+export const WithImg: Story<Args> = ({ shadowed, bordered }) => html`
+  <turtle-card
+    ?shadowed=${shadowed}
+    ?bordered=${bordered}
+    aria-labelledby="title"
+  >
+    <img slot="image" src=${landscapeJpg} alt="" />
+
+    <span id="title" slot="title">Title</span>
+
+    Body text
+  </turtle-card>
+`;
+WithImg.args = {
   bordered: true,
 };
