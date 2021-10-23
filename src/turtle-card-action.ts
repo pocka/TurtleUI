@@ -46,6 +46,7 @@ export class TurtleCardAction extends Pressable(LitElement) {
           font: inherit;
           font-size: calc(1.6 * var(--turtle-ui--unit));
           border: none;
+          box-sizing: border-box;
 
           background: hsl(
             var(--turtle-ui--color--tone--mono),
