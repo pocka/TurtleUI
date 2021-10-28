@@ -2,8 +2,15 @@ import { TurtleButton } from "./turtle-button";
 import { TurtleCard } from "./turtle-card";
 import { TurtleCardAction } from "./turtle-card-action";
 import { TurtleDesignSystem } from "./turtle-design-system";
+import { TurtleToggleSwitch } from "./turtle-toggle-switch";
 
-export { TurtleButton, TurtleCard, TurtleCardAction, TurtleDesignSystem };
+export {
+  TurtleButton,
+  TurtleCard,
+  TurtleCardAction,
+  TurtleDesignSystem,
+  TurtleToggleSwitch,
+};
 
 /**
  * All of TurtleUI components.
@@ -16,6 +23,7 @@ export const allComponents = [
   TurtleCard,
   TurtleCardAction,
   TurtleDesignSystem,
+  TurtleToggleSwitch,
 ];
 
 export interface TurtleComponent {
