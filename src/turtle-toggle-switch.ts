@@ -75,7 +75,10 @@ export class TurtleToggleSwitch extends LitElement {
           outline: none;
         }
         ::slotted(input:disabled:disabled) {
-          background-color: transparent;
+          background-color: hsl(
+            var(--turtle-ui--color--tone--mono),
+            var(--turtle-ui--color--level--9)
+          );
           border-color: hsl(
             var(--turtle-ui--color--tone--mono),
             var(--turtle-ui--color--level--7)
@@ -139,11 +142,11 @@ export class TurtleToggleSwitch extends LitElement {
     for (const mutation of mutations) {
       switch (mutation.attributeName) {
         case "disabled":
-          this._disabled = (mutation.target as HTMLInputElement).disabled
-          break
+          this._disabled = (mutation.target as HTMLInputElement).disabled;
+          break;
         case "checked":
-          this._checked = (mutation.target as HTMLInputElement).checked
-          break
+          this._checked = (mutation.target as HTMLInputElement).checked;
+          break;
       }
     }
   });
@@ -159,7 +162,7 @@ export class TurtleToggleSwitch extends LitElement {
           this._disabled = el.disabled;
           this._checked = el.checked;
 
-          el.addEventListener("input", this.#syncChecked)
+          el.addEventListener("input", this.#syncChecked);
 
           this.#attributeSyncObserver.observe(el, {
             attributes: true,
@@ -167,7 +170,7 @@ export class TurtleToggleSwitch extends LitElement {
           });
 
           return () => {
-            el.removeEventListener("input", this.#syncChecked)
+            el.removeEventListener("input", this.#syncChecked);
 
             this.#attributeSyncObserver.disconnect();
           };
@@ -183,6 +186,6 @@ export class TurtleToggleSwitch extends LitElement {
   }
 
   #syncChecked = (ev: Event) => {
-    this._checked = (ev.currentTarget as HTMLInputElement).checked
-  }
+    this._checked = (ev.currentTarget as HTMLInputElement).checked;
+  };
 }
