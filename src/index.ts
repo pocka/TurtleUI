@@ -2,6 +2,7 @@ import { TurtleButton } from "./turtle-button";
 import { TurtleCard } from "./turtle-card";
 import { TurtleCardAction } from "./turtle-card-action";
 import { TurtleDesignSystem } from "./turtle-design-system";
+import { TurtleRadioButton } from "./turtle-radio-button";
 import { TurtleToggleSwitch } from "./turtle-toggle-switch";
 
 export {
@@ -9,6 +10,7 @@ export {
   TurtleCard,
   TurtleCardAction,
   TurtleDesignSystem,
+  TurtleRadioButton,
   TurtleToggleSwitch,
 };
 
@@ -23,6 +25,7 @@ export const allComponents = [
   TurtleCard,
   TurtleCardAction,
   TurtleDesignSystem,
+  TurtleRadioButton,
   TurtleToggleSwitch,
 ];
 

@@ -12,6 +12,7 @@ import TurtleButton from "../src/turtle-button?spec";
 import TurtleCard from "../src/turtle-card?spec";
 import TurtleCardAction from "../src/turtle-card-action?spec";
 import TurtleDesignSystem from "../src/turtle-design-system?spec";
+import TurtleRadioButton from "../src/turtle-radio-button?spec";
 import TurtleToggleSwitch from "../src/turtle-toggle-switch?spec";
 
 registerTurtleUIComponents(allComponents);
@@ -21,6 +22,7 @@ const components = [
   TurtleCard,
   TurtleCardAction,
   TurtleDesignSystem,
+  TurtleRadioButton,
   TurtleToggleSwitch,
 ];
 
