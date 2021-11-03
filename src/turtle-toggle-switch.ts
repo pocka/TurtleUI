@@ -128,6 +128,12 @@ export class TurtleToggleSwitch extends LitElement {
             var(--turtle-ui--color--level--7)
           );
         }
+
+        @media (prefers-reduced-motion: reduce) {
+          .knob {
+            transition: none;
+          }
+        }
       `,
     ];
   }
