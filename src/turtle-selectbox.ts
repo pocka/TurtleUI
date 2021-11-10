@@ -66,6 +66,13 @@ export class TurtleSelectbox extends LitElement {
 
           transform: translate(0, -50%);
         }
+
+        .wrapper[data-disabled] > .caret {
+          color: hsl(
+            var(--turtle-ui--color--tone--mono),
+            var(--turtle-ui--color--level--7)
+          );
+        }
       `,
     ];
   }
