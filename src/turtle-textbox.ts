@@ -5,7 +5,9 @@ import { minireset } from "minireset.css/minireset.css.lit.js";
 
 import { wormhole } from "./directives/wormhole";
 
-function isValidityValid(el: HTMLInputElement): boolean {
+export function isValidityValid(
+  el: HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+): boolean {
   const ariaInvalid = el.getAttribute("aria-invalid");
   // both `grammar` and `spelling` are not for validation, skipping
   switch (ariaInvalid) {
@@ -44,10 +46,10 @@ export class TurtleTextbox extends LitElement {
           display: inherit;
         }
 
-        ::slotted(input) {
+        ::slotted(input),
+        ::slotted(select) {
           --border-color: var(--turtle-ui--color--tone--mono),
             var(--turtle-ui--color--level--7);
-          --right-offset: 0px;
           --right-offset: calc(4px + 2.4 * var(--turtle-ui--unit));
 
           appearance: none;
@@ -74,13 +76,15 @@ export class TurtleTextbox extends LitElement {
             var(--turtle-ui--color--level--7)
           );
         }
-        ::slotted(input:focus) {
+        ::slotted(input:focus),
+        ::slotted(select:focus) {
           --border-color: var(--turtle-ui--color--tone--primary),
             var(--turtle-ui--color--level--4);
 
           box-shadow: 0 0 0 4px hsla(var(--border-color), 0.16);
         }
-        ::slotted(input:disabled) {
+        ::slotted(input:disabled),
+        ::slotted(select:disabled) {
           background-color: hsl(
             var(--turtle-ui--color--tone--mono),
             var(--turtle-ui--color--level--9)
@@ -90,17 +94,18 @@ export class TurtleTextbox extends LitElement {
             var(--turtle-ui--color--level--7)
           );
         }
-        :host([touched]) ::slotted(input:not(:disabled)) {
-          --right-offset: calc(4px + 2.4 * var(--turtle-ui--unit));
-        }
 
         :host([touched]) ::slotted(input:not(:disabled)),
-        :host([touched]) ::slotted(input[aria-invalid="false"]:not(:disabled)) {
+        :host([touched]) ::slotted(select:not(:disabled)),
+        :host([touched]) ::slotted(input[aria-invalid="false"]:not(:disabled)),
+        :host([touched])
+          ::slotted(select[aria-invalid="false"]:not(:disabled)) {
           --border-color: var(--turtle-ui--color--tone--safe),
             var(--turtle-ui--color--level--3);
         }
 
         :host([touched]) ::slotted(:invalid:not(:disabled)),
+        :host([touched]) ::slotted(select[aria-invalid="true"]:not(:disabled)),
         :host([touched]) ::slotted(input[aria-invalid="true"]:not(:disabled)) {
           --border-color: var(--turtle-ui--color--tone--danger),
             var(--turtle-ui--color--level--4);
@@ -273,13 +278,13 @@ export class TurtleTextbox extends LitElement {
   };
 }
 
-const checkIcon = svg`
+export const checkIcon = svg`
   <svg class="icon" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path fill-rule="evenodd" clip-rule="evenodd" d="M18 1.48475 7.21035 12.3002 0 5.07261l1.28149-1.28456 5.92886 5.94303L16.7185.2002 18 1.48475Z" fill="currentColor"/>
 </svg>
 `;
 
-const crossIcon = svg`
+export const crossIcon = svg`
 <svg class="icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path d="M14 1.41 12.59 0 7 5.59 1.41 0 0 1.41 5.59 7 0 12.59 1.41 14 7 8.41 12.59 14 14 12.59 8.41 7 14 1.41Z" fill="currentColor"/>
 </svg>
