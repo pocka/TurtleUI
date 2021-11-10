@@ -95,18 +95,26 @@ export class TurtleTextbox extends LitElement {
           );
         }
 
-        :host([touched]) ::slotted(input:not(:disabled)),
-        :host([touched]) ::slotted(select:not(:disabled)),
-        :host([touched]) ::slotted(input[aria-invalid="false"]:not(:disabled)),
-        :host([touched])
+        :host([novalidity]) ::slotted(input),
+        :host([novalidity]) ::slotted(select) {
+          --right-offset: 0;
+        }
+
+        :host([touched]:not([novalidity])) ::slotted(input:not(:disabled)),
+        :host([touched]:not([novalidity])) ::slotted(select:not(:disabled)),
+        :host([touched]:not([novalidity]))
+          ::slotted(input[aria-invalid="false"]:not(:disabled)),
+        :host([touched]:not([novalidity]))
           ::slotted(select[aria-invalid="false"]:not(:disabled)) {
           --border-color: var(--turtle-ui--color--tone--safe),
             var(--turtle-ui--color--level--3);
         }
 
-        :host([touched]) ::slotted(:invalid:not(:disabled)),
-        :host([touched]) ::slotted(select[aria-invalid="true"]:not(:disabled)),
-        :host([touched]) ::slotted(input[aria-invalid="true"]:not(:disabled)) {
+        :host([touched]:not([novalidity])) ::slotted(:invalid:not(:disabled)),
+        :host([touched]:not([novalidity]))
+          ::slotted(select[aria-invalid="true"]:not(:disabled)),
+        :host([touched]:not([novalidity]))
+          ::slotted(input[aria-invalid="true"]:not(:disabled)) {
           --border-color: var(--turtle-ui--color--tone--danger),
             var(--turtle-ui--color--level--4);
         }
@@ -163,8 +171,10 @@ export class TurtleTextbox extends LitElement {
 
           animation: 0.3s 0s 1 ease-in shake;
         }
-        :host([touched]) > [data-invalid="false"]:not([data-disabled]) > .valid,
-        :host([touched])
+        :host([touched]:not([novalidity]))
+          > [data-invalid="false"]:not([data-disabled])
+          > .valid,
+        :host([touched]:not([novalidity]))
           > [data-invalid="true"]:not([data-disabled])
           > .invalid {
           display: flex;
@@ -189,6 +199,12 @@ export class TurtleTextbox extends LitElement {
     reflect: true,
   })
   touched: boolean = false;
+
+  @property({
+    type: Boolean,
+    attribute: "novalidity",
+  })
+  noValidity: boolean = false;
 
   @state()
   private _isElementValid?: boolean;

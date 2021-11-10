@@ -11,6 +11,7 @@ interface Args {
   disabled: boolean;
   touched?: boolean;
   ariaInvalid?: boolean;
+  noValidity: boolean;
 }
 
 export default {
@@ -24,14 +25,20 @@ export default {
   },
   args: {
     disabled: false,
+    noValidity: false,
   },
   argTypes: {
     ...disableControls([]),
   },
 } as Meta<Args>;
 
-const Template: Story<Args> = ({ disabled, touched, ariaInvalid }) => html`
-  <turtle-selectbox ?touched=${touched}>
+const Template: Story<Args> = ({
+  disabled,
+  touched,
+  noValidity,
+  ariaInvalid,
+}) => html`
+  <turtle-selectbox ?touched=${touched} ?novalidity=${noValidity}>
     <select
       ?disabled=${disabled}
       required
@@ -72,4 +79,9 @@ export const DefaultInvalid = Template.bind({});
 DefaultInvalid.args = {
   touched: true,
   ariaInvalid: true,
+};
+
+export const NoValidity = Template.bind({});
+NoValidity.args = {
+  noValidity: true,
 };

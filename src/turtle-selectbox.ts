@@ -37,6 +37,9 @@ export class TurtleSelectbox extends LitElement {
             4px + 2.4 * var(--turtle-ui--unit) + var(--caret-total-shift)
           );
         }
+        :host([novalidity]) ::slotted(select) {
+          --right-offset: calc(4px + var(--caret-total-shift));
+        }
 
         .indicator {
           right: calc(
@@ -72,6 +75,12 @@ export class TurtleSelectbox extends LitElement {
     reflect: true,
   })
   touched: boolean = false;
+
+  @property({
+    type: Boolean,
+    attribute: "novalidity",
+  })
+  noValidity: boolean = false;
 
   @state()
   private _isElementValid?: boolean;

@@ -13,6 +13,7 @@ interface Args {
   touched?: boolean;
   ariaInvalid?: boolean;
   placeholder?: string;
+  noValidity: boolean;
 }
 
 export default {
@@ -26,6 +27,7 @@ export default {
   },
   args: {
     disabled: false,
+    noValidity: false,
   },
   argTypes: {
     ...disableControls([]),
@@ -38,8 +40,9 @@ const Template: Story<Args> = ({
   placeholder,
   ariaInvalid,
   touched,
+  noValidity,
 }) => html`
-  <turtle-textbox ?touched=${touched}>
+  <turtle-textbox ?touched=${touched} ?novalidity=${noValidity}>
     <input
       type="text"
       ?disabled=${disabled}
@@ -119,3 +122,8 @@ export const Sized: Story<Args> = ({ disabled }) => html`
     />
   </turtle-textbox>
 `;
+
+export const NoValidity = Template.bind({});
+NoValidity.args = {
+  noValidity: true,
+};
