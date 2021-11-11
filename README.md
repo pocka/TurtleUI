@@ -1,24 +1,20 @@
-# Turtle UI WebComponents
+![Turtle UI](./README_cover.png)
 
-WIP
+This repository contains a source code for the Web Component implementation of [**Turtle UI**][design file], designed by [**@oathkite**](https://github.com/oathkite).
 
-Design work by [**@oathkite**](https://github.com/oathkite): <https://www.figma.com/community/file/990997715540889664>
+- [Design specification][design file]
+- Website (TODO)
 
-## Development
+[design file]: https://www.figma.com/community/file/990997715540889664
 
-```sh
-# Although this project uses "Zero-Installs", this is required probably due to
-# unplugged packages. Not actually "Zero-Installs" :(
-$ yarn
+## Installation
 
-# Start Storybook on http://localhost:6006
-$ yarn storybook
-```
+> TODO
 
-### Editor/IDE integration
+## Usage
 
-See [the Yarn's official docs](https://yarnpkg.com/getting-started/editor-sdks).
+> TODO
 
-```sh
-$ yarn dlx @yarnpkg/pnpify --sdk <SDKs>
-```
+## How to contribute
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md).
