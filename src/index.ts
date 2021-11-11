@@ -1,3 +1,4 @@
+// Basic Components
 import { TurtleButton } from "./turtle-button";
 import { TurtleCard } from "./turtle-card";
 import { TurtleCardAction } from "./turtle-card-action";
@@ -7,7 +8,27 @@ import { TurtleSelectbox } from "./turtle-selectbox";
 import { TurtleTextbox } from "./turtle-textbox";
 import { TurtleToggleSwitch } from "./turtle-toggle-switch";
 
+// Icons
+import { TurtleAngleIcon } from "./icons/turtle-angle-icon";
+import { TurtleArrowIcon } from "./icons/turtle-arrow-icon";
+import { TurtleAttentionIcon } from "./icons/turtle-attention-icon";
+import { TurtleBrandIcon } from "./icons/turtle-brand-icon";
+import { TurtleCheckIcon } from "./icons/turtle-check-icon";
+import { TurtleCircleCheckIcon } from "./icons/turtle-circle-check-icon";
+import { TurtleCircleCrossIcon } from "./icons/turtle-circle-cross-icon";
+import { TurtleCircleMinusIcon } from "./icons/turtle-circle-minus-icon";
+import { TurtleCirclePlusIcon } from "./icons/turtle-circle-plus-icon";
+import { TurtleCrossIcon } from "./icons/turtle-cross-icon";
+import { TurtleDotsIcon } from "./icons/turtle-dots-icon";
+import { TurtleHeartIcon } from "./icons/turtle-heart-icon";
+import { TurtleInfoIcon } from "./icons/turtle-info-icon";
+import { TurtleMinusIcon } from "./icons/turtle-minus-icon";
+import { TurtlePlusIcon } from "./icons/turtle-plus-icon";
+import { TurtleQuestionIcon } from "./icons/turtle-question-icon";
+import { TurtleReloadIcon } from "./icons/turtle-reload-icon";
+
 export {
+  // Basic Components
   TurtleButton,
   TurtleCard,
   TurtleCardAction,
@@ -16,7 +37,45 @@ export {
   TurtleSelectbox,
   TurtleTextbox,
   TurtleToggleSwitch,
+  // Icons
+  TurtleAngleIcon,
+  TurtleArrowIcon,
+  TurtleAttentionIcon,
+  TurtleBrandIcon,
+  TurtleCheckIcon,
+  TurtleCircleCheckIcon,
+  TurtleCircleCrossIcon,
+  TurtleCircleMinusIcon,
+  TurtleCirclePlusIcon,
+  TurtleCrossIcon,
+  TurtleDotsIcon,
+  TurtleHeartIcon,
+  TurtleInfoIcon,
+  TurtleMinusIcon,
+  TurtlePlusIcon,
+  TurtleQuestionIcon,
+  TurtleReloadIcon,
 };
+
+export const icons = [
+  TurtleAngleIcon,
+  TurtleArrowIcon,
+  TurtleAttentionIcon,
+  TurtleBrandIcon,
+  TurtleCheckIcon,
+  TurtleCircleCheckIcon,
+  TurtleCircleCrossIcon,
+  TurtleCircleMinusIcon,
+  TurtleCirclePlusIcon,
+  TurtleCrossIcon,
+  TurtleDotsIcon,
+  TurtleHeartIcon,
+  TurtleInfoIcon,
+  TurtleMinusIcon,
+  TurtlePlusIcon,
+  TurtleQuestionIcon,
+  TurtleReloadIcon,
+];
 
 /**
  * All of TurtleUI components.
@@ -33,6 +92,7 @@ export const allComponents = [
   TurtleSelectbox,
   TurtleTextbox,
   TurtleToggleSwitch,
+  ...icons,
 ];
 
 export interface TurtleComponent {
