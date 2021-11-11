@@ -12,6 +12,8 @@ import TurtleButton from "../src/turtle-button?spec";
 import TurtleCard from "../src/turtle-card?spec";
 import TurtleCardAction from "../src/turtle-card-action?spec";
 import TurtleDesignSystem from "../src/turtle-design-system?spec";
+import TurtleList from "../src/turtle-list?spec";
+import TurtleListItem from "../src/turtle-list-item?spec";
 import TurtleRadioButton from "../src/turtle-radio-button?spec";
 import TurtleSelectbox from "../src/turtle-selectbox?spec";
 import TurtleTextbox from "../src/turtle-textbox?spec";
@@ -24,6 +26,8 @@ const components = [
   TurtleCard,
   TurtleCardAction,
   TurtleDesignSystem,
+  TurtleList,
+  TurtleListItem,
   TurtleRadioButton,
   TurtleSelectbox,
   TurtleTextbox,

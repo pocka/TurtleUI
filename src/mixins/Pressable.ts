@@ -1,5 +1,6 @@
 import { html, LitElement, PropertyValues, TemplateResult } from "lit";
 import { property } from "lit/decorators/property";
+import { ifDefined } from "lit/directives/if-defined";
 
 // https://lit.dev/docs/composition/mixins/#typing-the-superclass
 type Constructor<T = {}> = new (...args: any[]) => T;
@@ -41,7 +42,7 @@ export interface PressableProps {
    *   }
    * }
    */
-  renderLightDOMSlot(): TemplateResult;
+  renderLightDOMSlot(className?: string): TemplateResult;
 }
 
 /**
@@ -123,8 +124,8 @@ export function Pressable<T extends Constructor<LitElement>>(
       });
     }
 
-    renderLightDOMSlot() {
-      return html`<slot id="lightdom"></slot>`;
+    renderLightDOMSlot(className?: string) {
+      return html`<slot id="lightdom" class=${ifDefined(className)}></slot>`;
     }
 
     /**
