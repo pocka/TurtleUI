@@ -63,11 +63,11 @@ const Template: Story<Args> = ({
           ></turtle-angle-icon>`
         : null}
     </turtle-list-item>
-    <turtle-list-item ?disabled=${disabled} lightdom>
+    <turtle-list-item lightdom>
       ${startIcon
         ? html`<turtle-brand-icon slot="icon-start"></turtle-brand-icon>`
         : null}
-      <button>Bar</button>
+      <button ?disabled=${disabled}>Bar</button>
       ${endIcon
         ? html`<turtle-angle-icon
             slot="icon-end"
@@ -75,11 +75,17 @@ const Template: Story<Args> = ({
           ></turtle-angle-icon>`
         : null}
     </turtle-list-item>
-    <turtle-list-item ?disabled=${disabled} lightdom>
+    <turtle-list-item lightdom>
       ${startIcon
         ? html`<turtle-brand-icon slot="icon-start"></turtle-brand-icon>`
         : null}
-      <a href="#" target="_blank" rel="noopener">Long name</a>
+      <a
+        href="#"
+        target="_blank"
+        rel="noopener"
+        aria-disabled=${disabled ? "true" : "false"}
+        >Long name</a
+      >
       ${endIcon
         ? html`<turtle-angle-icon
             slot="icon-end"

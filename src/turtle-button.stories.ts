@@ -10,7 +10,6 @@ import { TurtleButton } from "./turtle-button";
 interface Args {
   variant: TurtleButton["variant"];
   disabled: boolean;
-  syncAttributes: boolean;
 }
 
 export default {
@@ -25,7 +24,6 @@ export default {
   args: {
     variant: "normal",
     disabled: false,
-    syncAttributes: true,
   },
   argTypes: {
     variant: {
@@ -38,11 +36,8 @@ export default {
   },
 } as Meta<Args>;
 
-const Template: Story<Args> = ({ disabled, syncAttributes, variant }) =>
-  html`<turtle-button
-    variant=${variant}
-    .syncAttributes=${syncAttributes}
-    ?disabled=${disabled}
+const Template: Story<Args> = ({ disabled, variant }) =>
+  html`<turtle-button variant=${variant} ?disabled=${disabled}
     >Button</turtle-button
   >`;
 
@@ -70,24 +65,14 @@ export const FullWidth: Story<Args> = ({ variant }) =>
     >Button</turtle-button
   >`;
 
-export const LightDOM: Story<Args> = ({ variant, disabled, syncAttributes }) =>
+export const LightDOM: Story<Args> = ({ variant, disabled }) =>
   html`
     <div>
-      <turtle-button
-        lightdom
-        variant=${variant}
-        ?disabled=${disabled}
-        .syncAttributes=${syncAttributes}
-      >
-        <button>Button</button>
+      <turtle-button lightdom variant=${variant}>
+        <button ?disabled=${disabled}>Button</button>
       </turtle-button>
-      <turtle-button
-        lightdom
-        variant=${variant}
-        ?disabled=${disabled}
-        .syncAttributes=${syncAttributes}
-      >
-        <a href="#">Anchor</a>
+      <turtle-button lightdom variant=${variant}>
+        <a aria-disabled=${disabled ? "true" : "false"} href="#">Anchor</a>
       </turtle-button>
     </div>
   `;

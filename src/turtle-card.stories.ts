@@ -162,8 +162,8 @@ export const WithActions: Story<Args & { disabled: boolean }> = ({
     <turtle-card-action slot="action" ?disabled=${disabled}
       >Dismiss</turtle-card-action
     >
-    <turtle-card-action slot="action" lightdom ?disabled=${disabled}>
-      <a href="#">Action</a>
+    <turtle-card-action slot="action" lightdom>
+      <a href="#" aria-disabled=${disabled ? "true" : "false"}>Action</a>
     </turtle-card-action>
   </turtle-card>
 `;
