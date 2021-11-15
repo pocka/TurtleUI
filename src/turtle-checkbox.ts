@@ -77,6 +77,15 @@ export class TurtleCheckbox extends LitElement {
             var(--turtle-ui--color--level--4)
           );
         }
+        ::slotted(input:focus) {
+          box-shadow: 0 0 0 4px
+            hsla(
+              var(--turtle-ui--color--tone--primary),
+              var(--turtle-ui--color--level--4),
+              0.16
+            );
+          outline: none;
+        }
         ::slotted(input:disabled) {
           background-color: hsl(
             var(--turtle-ui--color--tone--mono),
