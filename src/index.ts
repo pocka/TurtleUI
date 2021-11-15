@@ -1,4 +1,5 @@
 // Basic Components
+import { TurtleAvatar } from "./turtle-avatar";
 import { TurtleButton } from "./turtle-button";
 import { TurtleCard } from "./turtle-card";
 import { TurtleCardAction } from "./turtle-card-action";
@@ -32,6 +33,7 @@ import { TurtleReloadIcon } from "./icons/turtle-reload-icon";
 
 export {
   // Basic Components
+  TurtleAvatar,
   TurtleButton,
   TurtleCard,
   TurtleCardAction,
@@ -90,6 +92,7 @@ export const icons = [
  * Use this only when you use every components included in this list.
  */
 export const allComponents = [
+  TurtleAvatar,
   TurtleButton,
   TurtleCard,
   TurtleCardAction,

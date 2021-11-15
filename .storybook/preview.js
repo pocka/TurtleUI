@@ -8,6 +8,7 @@ import "./fonts/fonts.css";
 
 import { allComponents, registerTurtleUIComponents } from "../src";
 
+import TurtleAvatar from "../src/turtle-avatar?spec";
 import TurtleButton from "../src/turtle-button?spec";
 import TurtleCard from "../src/turtle-card?spec";
 import TurtleCardAction from "../src/turtle-card-action?spec";
@@ -23,6 +24,7 @@ import TurtleToggleSwitch from "../src/turtle-toggle-switch?spec";
 registerTurtleUIComponents(allComponents);
 
 const components = [
+  TurtleAvatar,
   TurtleButton,
   TurtleCard,
   TurtleCardAction,
