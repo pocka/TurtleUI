@@ -9,6 +9,7 @@ import "./fonts/fonts.css";
 import { allComponents, registerTurtleUIComponents } from "../src";
 
 import TurtleAvatar from "../src/turtle-avatar?spec";
+import TurtleBalloon from "../src/turtle-balloon?spec";
 import TurtleButton from "../src/turtle-button?spec";
 import TurtleCard from "../src/turtle-card?spec";
 import TurtleCardAction from "../src/turtle-card-action?spec";
@@ -27,6 +28,7 @@ registerTurtleUIComponents(allComponents);
 
 const components = [
   TurtleAvatar,
+  TurtleBalloon,
   TurtleButton,
   TurtleCard,
   TurtleCardAction,

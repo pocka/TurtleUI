@@ -1,5 +1,6 @@
 // Basic Components
 import { TurtleAvatar } from "./turtle-avatar";
+import { TurtleBalloon } from "./turtle-balloon";
 import { TurtleButton } from "./turtle-button";
 import { TurtleCard } from "./turtle-card";
 import { TurtleCardAction } from "./turtle-card-action";
@@ -36,6 +37,7 @@ import { TurtleReloadIcon } from "./icons/turtle-reload-icon";
 export {
   // Basic Components
   TurtleAvatar,
+  TurtleBalloon,
   TurtleButton,
   TurtleCard,
   TurtleCardAction,
@@ -97,6 +99,7 @@ export const icons = [
  */
 export const allComponents = [
   TurtleAvatar,
+  TurtleBalloon,
   TurtleButton,
   TurtleCard,
   TurtleCardAction,
