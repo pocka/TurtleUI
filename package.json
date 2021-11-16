@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "license": "Apache-2.0",
   "type": "module",
+  "files": [
+    "es2019"
+  ],
   "exports": {
     "./package.json": "./package.json",
     "./*": "./es2019/*"

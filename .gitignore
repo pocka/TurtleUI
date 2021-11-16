@@ -3,6 +3,7 @@
 
 # JS
 node_modules
+*.tgz
 
 # You should use Yarn on this project
 package-lock.json
