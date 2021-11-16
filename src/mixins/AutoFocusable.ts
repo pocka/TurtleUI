@@ -1,5 +1,5 @@
 import { LitElement, PropertyValues } from "lit";
-import { property } from "lit/decorators/property";
+import { property } from "lit/decorators/property.js";
 
 // https://lit.dev/docs/composition/mixins/#typing-the-superclass
 type Constructor<T = {}> = new (...args: any[]) => T;

@@ -1,5 +1,5 @@
 import { css, LitElement, html } from "lit";
-import { property } from "lit/decorators/property";
+import { property } from "lit/decorators/property.js";
 
 declare global {
   interface HTMLElementTagNameMap {

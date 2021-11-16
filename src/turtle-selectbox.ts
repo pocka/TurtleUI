@@ -1,14 +1,14 @@
 import { css, LitElement, html, svg } from "lit";
-import { property } from "lit/decorators/property";
-import { state } from "lit/decorators/state";
+import { property } from "lit/decorators/property.js";
+import { state } from "lit/decorators/state.js";
 
-import { wormhole } from "./directives/wormhole";
+import { wormhole } from "./directives/wormhole.js";
 import {
   TurtleTextbox,
   isValidityValid,
   checkIcon,
   crossIcon,
-} from "./turtle-textbox";
+} from "./turtle-textbox.js";
 
 declare global {
   interface HTMLElementTagNameMap {

@@ -1,40 +1,40 @@
 // Basic Components
-import { TurtleAvatar } from "./turtle-avatar";
-import { TurtleBalloon } from "./turtle-balloon";
-import { TurtleButton } from "./turtle-button";
-import { TurtleCard } from "./turtle-card";
-import { TurtleCardAction } from "./turtle-card-action";
-import { TurtleCheckbox } from "./turtle-checkbox";
-import { TurtleDesignSystem } from "./turtle-design-system";
-import { TurtleList } from "./turtle-list";
-import { TurtleListItem } from "./turtle-list-item";
-import { TurtleNotification } from "./turtle-notification";
-import { TurtleNotificationAction } from "./turtle-notification-action";
-import { TurtleRadioButton } from "./turtle-radio-button";
-import { TurtleSelectbox } from "./turtle-selectbox";
-import { TurtleSnackbar } from "./turtle-snackbar";
-import { TurtleSnackbarAction } from "./turtle-snackbar-action";
-import { TurtleTextbox } from "./turtle-textbox";
-import { TurtleToggleSwitch } from "./turtle-toggle-switch";
+import { TurtleAvatar } from "./turtle-avatar.js";
+import { TurtleBalloon } from "./turtle-balloon.js";
+import { TurtleButton } from "./turtle-button.js";
+import { TurtleCard } from "./turtle-card.js";
+import { TurtleCardAction } from "./turtle-card-action.js";
+import { TurtleCheckbox } from "./turtle-checkbox.js";
+import { TurtleDesignSystem } from "./turtle-design-system.js";
+import { TurtleList } from "./turtle-list.js";
+import { TurtleListItem } from "./turtle-list-item.js";
+import { TurtleNotification } from "./turtle-notification.js";
+import { TurtleNotificationAction } from "./turtle-notification-action.js";
+import { TurtleRadioButton } from "./turtle-radio-button.js";
+import { TurtleSelectbox } from "./turtle-selectbox.js";
+import { TurtleSnackbar } from "./turtle-snackbar.js";
+import { TurtleSnackbarAction } from "./turtle-snackbar-action.js";
+import { TurtleTextbox } from "./turtle-textbox.js";
+import { TurtleToggleSwitch } from "./turtle-toggle-switch.js";
 
 // Icons
-import { TurtleAngleIcon } from "./icons/turtle-angle-icon";
-import { TurtleArrowIcon } from "./icons/turtle-arrow-icon";
-import { TurtleAttentionIcon } from "./icons/turtle-attention-icon";
-import { TurtleBrandIcon } from "./icons/turtle-brand-icon";
-import { TurtleCheckIcon } from "./icons/turtle-check-icon";
-import { TurtleCircleCheckIcon } from "./icons/turtle-circle-check-icon";
-import { TurtleCircleCrossIcon } from "./icons/turtle-circle-cross-icon";
-import { TurtleCircleMinusIcon } from "./icons/turtle-circle-minus-icon";
-import { TurtleCirclePlusIcon } from "./icons/turtle-circle-plus-icon";
-import { TurtleCrossIcon } from "./icons/turtle-cross-icon";
-import { TurtleDotsIcon } from "./icons/turtle-dots-icon";
-import { TurtleHeartIcon } from "./icons/turtle-heart-icon";
-import { TurtleInfoIcon } from "./icons/turtle-info-icon";
-import { TurtleMinusIcon } from "./icons/turtle-minus-icon";
-import { TurtlePlusIcon } from "./icons/turtle-plus-icon";
-import { TurtleQuestionIcon } from "./icons/turtle-question-icon";
-import { TurtleReloadIcon } from "./icons/turtle-reload-icon";
+import { TurtleAngleIcon } from "./icons/turtle-angle-icon.js";
+import { TurtleArrowIcon } from "./icons/turtle-arrow-icon.js";
+import { TurtleAttentionIcon } from "./icons/turtle-attention-icon.js";
+import { TurtleBrandIcon } from "./icons/turtle-brand-icon.js";
+import { TurtleCheckIcon } from "./icons/turtle-check-icon.js";
+import { TurtleCircleCheckIcon } from "./icons/turtle-circle-check-icon.js";
+import { TurtleCircleCrossIcon } from "./icons/turtle-circle-cross-icon.js";
+import { TurtleCircleMinusIcon } from "./icons/turtle-circle-minus-icon.js";
+import { TurtleCirclePlusIcon } from "./icons/turtle-circle-plus-icon.js";
+import { TurtleCrossIcon } from "./icons/turtle-cross-icon.js";
+import { TurtleDotsIcon } from "./icons/turtle-dots-icon.js";
+import { TurtleHeartIcon } from "./icons/turtle-heart-icon.js";
+import { TurtleInfoIcon } from "./icons/turtle-info-icon.js";
+import { TurtleMinusIcon } from "./icons/turtle-minus-icon.js";
+import { TurtlePlusIcon } from "./icons/turtle-plus-icon.js";
+import { TurtleQuestionIcon } from "./icons/turtle-question-icon.js";
+import { TurtleReloadIcon } from "./icons/turtle-reload-icon.js";
 
 export {
   // Basic Components

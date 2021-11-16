@@ -1,11 +1,11 @@
 import { css, LitElement, html, svg, nothing } from "lit";
-import { property } from "lit/decorators/property";
-import { ifDefined } from "lit/directives/if-defined";
-import { styleMap } from "lit/directives/style-map";
+import { property } from "lit/decorators/property.js";
+import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
 import { minireset } from "minireset.css/minireset.css.lit.js";
 
-import { SlotSensorController } from "./controllers/SlotSensorController";
-import { AutoFocusable } from "./mixins/AutoFocusable";
+import { SlotSensorController } from "./controllers/SlotSensorController.js";
+import { AutoFocusable } from "./mixins/AutoFocusable.js";
 
 export type Severity = "info" | "success" | "warning" | "danger";
 

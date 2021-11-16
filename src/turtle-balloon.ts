@@ -1,6 +1,6 @@
 import { css, LitElement, html } from "lit";
-import { property } from "lit/decorators/property";
-import { styleMap } from "lit/directives/style-map";
+import { property } from "lit/decorators/property.js";
+import { styleMap } from "lit/directives/style-map.js";
 import { minireset } from "minireset.css/minireset.css.lit.js";
 
 declare global {

@@ -1,8 +1,8 @@
 import { css, LitElement, svg } from "lit";
-import { property } from "lit/decorators/property";
+import { property } from "lit/decorators/property.js";
 import { minireset } from "minireset.css/minireset.css.lit.js";
 
-import { icon } from "./styles";
+import { icon } from "./styles.js";
 
 declare global {
   interface HTMLElementTagNameMap {

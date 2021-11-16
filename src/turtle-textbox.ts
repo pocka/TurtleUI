@@ -1,9 +1,9 @@
 import { css, LitElement, html, svg } from "lit";
-import { property } from "lit/decorators/property";
-import { state } from "lit/decorators/state";
+import { property } from "lit/decorators/property.js";
+import { state } from "lit/decorators/state.js";
 import { minireset } from "minireset.css/minireset.css.lit.js";
 
-import { wormhole } from "./directives/wormhole";
+import { wormhole } from "./directives/wormhole.js";
 
 export function isValidityValid(
   el: HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement

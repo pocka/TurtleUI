@@ -1,7 +1,7 @@
 import { css, LitElement, html } from "lit";
 import { minireset } from "minireset.css/minireset.css.lit.js";
 
-import { Pressable } from "./mixins/Pressable";
+import { Pressable } from "./mixins/Pressable.js";
 
 /**
  * @element turtle-snackbar-action

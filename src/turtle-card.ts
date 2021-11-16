@@ -1,8 +1,8 @@
 import { css, html, LitElement } from "lit";
-import { property } from "lit/decorators/property";
+import { property } from "lit/decorators/property.js";
 import { minireset } from "minireset.css/minireset.css.lit.js";
 
-import { SlotSensorController } from "./controllers/SlotSensorController";
+import { SlotSensorController } from "./controllers/SlotSensorController.js";
 
 declare global {
   interface HTMLElementTagNameMap {

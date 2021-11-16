@@ -1,6 +1,6 @@
 import { css, LitElement, html } from "lit";
-import { property } from "lit/decorators/property";
-import { ifDefined } from "lit/directives/if-defined";
+import { property } from "lit/decorators/property.js";
+import { ifDefined } from "lit/directives/if-defined.js";
 import { minireset } from "minireset.css/minireset.css.lit.js";
 
 declare global {

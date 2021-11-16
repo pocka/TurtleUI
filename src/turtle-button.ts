@@ -1,8 +1,8 @@
 import { css, LitElement, html } from "lit";
-import { property } from "lit/decorators/property";
+import { property } from "lit/decorators/property.js";
 import { minireset } from "minireset.css/minireset.css.lit.js";
 
-import { Pressable } from "./mixins/Pressable";
+import { Pressable } from "./mixins/Pressable.js";
 
 declare global {
   interface HTMLElementTagNameMap {
