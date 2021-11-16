@@ -3126,6 +3126,7 @@ __metadata:
     prettier: ^2.3.2
     react: ^17.0.2
     react-dom: ^17.0.2
+    resolve-typescript-plugin: ^1.1.1
     storybook-addon-designs: ^6.0.1
     storybook-dark-mode: ^1.0.8
     ts-loader: ^9.2.3
@@ -11312,6 +11313,17 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"resolve-typescript-plugin@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "resolve-typescript-plugin@npm:1.1.1"
+  dependencies:
+    tslib: 2.3.1
+  peerDependencies:
+    webpack: ^5.0.0
+  checksum: 8dc629c8195938bf9c88e3c6c8ce6bec186cea6226935f41fe4dc5d4d72fb4e922a404592851bd5870dd2fd53e3c43a8addaf3bd7875dfb5ade6d5b2a818a0e5
+  languageName: node
+  linkType: hard
+
 "resolve-url@npm:^0.2.1":
   version: 0.2.1
   resolution: "resolve-url@npm:0.2.1"
@@ -12671,6 +12683,13 @@ fsevents@^1.2.7:
   version: 1.0.7
   resolution: "ts-simple-type@npm:1.0.7"
   checksum: 3cffb45eab7ab7fd963e2765914c41488d9611dc0619334ac1cf01bc2b02cf9746adf12172d785894474c6c5f3cfbf8212e675e456362373a0c2a61441ad8572
+  languageName: node
+  linkType: hard
+
+"tslib@npm:2.3.1":
+  version: 2.3.1
+  resolution: "tslib@npm:2.3.1"
+  checksum: de17a98d4614481f7fcb5cd53ffc1aaf8654313be0291e1bfaee4b4bb31a20494b7d218ff2e15017883e8ea9626599b3b0e0229c18383ba9dce89da2adf15cb9
   languageName: node
   linkType: hard
 

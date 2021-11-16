@@ -53,6 +53,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prettier", "npm:2.3.2"],
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:02d59b758bbdf107f55710fc7160c97a56fc8e362ca6812e42c16be0189e9c6918659476d4a4576a6d6e27c951ca3a4729d37c8a872f822b1cf2818cec312f46#npm:17.0.2"],
+            ["resolve-typescript-plugin", "virtual:02d59b758bbdf107f55710fc7160c97a56fc8e362ca6812e42c16be0189e9c6918659476d4a4576a6d6e27c951ca3a4729d37c8a872f822b1cf2818cec312f46#npm:1.1.1"],
             ["storybook-addon-designs", "npm:6.0.1"],
             ["storybook-dark-mode", "virtual:02d59b758bbdf107f55710fc7160c97a56fc8e362ca6812e42c16be0189e9c6918659476d4a4576a6d6e27c951ca3a4729d37c8a872f822b1cf2818cec312f46#npm:1.0.8"],
             ["ts-loader", "virtual:02d59b758bbdf107f55710fc7160c97a56fc8e362ca6812e42c16be0189e9c6918659476d4a4576a6d6e27c951ca3a4729d37c8a872f822b1cf2818cec312f46#npm:9.2.3"],
@@ -7101,6 +7102,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prettier", "npm:2.3.2"],
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:02d59b758bbdf107f55710fc7160c97a56fc8e362ca6812e42c16be0189e9c6918659476d4a4576a6d6e27c951ca3a4729d37c8a872f822b1cf2818cec312f46#npm:17.0.2"],
+            ["resolve-typescript-plugin", "virtual:02d59b758bbdf107f55710fc7160c97a56fc8e362ca6812e42c16be0189e9c6918659476d4a4576a6d6e27c951ca3a4729d37c8a872f822b1cf2818cec312f46#npm:1.1.1"],
             ["storybook-addon-designs", "npm:6.0.1"],
             ["storybook-dark-mode", "virtual:02d59b758bbdf107f55710fc7160c97a56fc8e362ca6812e42c16be0189e9c6918659476d4a4576a6d6e27c951ca3a4729d37c8a872f822b1cf2818cec312f46#npm:1.0.8"],
             ["ts-loader", "virtual:02d59b758bbdf107f55710fc7160c97a56fc8e362ca6812e42c16be0189e9c6918659476d4a4576a6d6e27c951ca3a4729d37c8a872f822b1cf2818cec312f46#npm:9.2.3"],
@@ -17194,6 +17196,29 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["resolve-typescript-plugin", [
+        ["npm:1.1.1", {
+          "packageLocation": "./.yarn/cache/resolve-typescript-plugin-npm-1.1.1-860615f9d7-8dc629c819.zip/node_modules/resolve-typescript-plugin/",
+          "packageDependencies": [
+            ["resolve-typescript-plugin", "npm:1.1.1"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:02d59b758bbdf107f55710fc7160c97a56fc8e362ca6812e42c16be0189e9c6918659476d4a4576a6d6e27c951ca3a4729d37c8a872f822b1cf2818cec312f46#npm:1.1.1", {
+          "packageLocation": "./.yarn/__virtual__/resolve-typescript-plugin-virtual-f28b99dc71/0/cache/resolve-typescript-plugin-npm-1.1.1-860615f9d7-8dc629c819.zip/node_modules/resolve-typescript-plugin/",
+          "packageDependencies": [
+            ["resolve-typescript-plugin", "virtual:02d59b758bbdf107f55710fc7160c97a56fc8e362ca6812e42c16be0189e9c6918659476d4a4576a6d6e27c951ca3a4729d37c8a872f822b1cf2818cec312f46#npm:1.1.1"],
+            ["@types/webpack", null],
+            ["tslib", "npm:2.3.1"],
+            ["webpack", "virtual:02d59b758bbdf107f55710fc7160c97a56fc8e362ca6812e42c16be0189e9c6918659476d4a4576a6d6e27c951ca3a4729d37c8a872f822b1cf2818cec312f46#npm:5.44.0"]
+          ],
+          "packagePeers": [
+            "@types/webpack",
+            "webpack"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["resolve-url", [
         ["npm:0.2.1", {
           "packageLocation": "./.yarn/cache/resolve-url-npm-0.2.1-39edb8f908-7b7035b9ed.zip/node_modules/resolve-url/",
@@ -18749,6 +18774,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/tslib-npm-2.3.0-277e75e108-8869694c26.zip/node_modules/tslib/",
           "packageDependencies": [
             ["tslib", "npm:2.3.0"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:2.3.1", {
+          "packageLocation": "./.yarn/cache/tslib-npm-2.3.1-0e21e18015-de17a98d46.zip/node_modules/tslib/",
+          "packageDependencies": [
+            ["tslib", "npm:2.3.1"]
           ],
           "linkType": "HARD",
         }]

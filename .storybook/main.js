@@ -1,3 +1,5 @@
+const ResolveTypeScriptPlugin = require("resolve-typescript-plugin").default;
+
 module.exports = {
   stories: ["../src/**/*.stories.@(ts|mdx)"],
   addons: [
@@ -44,6 +46,13 @@ module.exports = {
               ...config.module.rules,
             ],
           },
+        ],
+      },
+      resolve: {
+        ...config.resolve,
+        plugins: [
+          ...(config.resolve.plugins ?? []),
+          new ResolveTypeScriptPlugin(),
         ],
       },
     };
