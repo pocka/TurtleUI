@@ -8,6 +8,8 @@ import { TurtleCheckbox } from "./turtle-checkbox";
 import { TurtleDesignSystem } from "./turtle-design-system";
 import { TurtleList } from "./turtle-list";
 import { TurtleListItem } from "./turtle-list-item";
+import { TurtleNotification } from "./turtle-notification";
+import { TurtleNotificationAction } from "./turtle-notification-action";
 import { TurtleRadioButton } from "./turtle-radio-button";
 import { TurtleSelectbox } from "./turtle-selectbox";
 import { TurtleSnackbar } from "./turtle-snackbar";
@@ -45,6 +47,8 @@ export {
   TurtleDesignSystem,
   TurtleList,
   TurtleListItem,
+  TurtleNotification,
+  TurtleNotificationAction,
   TurtleRadioButton,
   TurtleSelectbox,
   TurtleSnackbar,
@@ -107,6 +111,8 @@ export const allComponents = [
   TurtleDesignSystem,
   TurtleList,
   TurtleListItem,
+  TurtleNotification,
+  TurtleNotificationAction,
   TurtleRadioButton,
   TurtleSelectbox,
   TurtleSnackbar,

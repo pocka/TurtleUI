@@ -17,6 +17,8 @@ import TurtleCheckbox from "../src/turtle-checkbox?spec";
 import TurtleDesignSystem from "../src/turtle-design-system?spec";
 import TurtleList from "../src/turtle-list?spec";
 import TurtleListItem from "../src/turtle-list-item?spec";
+import TurtleNotification from "../src/turtle-notification?spec";
+import TurtleNotificationAction from "../src/turtle-notification-action?spec";
 import TurtleRadioButton from "../src/turtle-radio-button?spec";
 import TurtleSelectbox from "../src/turtle-selectbox?spec";
 import TurtleSnackbar from "../src/turtle-snackbar?spec";
@@ -36,6 +38,8 @@ const components = [
   TurtleDesignSystem,
   TurtleList,
   TurtleListItem,
+  TurtleNotification,
+  TurtleNotificationAction,
   TurtleRadioButton,
   TurtleSelectbox,
   TurtleSnackbar,
