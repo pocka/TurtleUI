@@ -9,6 +9,8 @@ import { TurtleList } from "./turtle-list";
 import { TurtleListItem } from "./turtle-list-item";
 import { TurtleRadioButton } from "./turtle-radio-button";
 import { TurtleSelectbox } from "./turtle-selectbox";
+import { TurtleSnackbar } from "./turtle-snackbar";
+import { TurtleSnackbarAction } from "./turtle-snackbar-action";
 import { TurtleTextbox } from "./turtle-textbox";
 import { TurtleToggleSwitch } from "./turtle-toggle-switch";
 
@@ -43,6 +45,8 @@ export {
   TurtleListItem,
   TurtleRadioButton,
   TurtleSelectbox,
+  TurtleSnackbar,
+  TurtleSnackbarAction,
   TurtleTextbox,
   TurtleToggleSwitch,
   // Icons
@@ -102,6 +106,8 @@ export const allComponents = [
   TurtleListItem,
   TurtleRadioButton,
   TurtleSelectbox,
+  TurtleSnackbar,
+  TurtleSnackbarAction,
   TurtleTextbox,
   TurtleToggleSwitch,
   ...icons,

@@ -18,6 +18,8 @@ import TurtleList from "../src/turtle-list?spec";
 import TurtleListItem from "../src/turtle-list-item?spec";
 import TurtleRadioButton from "../src/turtle-radio-button?spec";
 import TurtleSelectbox from "../src/turtle-selectbox?spec";
+import TurtleSnackbar from "../src/turtle-snackbar?spec";
+import TurtleSnackbarAction from "../src/turtle-snackbar-action?spec";
 import TurtleTextbox from "../src/turtle-textbox?spec";
 import TurtleToggleSwitch from "../src/turtle-toggle-switch?spec";
 
@@ -34,6 +36,8 @@ const components = [
   TurtleListItem,
   TurtleRadioButton,
   TurtleSelectbox,
+  TurtleSnackbar,
+  TurtleSnackbarAction,
   TurtleTextbox,
   TurtleToggleSwitch,
 ];

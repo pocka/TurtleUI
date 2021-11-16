@@ -52,6 +52,7 @@ export class TurtleDesignSystem extends LitElement {
 
         --turtle-ui--color--tone--mono: 0, 0%;
         --turtle-ui--color--tone--safe: 123, 46%;
+        --turtle-ui--color--tone--warning: 43, 96%;
         --turtle-ui--color--tone--danger: 14, 100%;
         --turtle-ui--color--tone--primary: 204, 100%;
 
