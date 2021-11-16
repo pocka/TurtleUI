@@ -45,6 +45,6 @@
     "storybook": "start-storybook -p 6006 --ci",
     "build-storybook": "build-storybook",
     "build": "tsc --build tsconfig.build.json",
-    "prepare": "npm run build"
+    "prepack": "yarn build"
   }
 }
