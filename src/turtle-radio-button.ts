@@ -7,6 +7,9 @@ declare global {
   }
 }
 
+/**
+ * @element turtle-radio-button
+ */
 export class TurtleRadioButton extends LitElement {
   static defaultTagName = "turtle-radio-button" as const;
 
