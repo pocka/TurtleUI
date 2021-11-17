@@ -3104,9 +3104,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@turtle-ui/webcomponents@workspace:.":
+"@turtleui/webcomponents@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@turtle-ui/webcomponents@workspace:."
+  resolution: "@turtleui/webcomponents@workspace:."
   dependencies:
     "@babel/core": ^7.14.6
     "@mdx-js/react": ^1.6.22
