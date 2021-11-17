@@ -16,6 +16,7 @@ import TurtleCard from "../src/turtle-card?spec";
 import TurtleCardAction from "../src/turtle-card-action?spec";
 import TurtleCheckbox from "../src/turtle-checkbox?spec";
 import TurtleDesignSystem from "../src/turtle-design-system?spec";
+import TurtleFormField from "../src/turtle-form-field?spec";
 import TurtleList from "../src/turtle-list?spec";
 import TurtleListItem from "../src/turtle-list-item?spec";
 import TurtleNotification from "../src/turtle-notification?spec";
@@ -38,6 +39,7 @@ const components = [
   TurtleCardAction,
   TurtleCheckbox,
   TurtleDesignSystem,
+  TurtleFormField,
   TurtleList,
   TurtleListItem,
   TurtleNotification,

@@ -7,6 +7,7 @@ import { TurtleCard } from "./turtle-card.js";
 import { TurtleCardAction } from "./turtle-card-action.js";
 import { TurtleCheckbox } from "./turtle-checkbox.js";
 import { TurtleDesignSystem } from "./turtle-design-system.js";
+import { TurtleFormField } from "./turtle-form-field";
 import { TurtleList } from "./turtle-list.js";
 import { TurtleListItem } from "./turtle-list-item.js";
 import { TurtleNotification } from "./turtle-notification.js";
@@ -47,6 +48,7 @@ export {
   TurtleCardAction,
   TurtleCheckbox,
   TurtleDesignSystem,
+  TurtleFormField,
   TurtleList,
   TurtleListItem,
   TurtleNotification,
@@ -112,6 +114,7 @@ export const allComponents = [
   TurtleCardAction,
   TurtleCheckbox,
   TurtleDesignSystem,
+  TurtleFormField,
   TurtleList,
   TurtleListItem,
   TurtleNotification,

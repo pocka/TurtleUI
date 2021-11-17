@@ -44,6 +44,7 @@ export class TurtleTextbox extends LitElement {
 
         .wrapper {
           display: inherit;
+          width: 100%;
         }
 
         ::slotted(input),
@@ -206,6 +207,10 @@ export class TurtleTextbox extends LitElement {
   })
   noValidity: boolean = false;
 
+  get isValid() {
+    return !!this._isElementValid;
+  }
+
   @state()
   private _isElementValid?: boolean;
 
@@ -227,9 +232,7 @@ export class TurtleTextbox extends LitElement {
     }
 
     if (validityRelatedAttributeChanged) {
-      this._isElementValid = isValidityValid(
-        mutations[0]!.target as HTMLInputElement
-      );
+      this.#updateValidity(mutations[0]!.target as HTMLInputElement);
     }
   });
 
@@ -246,7 +249,7 @@ export class TurtleTextbox extends LitElement {
               return;
             }
 
-            this._isElementValid = isValidityValid(el);
+            this.#updateValidity(el);
             this._disabled = el.disabled;
 
             el.addEventListener("input", this.#onSlottedInputInputted);
@@ -284,13 +287,23 @@ export class TurtleTextbox extends LitElement {
   }
 
   #onSlottedInputInputted = (ev: Event) => {
-    this._isElementValid = isValidityValid(
-      ev.currentTarget as HTMLInputElement
-    );
+    this.#updateValidity(ev.currentTarget as HTMLInputElement);
+  };
+
+  #updateValidity = (el: Parameters<typeof isValidityValid>[0]) => {
+    const valid = isValidityValid(el);
+
+    if (valid !== this._isElementValid) {
+      this._isElementValid = valid;
+      this.dispatchEvent(new CustomEvent("validitychange"));
+    }
   };
 
   touch = () => {
-    this.touched = true;
+    if (!this.touched) {
+      this.touched = true;
+      this.dispatchEvent(new CustomEvent("fieldtouch"));
+    }
   };
 }
 
