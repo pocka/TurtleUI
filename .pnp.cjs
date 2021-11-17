@@ -49,7 +49,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["babel-loader", "virtual:a3f33df5b5b48a489645f658c316424aa130212ee6a9a27743eaadad2ca74307c30d43e3f06d1667d2f1f24ebc29edc02b9b2d97f797f38bdbc1ffdd284c9715#npm:8.2.2"],
             ["lit", "npm:2.0.2"],
             ["lit-html", "npm:1.4.1"],
-            ["minireset.css", "npm:0.0.7"],
             ["prettier", "npm:2.3.2"],
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:a3f33df5b5b48a489645f658c316424aa130212ee6a9a27743eaadad2ca74307c30d43e3f06d1667d2f1f24ebc29edc02b9b2d97f797f38bdbc1ffdd284c9715#npm:17.0.2"],
@@ -7098,7 +7097,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["babel-loader", "virtual:a3f33df5b5b48a489645f658c316424aa130212ee6a9a27743eaadad2ca74307c30d43e3f06d1667d2f1f24ebc29edc02b9b2d97f797f38bdbc1ffdd284c9715#npm:8.2.2"],
             ["lit", "npm:2.0.2"],
             ["lit-html", "npm:1.4.1"],
-            ["minireset.css", "npm:0.0.7"],
             ["prettier", "npm:2.3.2"],
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:a3f33df5b5b48a489645f658c316424aa130212ee6a9a27743eaadad2ca74307c30d43e3f06d1667d2f1f24ebc29edc02b9b2d97f797f38bdbc1ffdd284c9715#npm:17.0.2"],
@@ -14456,16 +14454,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["minipass-sized", "npm:1.0.3"],
             ["minipass", "npm:3.1.3"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["minireset.css", [
-        ["npm:0.0.7", {
-          "packageLocation": "./.yarn/cache/minireset.css-npm-0.0.7-4fcb543606-f37dfa119c.zip/node_modules/minireset.css/",
-          "packageDependencies": [
-            ["minireset.css", "npm:0.0.7"],
-            ["lit-element", "npm:2.5.1"]
           ],
           "linkType": "HARD",
         }]

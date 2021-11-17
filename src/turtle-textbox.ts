@@ -1,7 +1,7 @@
 import { css, LitElement, html, svg } from "lit";
 import { property } from "lit/decorators/property.js";
 import { state } from "lit/decorators/state.js";
-import { minireset } from "minireset.css/minireset.css.lit.js";
+import { minireset } from "./minireset.js";
 
 import { wormhole } from "./directives/wormhole.js";
 

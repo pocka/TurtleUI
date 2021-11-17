@@ -1,5 +1,5 @@
 import { css, LitElement, html } from "lit";
-import { minireset } from "minireset.css/minireset.css.lit.js";
+import { minireset } from "./minireset.js";
 
 import { SlotSensorController } from "./controllers/SlotSensorController.js";
 import { Pressable } from "./mixins/Pressable.js";

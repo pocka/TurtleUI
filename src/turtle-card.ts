@@ -1,6 +1,6 @@
 import { css, html, LitElement } from "lit";
 import { property } from "lit/decorators/property.js";
-import { minireset } from "minireset.css/minireset.css.lit.js";
+import { minireset } from "./minireset.js";
 
 import { SlotSensorController } from "./controllers/SlotSensorController.js";
 

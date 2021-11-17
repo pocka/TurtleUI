@@ -3122,7 +3122,6 @@ __metadata:
     babel-loader: ^8.2.2
     lit: ^2.0.2
     lit-html: ^1.4.1
-    minireset.css: ^0.0.7
     prettier: ^2.3.2
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -8678,7 +8677,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"lit-element@npm:*, lit-element@npm:^2.4.0":
+"lit-element@npm:^2.4.0":
   version: 2.5.1
   resolution: "lit-element@npm:2.5.1"
   dependencies:
@@ -9285,13 +9284,6 @@ fsevents@^1.2.7:
   dependencies:
     yallist: ^4.0.0
   checksum: 74b623c1f996caafa66772301b66a1b634b20270f0d1a731ef86195d5a1a5f9984a773a1e88a6cecfd264d6c471c4c0fc8574cd96488f01c8f74c0b600021e55
-  languageName: node
-  linkType: hard
-
-"minireset.css@npm:^0.0.7":
-  version: 0.0.7
-  resolution: "minireset.css@npm:0.0.7"
-  checksum: f37dfa119c68eb9682ad1932a048b1d00680e6dec0fe6de6519c58d929f5e2f82cc36fe53b30944e218ab12c1c11281878ce8b0db896f9d617b603f918e6f168
   languageName: node
   linkType: hard
 

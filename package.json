@@ -42,8 +42,7 @@
     "webpack": "^5.44.0"
   },
   "dependencies": {
-    "lit": "^2.0.2",
-    "minireset.css": "^0.0.7"
+    "lit": "^2.0.2"
   },
   "scripts": {
     "storybook": "start-storybook -p 6006 --ci",

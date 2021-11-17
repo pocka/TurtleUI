@@ -1,6 +1,6 @@
 import { css, LitElement, html } from "lit";
 import { property } from "lit/decorators/property.js";
-import { minireset } from "minireset.css/minireset.css.lit.js";
+import { minireset } from "./minireset.js";
 
 import { Pressable } from "./mixins/Pressable.js";
 

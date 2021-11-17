@@ -1,7 +1,8 @@
 import { css, LitElement, html } from "lit";
 import { property } from "lit/decorators/property.js";
 import { ifDefined } from "lit/directives/if-defined.js";
-import { minireset } from "minireset.css/minireset.css.lit.js";
+
+import { minireset } from "./minireset.js";
 
 declare global {
   interface HTMLElementTagNameMap {
