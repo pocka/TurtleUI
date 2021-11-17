@@ -2,6 +2,7 @@
 import { TurtleAvatar } from "./turtle-avatar.js";
 import { TurtleBalloon } from "./turtle-balloon.js";
 import { TurtleButton } from "./turtle-button.js";
+import { TurtleButtonGroup } from "./turtle-button-group";
 import { TurtleCard } from "./turtle-card.js";
 import { TurtleCardAction } from "./turtle-card-action.js";
 import { TurtleCheckbox } from "./turtle-checkbox.js";
@@ -41,6 +42,7 @@ export {
   TurtleAvatar,
   TurtleBalloon,
   TurtleButton,
+  TurtleButtonGroup,
   TurtleCard,
   TurtleCardAction,
   TurtleCheckbox,
@@ -105,6 +107,7 @@ export const allComponents = [
   TurtleAvatar,
   TurtleBalloon,
   TurtleButton,
+  TurtleButtonGroup,
   TurtleCard,
   TurtleCardAction,
   TurtleCheckbox,

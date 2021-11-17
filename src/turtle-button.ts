@@ -51,6 +51,7 @@ export class TurtleButton extends Pressable(LitElement) {
           --turtle-ui--button--highlight-shadow-color: var(
             --turtle-ui--color--highlight--shadow
           );
+          --turtle-button--base-radius: 8px;
 
           display: inline-block;
           font-size: var(--base-font-size);
@@ -96,16 +97,32 @@ export class TurtleButton extends Pressable(LitElement) {
         ::slotted(*) {
           appearance: none;
           display: block;
-          width: inherit;
+          width: 100%;
           font: inherit;
           font-size: 1em;
           line-height: 1.5;
           border: 1px solid var(--turtle-ui--button--border-color);
           padding: calc(var(--base-font-size) / 2)
             calc(var(--base-font-size) * 0.75);
+          box-sizing: border-box;
 
           background-color: var(--turtle-ui--button--bg);
-          border-radius: 8px;
+          border-radius: var(
+              --turtle-button--top-left-radius,
+              var(--turtle-button--base-radius)
+            )
+            var(
+              --turtle-button--top-right-radius,
+              var(--turtle-button--base-radius)
+            )
+            var(
+              --turtle-button--bottom-right-radius,
+              var(--turtle-button--base-radius)
+            )
+            var(
+              --turtle-button--bottom-left-radius,
+              var(--turtle-button--base-radius)
+            );
           color: var(--turtle-ui--button--fg);
           cursor: pointer;
           font-weight: bold;

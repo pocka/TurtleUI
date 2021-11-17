@@ -11,6 +11,7 @@ import { allComponents, registerTurtleUIComponents } from "../src";
 import TurtleAvatar from "../src/turtle-avatar?spec";
 import TurtleBalloon from "../src/turtle-balloon?spec";
 import TurtleButton from "../src/turtle-button?spec";
+import TurtleButtonGroup from "../src/turtle-button-group?spec";
 import TurtleCard from "../src/turtle-card?spec";
 import TurtleCardAction from "../src/turtle-card-action?spec";
 import TurtleCheckbox from "../src/turtle-checkbox?spec";
@@ -32,6 +33,7 @@ const components = [
   TurtleAvatar,
   TurtleBalloon,
   TurtleButton,
+  TurtleButtonGroup,
   TurtleCard,
   TurtleCardAction,
   TurtleCheckbox,
