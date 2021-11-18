@@ -1,59 +1,213 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><title>Webpack App</title><meta name="viewport" content="width=device-width,initial-scale=1"/><style>html, body {
-    overflow: hidden;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Turtle UI</title>
+    
+    
+    
+    <script type="module" crossorigin src="/pocka/TurtleUI/assets/index.5e278e0a.js"></script>
+    <link rel="modulepreload" href="/pocka/TurtleUI/assets/vendor.a0c068f0.js">
+    <link rel="stylesheet" href="/pocka/TurtleUI/assets/index.df5aaa7f.css">
+  </head>
+  <body>
+    <turtle-design-system class="design-system">
+      <site-layout>
+        <site-header slot="header" role="banner" top-href="/">
+          <a slot="nav" href="#usage">Usage</a>
+          <a slot="nav" href="#components">Components</a>
+          <a
+            slot="nav"
+            href="https://github.com/pocka/TurtleUI"
+            target="_blank"
+            rel="noopener"
+          >
+            GitHub
+          </a>
+        </site-header>
 
-  * {
-    box-sizing: border-box;
-  }</style><script>/* globals window */
-  /* eslint-disable no-underscore-dangle */
-  try {
-    if (window.top !== window) {
-      window.__REACT_DEVTOOLS_GLOBAL_HOOK__ = window.top.__REACT_DEVTOOLS_GLOBAL_HOOK__;
-    }
-  } catch (e) {
-    // eslint-disable-next-line no-console
-    console.warn('unable to connect to top frame for connecting dev tools');
-  }
+        <aside slot="sidebar" class="sidebar">
+          <ul>
+            <li>
+              <a href="#usage">Usage</a>
+              <ul>
+                <li><a href="#installation">Installation</a></li>
+                <li>
+                  <a href="#registering_components">Registering components</a>
+                </li>
+                <li><a href="#using_components">Using components</a></li>
+              </ul>
+            </li>
+            <li><a href="#browser_support">Browser support</a></li>
+            <li>
+              <a href="#styles">Styles</a>
+              <ul>
+                <li>
+                  <a href="#responsive_font_size">Responsive font size</a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#components">Components</a></li>
+            <li><a href="#api">API</a></li>
+          </ul>
+        </aside>
 
-  window.onerror = function onerror(message, source, line, column, err) {
-    if (window.CONFIG_TYPE !== 'DEVELOPMENT') return;
-    // eslint-disable-next-line no-var, vars-on-top
-    var xhr = new window.XMLHttpRequest();
-    xhr.open('POST', '/runtime-error');
-    xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
-    xhr.send(
-      JSON.stringify({
-        /* eslint-disable object-shorthand */
-        message: message,
-        source: source,
-        line: line,
-        column: column,
-        error: err && { message: err.message, name: err.name, stack: err.stack },
-        origin: 'manager',
-        /* eslint-enable object-shorthand */
-      })
-    );
-  };</script><style>#root[hidden],
-      #docs-root[hidden] {
-        display: none !important;
-      }</style></head><body><div id="root"></div><div id="docs-root"></div><script>window['CONFIG_TYPE'] = "PRODUCTION";
-          
-      
-          
-            window['LOGLEVEL'] = "info";
-          
-      
-          
-            window['FEATURES'] = {"postcss":true,"emotionAlias":true};
-          
-      
-          
-      
-          
-      
-          
-            window['DOCS_MODE'] = false;</script><script src="runtime~main.e1672eca0ace34033970.manager.bundle.js"></script><script src="25.d417640b6af74fca64c4.manager.bundle.js"></script><script src="main.aa2ded478e7f72620d63.manager.bundle.js"></script></body></html>
+        <main>
+          <h1>
+            <img
+              class="brand-hero"
+              src="/pocka/TurtleUI/assets/hero.a07aa0ed.png"
+              width="1920"
+              height="960"
+              alt="Turtle UI"
+            />
+          </h1>
+          <div>
+            <a href="https://www.npmjs.com/package/@turtleui/webcomponents"
+              ><img
+                src="https://img.shields.io/npm/v/@turtleui/webcomponents"
+                alt="npm version"
+            /></a>
+            <a href="https://github.com/pocka/TurtleUI/blob/master/LICENSE"
+              ><img
+                src="https://img.shields.io/github/license/pocka/TurtleUI"
+                alt="license"
+            /></a>
+          </div>
+          <p>
+            Turtle UI for Web Components is CustomElements implementation of
+            <a
+              class="link"
+              href="https://www.figma.com/community/file/990997715540889664"
+              target="_blank"
+              rel="noopener"
+              >Turtle UI</a
+            >, which aims to make prototyping easier.
+          </p>
+
+          <h2 id="usage">Usage</h2>
+
+          <h3 id="installation">Installation</h3>
+          <p>
+            Install <code>@turtleui/webcomponents</code> via JavaScript package
+            manager (e.g. npm, Yarn, pnpm).
+          </p>
+          <pre
+            class="code"
+          ><code class="language-shell">$ npm i @turtleui/webcomponents</code></pre>
+          <turtle-card bordered aria-describedby="typescript-definition">
+            <span id="typescript-definition" slot="title">
+              TypeScript definition
+            </span>
+
+            This package provides first-party TypeScript definition files
+            (<code>*.d.ts</code>). No need to install additional packages.
+          </turtle-card>
+
+          <h3 id="registering_components">Registering components</h3>
+          <p>
+            You need to register each CustomElement before using. We provide a
+            convenient way for that.
+          </p>
+          <pre
+            class="code"
+          ><code class="language-js">import { TurtleButton, registerTurtleUIComponents } from "@turtleui/webcomponents";
+
+// Now you can use &lt;turtle-button&gt;
+registerTurtleUIComponents([TurtleButton]);</code></pre>
+          <p>
+            Also, you can import allComponents and register all Turtle UI Web
+            Components. Please use it with caution as it would increase bundle
+            size if you use only part of our components.
+          </p>
+          <pre
+            class="code"
+          ><code class="language-js">import { allComponents, registerTurtleUIComponents } from "@turtleui/webcomponents";
+
+// allComponents is an array contains every CustomElement we provide.
+// [TurtleButton, TurtleCard, TurtleCardAction, ...]
+registerTurtleUIComponents(allComponents)</code></pre>
+
+          <h3 id="using_components">Using components</h3>
+          <p>
+            Use them just like native HTML elements, such as
+            <code>&lt;p&gt;</code>. Please make sure to close the tag, even if
+            there is no children node.
+          </p>
+          <pre class="code"><code class="language-html">&lt;body&gt;
+  &lt;turtle-design-system&gt;
+    &lt;turtle-button variant="primary"&gt;Button&lt;/turtle-button&gt;
+  &lt;/turtle-design-system&gt;
+&lt;body&gt;</code></pre>
+          <turtle-card bordered aria-describedby="note_design_system_component">
+            <span id="note_design_system_component" slot="title"
+              >Use components inside
+              <code>&lt;turtle-design-system&gt;</code></span
+            >
+
+            In order to use design tokens, every
+            <code>&lt;turtle-*&gt;</code> components MUST be descendants of
+            &lt;turtle-design-system&gt;.
+          </turtle-card>
+
+          <h2 id="browser_support">Browser support</h2>
+          <p>
+            This package supports browsers that implement Web Components v1 spec
+            and basic ES2019 features. If you would like to support browsers not
+            compatible with ES2019 syntax, please transpile this package along
+            with your application code.
+          </p>
+
+          <h2 id="styles">Styles</h2>
+          <p>
+            You can tweak styles by providing CSS custom properties to design
+            system.
+          </p>
+
+          <h3 id="responsive_font_size">Responsive font size</h3>
+          <p>
+            Sine we respect browser font size set by a user, our components
+            heavily use
+            <code>--turtle-ui--unit</code> CSS custom property. Every
+            size/length that scales based on browser font size setting uses the
+            property and assumes the value of the property would be
+            <code>10px</code> with default browser font size setting. If you're
+            using
+            <a
+              class="link"
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size#rems"
+              target="_blank"
+              rel="noopener"
+              >the <code>html { font-size: 62.5%; }</code> technique</a
+            >, set <code>--turtle-ui--unit: 1rem;</code> to the
+            <code>&lt;turtle-design-system&gt;</code>.
+          </p>
+          <pre class="code"><code class="language-css">turtle-design-system {
+  --turtle-ui--unit: 1rem; /* where 1rem = 10px */
+}</code></pre>
+          <p>
+            Otherwise, set a <code>rem</code> value that equals to
+            <code>10px</code>.
+          </p>
+          <pre class="code"><code class="language-css">turtle-design-system {
+  --turtle-ui--unit: 0.625rem; /* when root font-size is 16px (default value in many environment), this would equal to 10px */
+}</code></pre>
+          <p>
+            If you want to disable the responsive font size feature for some
+            reason, specify <code>10px</code> directly.
+          </p>
+          <pre class="code"><code class="language-css">turtle-design-system {
+  --turtle-ui--unit: 10px;
+}</code></pre>
+
+          <h2 id="components">Components</h2>
+          <p>Documentation work in progress.</p>
+
+          <h2 id="api">API</h2>
+          <p>Documentation work in progress.</p>
+        </main>
+      </site-layout>
+    </turtle-design-system>
+  </body>
+</html>
