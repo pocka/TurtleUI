@@ -23,7 +23,7 @@ jobs:
       - name: Build package
         run: yarn build
       - name: Build website
-        run: yarn website:build --base /${{ github.repository }}/
+        run: yarn website:build --base /TurtleUI/
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
