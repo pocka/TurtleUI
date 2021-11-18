@@ -17,6 +17,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
+    "@fontsource/ubuntu": "^4.5.0",
+    "@fontsource/ubuntu-mono": "^4.5.0",
     "@mdx-js/react": "^1.6.22",
     "@storybook/addon-a11y": "^6.4.0-rc.2",
     "@storybook/addon-actions": "^6.4.0-rc.2",
@@ -27,9 +29,11 @@
     "@storybook/manager-webpack5": "^6.4.0-rc.2",
     "@storybook/theming": "^6.4.0-rc.2",
     "@storybook/web-components": "^6.4.0-rc.2",
+    "@types/prismjs": "^1.16.6",
     "babel-loader": "^8.2.2",
     "lit-html": "^1.4.1",
     "prettier": "^2.3.2",
+    "prismjs": "^1.25.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "resolve-typescript-plugin": "^1.1.1",
@@ -37,6 +41,7 @@
     "storybook-dark-mode": "^1.0.8",
     "ts-loader": "^9.2.3",
     "typescript": "^4.4.4",
+    "vite": "^2.6.14",
     "web-component-analyzer": "^1.1.6",
     "web-component-analyzer-loader": "^0.1.1",
     "webpack": "^5.44.0"
@@ -48,6 +53,9 @@
     "storybook": "start-storybook -p 6006 --ci",
     "build-storybook": "build-storybook",
     "build": "tsc --build tsconfig.build.json",
-    "prepack": "yarn build"
+    "prepack": "yarn build",
+    "prewebsite": "yarn build",
+    "website": "vite ./website/src",
+    "website:build": "vite build ./website/src --outDir '../dist'"
   }
 }

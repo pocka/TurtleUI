@@ -1,0 +1,187 @@
+@import "@fontsource/ubuntu/index.css";
+@import "@fontsource/ubuntu/700.css";
+@import "@fontsource/ubuntu-mono/index.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  font-family: "Ubuntu", sans-serif;
+  padding-top: 65px;
+}
+
+body {
+  font-size: 1.6rem;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  overflow: hidden;
+}
+
+.design-system {
+  --turtle-ui--unit: 1rem;
+
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+}
+
+.link {
+  color: hsl(
+    var(--turtle-ui--color--tone--primary),
+    var(--turtle-ui--color--level--4)
+  );
+}
+
+.brand-hero {
+  display: block;
+  height: auto;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: calc(6.4 * var(--turtle-ui--unit));
+
+  border-radius: 8px;
+}
+
+code {
+  font-family: "Ubuntu Mono", monospace !important;
+}
+
+main {
+  padding: calc(1.6 * var(--turtle-ui--unit)) 16px;
+  min-width: 100%;
+}
+
+main p {
+  font-size: calc(1.6 * var(--turtle-ui--unit));
+  line-height: 1.5;
+  margin: calc(1.6 * var(--turtle-ui--unit)) 0;
+}
+
+main turtle-card {
+  margin: calc(1.6 * var(--turtle-ui--unit)) 0;
+}
+
+main h1 {
+  font-size: calc(3.2 * var(--turtle-ui--unit));
+  line-height: 1.8;
+  margin: calc(3.2 * var(--turtle-ui--unit)) 0;
+}
+main h2 {
+  font-size: calc(2.4 * var(--turtle-ui--unit));
+  line-height: 1.8;
+  border-bottom: 1px solid
+    hsl(var(--turtle-ui--color--tone--mono), var(--turtle-ui--color--level--9));
+  margin: 0;
+  margin-top: calc(6.4 * var(--turtle-ui--unit));
+}
+main h3 {
+  font-size: calc(2 * var(--turtle-ui--unit));
+  line-height: 1.6;
+  margin: 0;
+  margin-block-start: calc(4 * var(--turtle-ui--unit));
+}
+
+main pre {
+  margin: calc(0.8 * var(--turtle-ui--unit)) 0;
+  padding: calc(0.8 * var(--turtle-ui--unit)) 16px;
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: auto;
+
+  background-color: hsl(
+    var(--turtle-ui--color--tone--mono),
+    var(--turtle-ui--color--level--9)
+  );
+  border-radius: 4px;
+}
+
+/* syntax highlighting */
+.token.attr-name {
+  color: hsl(
+    var(--turtle-ui--color--tone--mono),
+    var(--turtle-ui--color--level--1)
+  );
+}
+.token.string,
+.token.attr-value {
+  color: hsl(
+    var(--turtle-ui--color--tone--safe),
+    var(--turtle-ui--color--level--3)
+  );
+}
+.token.keyword,
+.token.tag,
+.token.selector {
+  color: hsl(
+    var(--turtle-ui--color--tone--danger),
+    var(--turtle-ui--color--level--3)
+  );
+}
+.token.function,
+.token.property {
+  color: hsl(
+    var(--turtle-ui--color--tone--primary),
+    var(--turtle-ui--color--level--3)
+  );
+}
+.token.comment {
+  color: hsl(
+    var(--turtle-ui--color--tone--mono),
+    var(--turtle-ui--color--level--4)
+  );
+}
+
+.sidebar {
+  margin: calc(0.8 * var(--turtle-ui--unit));
+  padding: calc(0.8 * var(--turtle-ui--unit)) 8px;
+  font-size: calc(1.6 * var(--turtle-ui--unit));
+  line-height: 1.71;
+
+  background-color: hsl(
+    var(--turtle-ui--color--tone--mono),
+    var(--turtle-ui--color--level--9)
+  );
+  border-radius: 4px;
+  color: hsl(
+    var(--turtle-ui--color--tone--mono),
+    var(--turtle-ui--color--level--0)
+  );
+}
+.sidebar ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.sidebar li > ul {
+  padding-inline-start: calc(1.6 * var(--turtle-ui--unit));
+}
+.sidebar a {
+  color: inherit;
+  text-decoration: none;
+}
+.sidebar a:hover {
+  text-decoration: underline;
+}
+.sidebar > ul > li > ul {
+  font-size: calc(1.4 * var(--turtle-ui--unit));
+  line-height: 1.5;
+
+  color: hsl(
+    var(--turtle-ui--color--tone--mono),
+    var(--turtle-ui--color--level--3)
+  );
+  font-weight: normal;
+}

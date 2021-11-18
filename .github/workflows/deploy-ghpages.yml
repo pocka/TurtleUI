@@ -20,10 +20,12 @@ jobs:
           node-version: "${{ steps.nvm.outputs.NVMRC }}"
       - name: Install dependencies
         run: yarn install --immutable --immutable-cache
-      - name: Build Storybook
-        run: yarn build-storybook
+      - name: Build package
+        run: yarn build
+      - name: Build website
+        run: yarn website:build --base /${{ github.repository }}/
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./storybook-static
+          publish_dir: ./website/dist
