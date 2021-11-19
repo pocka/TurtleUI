@@ -169,6 +169,8 @@ main pre {
   padding: calc(0.8 * var(--turtle-ui--unit)) 8px;
   font-size: calc(1.6 * var(--turtle-ui--unit));
   line-height: 1.71;
+
+  z-index: 100;
 }
 .sidebar ul {
   padding: 0;

@@ -12,6 +12,9 @@ export class SiteLayout extends LitElement {
         :host {
           --header-height: calc(5.6 * var(--turtle-ui--unit));
           --gap: 0px;
+          --z-topmost: 100;
+          --z-top: 50;
+          --z-default: 0;
 
           display: grid;
           grid-template-columns: 1fr;
@@ -28,10 +31,14 @@ export class SiteLayout extends LitElement {
           grid-area: header;
           position: sticky;
           top: 0;
+
+          z-index: var(--z-top);
         }
 
         .body::slotted(*) {
           grid-area: body;
+
+          z-index: var(--z-default);
         }
 
         .sidebar::slotted(*) {
@@ -51,11 +58,18 @@ export class SiteLayout extends LitElement {
             var(--turtle-ui--color--level--0)
           );
           overflow-y: auto;
+          z-index: var(--z-topmost);
 
-          transform: translateX(var(--x-offset));
+          transform: translate3D(var(--x-offset), 0, 0);
           transition: transform 0.1s ease-out;
         }
-        :host([menu-opened]) .sidebar::slotted(*) {
+        /*
+         * Safari, a.k.a. the new IE, seems to implement the :host selector incorrectly
+         * so when we do ":host([menu-opened]) .sidebar::slotted(*)" the assigned element
+         * does not recieve the styles defined in the rule, while the devtool shows the rule
+         * is applied to the element.
+         */
+        .sidebar.open::slotted(*) {
           --x-offset: 100%;
 
           transition: transform 0.2s ease;
@@ -65,6 +79,8 @@ export class SiteLayout extends LitElement {
           position: fixed;
           left: calc(-0.6 * var(--turtle-ui--unit));
           bottom: 8px;
+
+          z-index: var(--z-topmost);
         }
 
         .angle {
@@ -86,6 +102,10 @@ export class SiteLayout extends LitElement {
               "blank body";
           }
 
+          .header::slotted(*) {
+            z-index: var(--z-topmost);
+          }
+
           .sidebar::slotted(*) {
             position: fixed;
             top: calc(var(--header-height) + var(--gap));
@@ -95,6 +115,7 @@ export class SiteLayout extends LitElement {
             width: var(--sidebar-width);
 
             border-radius: 4px;
+            z-index: var(--z-top);
 
             transform: none;
           }
@@ -130,7 +151,10 @@ export class SiteLayout extends LitElement {
     return html`
       <slot class="header" name="header"></slot>
       <slot class="body"></slot>
-      <slot class="sidebar" name="sidebar"></slot>
+      <slot
+        class="sidebar ${this.menuOpened ? "open" : "closed"}"
+        name="sidebar"
+      ></slot>
 
       <turtle-button
         class="menu-toggle"
