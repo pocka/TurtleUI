@@ -8,5 +8,11 @@ import {
 
 import { SiteHeader } from "./site-header";
 import { SiteLayout } from "./site-layout";
+import { SiteSandbox } from "./site-sandbox";
 
-registerTurtleUIComponents([...allComponents, SiteHeader, SiteLayout]);
+registerTurtleUIComponents([
+  ...allComponents,
+  SiteHeader,
+  SiteLayout,
+  SiteSandbox,
+]);
