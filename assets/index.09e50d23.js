@@ -2324,4 +2324,4 @@ import{r as h,e as c,s,p as v,l as M,i as Pt,a as ie,d as ae,t as jt,b as ne,c a
           direction=${this.menuOpened?"left":"right"}
         ></turtle-angle-icon>
       </turtle-button>
-    `}}Ot=new WeakMap;tt=new WeakMap;Ct.defaultTagName="site-layout";Fe([c({type:Boolean,attribute:"menu-opened",reflect:!0})],Ct.prototype,"menuOpened",2);Re([...Se,Tt,Ct]);ue.exports.highlightAll(!0);
+    `}}Ot=new WeakMap;tt=new WeakMap;Ct.defaultTagName="site-layout";Fe([c({type:Boolean,attribute:"menu-opened",reflect:!0})],Ct.prototype,"menuOpened",2);Re([...Se,Tt,Ct]);ue.exports.highlightAll();
