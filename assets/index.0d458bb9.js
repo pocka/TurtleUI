@@ -1,4 +1,4 @@
-import{r as h,e as c,s,p as v,l as S,i as Pt,a as ie,d as ae,t as jt,b as ne,c as p,y as d,T as se,f as ue}from"./vendor.a0c068f0.js";const ce=function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const i of document.querySelectorAll('link[rel="modulepreload"]'))r(i);new MutationObserver(i=>{for(const o of i)if(o.type==="childList")for(const a of o.addedNodes)a.tagName==="LINK"&&a.rel==="modulepreload"&&r(a)}).observe(document,{childList:!0,subtree:!0});function e(i){const o={};return i.integrity&&(o.integrity=i.integrity),i.referrerpolicy&&(o.referrerPolicy=i.referrerpolicy),i.crossorigin==="use-credentials"?o.credentials="include":i.crossorigin==="anonymous"?o.credentials="omit":o.credentials="same-origin",o}function r(i){if(i.ep)return;i.ep=!0;const o=e(i);fetch(i.href,o)}};ce();const u=h`
+import{r as h,e as c,s,p as v,l as M,i as Pt,a as ie,d as ae,t as jt,b as ne,c as p,y as d,T as se,f as ue}from"./vendor.a0c068f0.js";const ce=function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const i of document.querySelectorAll('link[rel="modulepreload"]'))r(i);new MutationObserver(i=>{for(const o of i)if(o.type==="childList")for(const a of o.addedNodes)a.tagName==="LINK"&&a.rel==="modulepreload"&&r(a)}).observe(document,{childList:!0,subtree:!0});function e(i){const o={};return i.integrity&&(o.integrity=i.integrity),i.referrerpolicy&&(o.referrerPolicy=i.referrerpolicy),i.crossorigin==="use-credentials"?o.credentials="include":i.crossorigin==="anonymous"?o.credentials="omit":o.credentials="same-origin",o}function r(i){if(i.ep)return;i.ep=!0;const o=e(i);fetch(i.href,o)}};ce();const u=h`
   /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
   html,
   body,
@@ -67,7 +67,7 @@ import{r as h,e as c,s,p as v,l as S,i as Pt,a as ie,d as ae,t as jt,b as ne,c a
   th {
     padding: 0;
   }
-`;var $t=globalThis&&globalThis.__decorate||function(l,t,e,r){var i=arguments.length,o=i<3?t:r===null?r=Object.getOwnPropertyDescriptor(t,e):r,a;if(typeof Reflect=="object"&&typeof Reflect.decorate=="function")o=Reflect.decorate(l,t,e,r);else for(var n=l.length-1;n>=0;n--)(a=l[n])&&(o=(i<3?a(o):i>3?a(t,e,o):a(t,e))||o);return i>3&&o&&Object.defineProperty(t,e,o),o};class R extends s{constructor(){super(...arguments);this.bordered=!1}static get styles(){return[u,h`
+`;var $t=globalThis&&globalThis.__decorate||function(l,t,e,r){var i=arguments.length,o=i<3?t:r===null?r=Object.getOwnPropertyDescriptor(t,e):r,a;if(typeof Reflect=="object"&&typeof Reflect.decorate=="function")o=Reflect.decorate(l,t,e,r);else for(var n=l.length-1;n>=0;n--)(a=l[n])&&(o=(i<3?a(o):i>3?a(t,e,o):a(t,e))||o);return i>3&&o&&Object.defineProperty(t,e,o),o};class S extends s{constructor(){super(...arguments);this.bordered=!1}static get styles(){return[u,h`
         :host {
           --turtle-avatar--size: calc(4.8 * var(--turtle-ui--unit));
 
@@ -125,7 +125,7 @@ import{r as h,e as c,s,p as v,l as S,i as Pt,a as ie,d as ae,t as jt,b as ne,c a
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           role="img"
-          aria-label=${S(this.defaultAlt)}
+          aria-label=${M(this.defaultAlt)}
         >
           <g clip-path="url(#a)">
             <path class="placeholder-bg" d="M0 0h32v32H0z" />
@@ -143,7 +143,7 @@ import{r as h,e as c,s,p as v,l as S,i as Pt,a as ie,d as ae,t as jt,b as ne,c a
           </defs>
         </svg>
       </slot>
-    `}}R.defaultTagName="turtle-avatar";$t([c({type:Boolean,reflect:!0})],R.prototype,"bordered",void 0);$t([c({type:String,attribute:"default-alt"})],R.prototype,"defaultAlt",void 0);var Et=globalThis&&globalThis.__decorate||function(l,t,e,r){var i=arguments.length,o=i<3?t:r===null?r=Object.getOwnPropertyDescriptor(t,e):r,a;if(typeof Reflect=="object"&&typeof Reflect.decorate=="function")o=Reflect.decorate(l,t,e,r);else for(var n=l.length-1;n>=0;n--)(a=l[n])&&(o=(i<3?a(o):i>3?a(t,e,o):a(t,e))||o);return i>3&&o&&Object.defineProperty(t,e,o),o};class z extends s{constructor(){super(...arguments);this.tailPosition="bottom",this.tailOffset=.5}static get styles(){return[u,h`
+    `}}S.defaultTagName="turtle-avatar";$t([c({type:Boolean,reflect:!0})],S.prototype,"bordered",void 0);$t([c({type:String,attribute:"default-alt"})],S.prototype,"defaultAlt",void 0);var Et=globalThis&&globalThis.__decorate||function(l,t,e,r){var i=arguments.length,o=i<3?t:r===null?r=Object.getOwnPropertyDescriptor(t,e):r,a;if(typeof Reflect=="object"&&typeof Reflect.decorate=="function")o=Reflect.decorate(l,t,e,r);else for(var n=l.length-1;n>=0;n--)(a=l[n])&&(o=(i<3?a(o):i>3?a(t,e,o):a(t,e))||o);return i>3&&o&&Object.defineProperty(t,e,o),o};class R extends s{constructor(){super(...arguments);this.tailPosition="bottom",this.tailOffset=.5}static get styles(){return[u,h`
         * {
           box-sizing: border-box;
         }
@@ -237,9 +237,9 @@ import{r as h,e as c,s,p as v,l as S,i as Pt,a as ie,d as ae,t as jt,b as ne,c a
         style=${Pt({"--turtle-balloon--tail-offset":`${this.tailOffset}`})}
         aria-hidden="true"
       ></div>
-    `}}z.defaultTagName="turtle-balloon";Et([c({type:String,attribute:"tail-position"})],z.prototype,"tailPosition",void 0);Et([c({type:Number,attribute:"tail-offset"})],z.prototype,"tailOffset",void 0);var L=globalThis&&globalThis.__classPrivateFieldGet||function(l,t,e,r){if(e==="a"&&!r)throw new TypeError("Private accessor was defined without a getter");if(typeof t=="function"?l!==t||!r:!t.has(l))throw new TypeError("Cannot read private member from an object whose class did not declare it");return e==="m"?r:e==="a"?r.call(l):r?r.value:t.get(l)},Z=globalThis&&globalThis.__classPrivateFieldSet||function(l,t,e,r,i){if(r==="m")throw new TypeError("Private method is not writable");if(r==="a"&&!i)throw new TypeError("Private accessor was defined without a setter");if(typeof t=="function"?l!==t||!i:!t.has(l))throw new TypeError("Cannot write private member to an object whose class did not declare it");return r==="a"?i.call(l,e):i?i.value=e:t.set(l,e),e},w,y;class de extends ae{constructor(t){super(t);if(w.set(this,null),y.set(this,[]),t.type!==jt.CHILD&&t.type!==jt.ELEMENT)throw new Error("The `wormhole` directive must be used in either the child or the element position.")}update(t,[e]){var r;(r=L(this,w,"f"))===null||r===void 0||r.call(this);const i="parentNode"in t?t.parentNode:t.element;if(!("tagName"in i)||i.tagName!=="SLOT")throw new Error("The `wormhole` directive must be used with <slot> element.");const o=()=>{L(this,y,"f").forEach(n=>n());const a=i.assignedElements();Z(this,y,a.map(e).filter(n=>!!n),"f")};return i.addEventListener("slotchange",o),Z(this,w,()=>{i.removeEventListener("slotchange",o)},"f"),this.render(e)}render(t){return ne}disconnected(){var t;(t=L(this,w,"f"))===null||t===void 0||t.call(this),Z(this,w,null,"f"),L(this,y,"f").forEach(e=>e()),Z(this,y,[],"f")}}w=new WeakMap,y=new WeakMap;const x=ie(de);var Mt=globalThis&&globalThis.__decorate||function(l,t,e,r){var i=arguments.length,o=i<3?t:r===null?r=Object.getOwnPropertyDescriptor(t,e):r,a;if(typeof Reflect=="object"&&typeof Reflect.decorate=="function")o=Reflect.decorate(l,t,e,r);else for(var n=l.length-1;n>=0;n--)(a=l[n])&&(o=(i<3?a(o):i>3?a(t,e,o):a(t,e))||o);return i>3&&o&&Object.defineProperty(t,e,o),o},St=globalThis&&globalThis.__classPrivateFieldSet||function(l,t,e,r,i){if(r==="m")throw new TypeError("Private method is not writable");if(r==="a"&&!i)throw new TypeError("Private accessor was defined without a setter");if(typeof t=="function"?l!==t||!i:!t.has(l))throw new TypeError("Cannot write private member to an object whose class did not declare it");return r==="a"?i.call(l,e):i?i.value=e:t.set(l,e),e},j=globalThis&&globalThis.__classPrivateFieldGet||function(l,t,e,r){if(e==="a"&&!r)throw new TypeError("Private accessor was defined without a getter");if(typeof t=="function"?l!==t||!r:!t.has(l))throw new TypeError("Cannot read private member from an object whose class did not declare it");return e==="m"?r:e==="a"?r.call(l):r?r.value:t.get(l)};function $(l){var t,e,r;class i extends l{constructor(){super(...arguments);this.disabled=!1,this.lightDOM=!1,t.set(this,!1),e.set(this,new MutationObserver(a=>{!a[0]||St(this,t,Rt(a[0].target),"f")})),r.set(this,a=>{!j(this,t,"f")||(a.preventDefault(),a.stopPropagation())})}renderLightDOMSlot(a){return v`<slot id="lightdom" class=${S(a)}>
-        ${x(n=>{if("getAttribute"in n)return St(this,t,Rt(n),"f"),n.addEventListener("click",j(this,r,"f")),j(this,e,"f").observe(n,{attributes:!0,attributeFilter:["disabled","aria-disabled"]}),()=>{n.removeEventListener("click",j(this,r,"f")),j(this,e,"f").disconnect()}})}
-      </slot>`}}return t=new WeakMap,e=new WeakMap,r=new WeakMap,Mt([c({type:Boolean,reflect:!0})],i.prototype,"disabled",void 0),Mt([c({type:Boolean,attribute:"lightdom"})],i.prototype,"lightDOM",void 0),i}function Rt(l){const t=l.getAttribute("aria-disabled");return t?t==="true":"disabled"in l?l.disabled:!1}var he=globalThis&&globalThis.__decorate||function(l,t,e,r){var i=arguments.length,o=i<3?t:r===null?r=Object.getOwnPropertyDescriptor(t,e):r,a;if(typeof Reflect=="object"&&typeof Reflect.decorate=="function")o=Reflect.decorate(l,t,e,r);else for(var n=l.length-1;n>=0;n--)(a=l[n])&&(o=(i<3?a(o):i>3?a(t,e,o):a(t,e))||o);return i>3&&o&&Object.defineProperty(t,e,o),o};class et extends $(s){constructor(){super(...arguments);this.variant="normal"}static get styles(){return[u,h`
+    `}}R.defaultTagName="turtle-balloon";Et([c({type:String,attribute:"tail-position"})],R.prototype,"tailPosition",void 0);Et([c({type:Number,attribute:"tail-offset"})],R.prototype,"tailOffset",void 0);var L=globalThis&&globalThis.__classPrivateFieldGet||function(l,t,e,r){if(e==="a"&&!r)throw new TypeError("Private accessor was defined without a getter");if(typeof t=="function"?l!==t||!r:!t.has(l))throw new TypeError("Cannot read private member from an object whose class did not declare it");return e==="m"?r:e==="a"?r.call(l):r?r.value:t.get(l)},Z=globalThis&&globalThis.__classPrivateFieldSet||function(l,t,e,r,i){if(r==="m")throw new TypeError("Private method is not writable");if(r==="a"&&!i)throw new TypeError("Private accessor was defined without a setter");if(typeof t=="function"?l!==t||!i:!t.has(l))throw new TypeError("Cannot write private member to an object whose class did not declare it");return r==="a"?i.call(l,e):i?i.value=e:t.set(l,e),e},w,y;class de extends ae{constructor(t){super(t);if(w.set(this,null),y.set(this,[]),t.type!==jt.CHILD&&t.type!==jt.ELEMENT)throw new Error("The `wormhole` directive must be used in either the child or the element position.")}update(t,[e]){var r;(r=L(this,w,"f"))===null||r===void 0||r.call(this);const i="parentNode"in t?t.parentNode:t.element;if(!("tagName"in i)||i.tagName!=="SLOT")throw new Error("The `wormhole` directive must be used with <slot> element.");const o=()=>{L(this,y,"f").forEach(n=>n());const a=i.assignedElements();Z(this,y,a.map(e).filter(n=>!!n),"f")};return i.addEventListener("slotchange",o),Z(this,w,()=>{i.removeEventListener("slotchange",o)},"f"),this.render(e)}render(t){return ne}disconnected(){var t;(t=L(this,w,"f"))===null||t===void 0||t.call(this),Z(this,w,null,"f"),L(this,y,"f").forEach(e=>e()),Z(this,y,[],"f")}}w=new WeakMap,y=new WeakMap;const x=ie(de);var zt=globalThis&&globalThis.__decorate||function(l,t,e,r){var i=arguments.length,o=i<3?t:r===null?r=Object.getOwnPropertyDescriptor(t,e):r,a;if(typeof Reflect=="object"&&typeof Reflect.decorate=="function")o=Reflect.decorate(l,t,e,r);else for(var n=l.length-1;n>=0;n--)(a=l[n])&&(o=(i<3?a(o):i>3?a(t,e,o):a(t,e))||o);return i>3&&o&&Object.defineProperty(t,e,o),o},Mt=globalThis&&globalThis.__classPrivateFieldSet||function(l,t,e,r,i){if(r==="m")throw new TypeError("Private method is not writable");if(r==="a"&&!i)throw new TypeError("Private accessor was defined without a setter");if(typeof t=="function"?l!==t||!i:!t.has(l))throw new TypeError("Cannot write private member to an object whose class did not declare it");return r==="a"?i.call(l,e):i?i.value=e:t.set(l,e),e},j=globalThis&&globalThis.__classPrivateFieldGet||function(l,t,e,r){if(e==="a"&&!r)throw new TypeError("Private accessor was defined without a getter");if(typeof t=="function"?l!==t||!r:!t.has(l))throw new TypeError("Cannot read private member from an object whose class did not declare it");return e==="m"?r:e==="a"?r.call(l):r?r.value:t.get(l)};function $(l){var t,e,r;class i extends l{constructor(){super(...arguments);this.disabled=!1,this.lightDOM=!1,t.set(this,!1),e.set(this,new MutationObserver(a=>{!a[0]||Mt(this,t,St(a[0].target),"f")})),r.set(this,a=>{!j(this,t,"f")||(a.preventDefault(),a.stopPropagation())})}renderLightDOMSlot(a){return v`<slot id="lightdom" class=${M(a)}>
+        ${x(n=>{if("getAttribute"in n)return Mt(this,t,St(n),"f"),n.addEventListener("click",j(this,r,"f")),j(this,e,"f").observe(n,{attributes:!0,attributeFilter:["disabled","aria-disabled"]}),()=>{n.removeEventListener("click",j(this,r,"f")),j(this,e,"f").disconnect()}})}
+      </slot>`}}return t=new WeakMap,e=new WeakMap,r=new WeakMap,zt([c({type:Boolean,reflect:!0})],i.prototype,"disabled",void 0),zt([c({type:Boolean,attribute:"lightdom"})],i.prototype,"lightDOM",void 0),i}function St(l){const t=l.getAttribute("aria-disabled");return t?t==="true":"disabled"in l?l.disabled:!1}var he=globalThis&&globalThis.__decorate||function(l,t,e,r){var i=arguments.length,o=i<3?t:r===null?r=Object.getOwnPropertyDescriptor(t,e):r,a;if(typeof Reflect=="object"&&typeof Reflect.decorate=="function")o=Reflect.decorate(l,t,e,r);else for(var n=l.length-1;n>=0;n--)(a=l[n])&&(o=(i<3?a(o):i>3?a(t,e,o):a(t,e))||o);return i>3&&o&&Object.defineProperty(t,e,o),o};class et extends $(s){constructor(){super(...arguments);this.variant="normal"}static get styles(){return[u,h`
         :host {
           --base-font-size: var(--turtle-ui--base-font-size, 1rem);
           --turtle-ui--button--border-color: var(--turtle-ui--color--border);
@@ -390,7 +390,7 @@ import{r as h,e as c,s,p as v,l as S,i as Pt,a as ie,d as ae,t as jt,b as ne,c a
           --turtle-button--top-left-radius: 0;
           --turtle-button--bottom-left-radius: 0;
         }
-      `]}render(){return v` <slot></slot> `}}rt.defaultTagName="turtle-button-group";ve([c({type:Boolean,reflect:!0})],rt.prototype,"evenly",void 0);var zt=globalThis&&globalThis.__classPrivateFieldGet||function(l,t,e,r){if(e==="a"&&!r)throw new TypeError("Private accessor was defined without a getter");if(typeof t=="function"?l!==t||!r:!t.has(l))throw new TypeError("Cannot read private member from an object whose class did not declare it");return e==="m"?r:e==="a"?r.call(l):r?r.value:t.get(l)},N;class _{constructor(t,e=""){this.assigned=!1,N.set(this,()=>{if(!this.host.shadowRoot)return;const r=this.slotName?`slot[name="${this.slotName}"]`:"slot:not([name])",i=this.host.shadowRoot.querySelector(r);this.assigned=!!i&&i.assignedNodes().length>0,this.host.requestUpdate()}),t.addController(this),this.host=t,this.slotName=e}hostConnected(){!this.host.shadowRoot||this.host.shadowRoot.addEventListener("slotchange",zt(this,N,"f"))}hostDisconnected(){var t;(t=this.host.shadowRoot)===null||t===void 0||t.removeEventListener("slotchange",zt(this,N,"f"))}}N=new WeakMap;var Lt=globalThis&&globalThis.__decorate||function(l,t,e,r){var i=arguments.length,o=i<3?t:r===null?r=Object.getOwnPropertyDescriptor(t,e):r,a;if(typeof Reflect=="object"&&typeof Reflect.decorate=="function")o=Reflect.decorate(l,t,e,r);else for(var n=l.length-1;n>=0;n--)(a=l[n])&&(o=(i<3?a(o):i>3?a(t,e,o):a(t,e))||o);return i>3&&o&&Object.defineProperty(t,e,o),o},Zt=globalThis&&globalThis.__classPrivateFieldGet||function(l,t,e,r){if(e==="a"&&!r)throw new TypeError("Private accessor was defined without a getter");if(typeof t=="function"?l!==t||!r:!t.has(l))throw new TypeError("Cannot read private member from an object whose class did not declare it");return e==="m"?r:e==="a"?r.call(l):r?r.value:t.get(l)},ot,lt;class B extends s{constructor(){super(...arguments);ot.set(this,new _(this,"action")),lt.set(this,new _(this,"image")),this.shadowed=!1,this.bordered=!1}static get styles(){return[u,h`
+      `]}render(){return v` <slot></slot> `}}rt.defaultTagName="turtle-button-group";ve([c({type:Boolean,reflect:!0})],rt.prototype,"evenly",void 0);var Rt=globalThis&&globalThis.__classPrivateFieldGet||function(l,t,e,r){if(e==="a"&&!r)throw new TypeError("Private accessor was defined without a getter");if(typeof t=="function"?l!==t||!r:!t.has(l))throw new TypeError("Cannot read private member from an object whose class did not declare it");return e==="m"?r:e==="a"?r.call(l):r?r.value:t.get(l)},N;class _{constructor(t,e=""){this.assigned=!1,N.set(this,()=>{if(!this.host.shadowRoot)return;const r=this.slotName?`slot[name="${this.slotName}"]`:"slot:not([name])",i=this.host.shadowRoot.querySelector(r);this.assigned=!!i&&i.assignedNodes().length>0,this.host.requestUpdate()}),t.addController(this),this.host=t,this.slotName=e}hostConnected(){!this.host.shadowRoot||this.host.shadowRoot.addEventListener("slotchange",Rt(this,N,"f"))}hostDisconnected(){var t;(t=this.host.shadowRoot)===null||t===void 0||t.removeEventListener("slotchange",Rt(this,N,"f"))}}N=new WeakMap;var Lt=globalThis&&globalThis.__decorate||function(l,t,e,r){var i=arguments.length,o=i<3?t:r===null?r=Object.getOwnPropertyDescriptor(t,e):r,a;if(typeof Reflect=="object"&&typeof Reflect.decorate=="function")o=Reflect.decorate(l,t,e,r);else for(var n=l.length-1;n>=0;n--)(a=l[n])&&(o=(i<3?a(o):i>3?a(t,e,o):a(t,e))||o);return i>3&&o&&Object.defineProperty(t,e,o),o},Zt=globalThis&&globalThis.__classPrivateFieldGet||function(l,t,e,r){if(e==="a"&&!r)throw new TypeError("Private accessor was defined without a getter");if(typeof t=="function"?l!==t||!r:!t.has(l))throw new TypeError("Cannot read private member from an object whose class did not declare it");return e==="m"?r:e==="a"?r.call(l):r?r.value:t.get(l)},ot,lt;class B extends s{constructor(){super(...arguments);ot.set(this,new _(this,"action")),lt.set(this,new _(this,"image")),this.shadowed=!1,this.bordered=!1}static get styles(){return[u,h`
         :host {
           --turtle-ui--card--radius: 8px;
 
@@ -1653,7 +1653,7 @@ import{r as h,e as c,s,p as v,l as S,i as Pt,a as ie,d as ae,t as jt,b as ne,c a
   <path fill-rule="evenodd" clip-rule="evenodd" d="m13.6095 5.60932-.9429-.94281-4.86188 4.86193-4.86193-4.86193-.94281.94281 5.80474 5.80478 5.80478-5.80478Z" fill="currentColor"/>
 </svg>
 
-`;var ye=globalThis&&globalThis.__decorate||function(l,t,e,r){var i=arguments.length,o=i<3?t:r===null?r=Object.getOwnPropertyDescriptor(t,e):r,a;if(typeof Reflect=="object"&&typeof Reflect.decorate=="function")o=Reflect.decorate(l,t,e,r);else for(var n=l.length-1;n>=0;n--)(a=l[n])&&(o=(i<3?a(o):i>3?a(t,e,o):a(t,e))||o);return i>3&&o&&Object.defineProperty(t,e,o),o};function xe(l){class t extends l{constructor(){super(...arguments);this.autofocus=!1}firstUpdated(r){super.firstUpdated(r),this.autofocus&&this.focus()}}return ye([c({type:Boolean})],t.prototype,"autofocus",void 0),t}var ct=globalThis&&globalThis.__decorate||function(l,t,e,r){var i=arguments.length,o=i<3?t:r===null?r=Object.getOwnPropertyDescriptor(t,e):r,a;if(typeof Reflect=="object"&&typeof Reflect.decorate=="function")o=Reflect.decorate(l,t,e,r);else for(var n=l.length-1;n>=0;n--)(a=l[n])&&(o=(i<3?a(o):i>3?a(t,e,o):a(t,e))||o);return i>3&&o&&Object.defineProperty(t,e,o),o},Ut=globalThis&&globalThis.__classPrivateFieldGet||function(l,t,e,r){if(e==="a"&&!r)throw new TypeError("Private accessor was defined without a getter");if(typeof t=="function"?l!==t||!r:!t.has(l))throw new TypeError("Cannot read private member from an object whose class did not declare it");return e==="m"?r:e==="a"?r.call(l):r?r.value:t.get(l)},dt,ht;class M extends xe(s){constructor(){super(...arguments);dt.set(this,new _(this,"action")),this.severity="info",ht.set(this,()=>{this.dispatchEvent(new CustomEvent("timerend"))})}static get styles(){return[u,h`
+`;var ye=globalThis&&globalThis.__decorate||function(l,t,e,r){var i=arguments.length,o=i<3?t:r===null?r=Object.getOwnPropertyDescriptor(t,e):r,a;if(typeof Reflect=="object"&&typeof Reflect.decorate=="function")o=Reflect.decorate(l,t,e,r);else for(var n=l.length-1;n>=0;n--)(a=l[n])&&(o=(i<3?a(o):i>3?a(t,e,o):a(t,e))||o);return i>3&&o&&Object.defineProperty(t,e,o),o};function xe(l){class t extends l{constructor(){super(...arguments);this.autofocus=!1}firstUpdated(r){super.firstUpdated(r),this.autofocus&&this.focus()}}return ye([c({type:Boolean})],t.prototype,"autofocus",void 0),t}var ct=globalThis&&globalThis.__decorate||function(l,t,e,r){var i=arguments.length,o=i<3?t:r===null?r=Object.getOwnPropertyDescriptor(t,e):r,a;if(typeof Reflect=="object"&&typeof Reflect.decorate=="function")o=Reflect.decorate(l,t,e,r);else for(var n=l.length-1;n>=0;n--)(a=l[n])&&(o=(i<3?a(o):i>3?a(t,e,o):a(t,e))||o);return i>3&&o&&Object.defineProperty(t,e,o),o},Ut=globalThis&&globalThis.__classPrivateFieldGet||function(l,t,e,r){if(e==="a"&&!r)throw new TypeError("Private accessor was defined without a getter");if(typeof t=="function"?l!==t||!r:!t.has(l))throw new TypeError("Cannot read private member from an object whose class did not declare it");return e==="m"?r:e==="a"?r.call(l):r?r.value:t.get(l)},dt,ht;class z extends xe(s){constructor(){super(...arguments);dt.set(this,new _(this,"action")),this.severity="info",ht.set(this,()=>{this.dispatchEvent(new CustomEvent("timerend"))})}static get styles(){return[u,h`
         * {
           box-sizing: border-box;
         }
@@ -1774,8 +1774,8 @@ import{r as h,e as c,s,p as v,l as S,i as Pt,a as ie,d as ae,t as jt,b as ne,c a
           viewBox="0 0 100 100"
           xmlns="http://www.w3.org/2000/svg"
           aria-hidden=${typeof this.lifetimeLabel!="string"?"true":"false"}
-          role=${S(typeof this.lifetimeLabel=="string"?"img":void 0)}
-          aria-label=${S(this.lifetimeLabel)}
+          role=${M(typeof this.lifetimeLabel=="string"?"img":void 0)}
+          aria-label=${M(this.lifetimeLabel)}
           @animationend=${Ut(this,ht,"f")}
         >
           <circle cx="50" cy="50" r="25" pathLength="10" />
@@ -1784,7 +1784,7 @@ import{r as h,e as c,s,p as v,l as S,i as Pt,a as ie,d as ae,t as jt,b as ne,c a
       <div class="actions" ?data-assigned=${Ut(this,dt,"f").assigned}>
         <slot name="action"></slot>
       </div>
-    `}}dt=new WeakMap,ht=new WeakMap;M.defaultTagName="turtle-snackbar";ct([c({type:String,reflect:!0})],M.prototype,"severity",void 0);ct([c({type:Number})],M.prototype,"lifetime",void 0);ct([c({type:String,attribute:"lifetime-label"})],M.prototype,"lifetimeLabel",void 0);class Xt extends $(s){static get styles(){return[u,h`
+    `}}dt=new WeakMap,ht=new WeakMap;z.defaultTagName="turtle-snackbar";ct([c({type:String,reflect:!0})],z.prototype,"severity",void 0);ct([c({type:Number})],z.prototype,"lifetime",void 0);ct([c({type:String,attribute:"lifetime-label"})],z.prototype,"lifetimeLabel",void 0);class Xt extends $(s){static get styles(){return[u,h`
         :host {
           box-sizing: border-box;
         }
@@ -2086,7 +2086,7 @@ import{r as h,e as c,s,p as v,l as S,i as Pt,a as ie,d as ae,t as jt,b as ne,c a
       <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2Z" fill="currentColor"/>
       </svg>
-    `}}re.defaultTagName="turtle-plus-icon";var Me=globalThis&&globalThis.__decorate||function(l,t,e,r){var i=arguments.length,o=i<3?t:r===null?r=Object.getOwnPropertyDescriptor(t,e):r,a;if(typeof Reflect=="object"&&typeof Reflect.decorate=="function")o=Reflect.decorate(l,t,e,r);else for(var n=l.length-1;n>=0;n--)(a=l[n])&&(o=(i<3?a(o):i>3?a(t,e,o):a(t,e))||o);return i>3&&o&&Object.defineProperty(t,e,o),o};class _t extends s{constructor(){super(...arguments);this.outlined=!1}static get styles(){return[u,f]}render(){return this.outlined?d`
+    `}}re.defaultTagName="turtle-plus-icon";var ze=globalThis&&globalThis.__decorate||function(l,t,e,r){var i=arguments.length,o=i<3?t:r===null?r=Object.getOwnPropertyDescriptor(t,e):r,a;if(typeof Reflect=="object"&&typeof Reflect.decorate=="function")o=Reflect.decorate(l,t,e,r);else for(var n=l.length-1;n>=0;n--)(a=l[n])&&(o=(i<3?a(o):i>3?a(t,e,o):a(t,e))||o);return i>3&&o&&Object.defineProperty(t,e,o),o};class _t extends s{constructor(){super(...arguments);this.outlined=!1}static get styles(){return[u,f]}render(){return this.outlined?d`
         <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M11 18h2v-2h-2v2Zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2Zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4Z" fill="currentColor"/>
         </svg>
@@ -2094,11 +2094,11 @@ import{r as h,e as c,s,p as v,l as S,i as Pt,a as ie,d as ae,t as jt,b as ne,c a
       <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12Zm10-6c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 .88-.58 1.324-1.23 1.822C11.942 12.457 11 13.179 11 15h2c0-1.095.711-1.717 1.44-2.354C15.21 11.973 16 11.283 16 10c0-2.21-1.79-4-4-4Zm-1 10v2h2v-2h-2Z" fill="currentColor"/>
       </svg>
-    `}}_t.defaultTagName="turtle-question-icon";Me([c({type:Boolean})],_t.prototype,"outlined",void 0);class oe extends s{static get styles(){return[u,f]}render(){return d`
+    `}}_t.defaultTagName="turtle-question-icon";ze([c({type:Boolean})],_t.prototype,"outlined",void 0);class oe extends s{static get styles(){return[u,f]}render(){return d`
       <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M4 14.414.793 11.207l1.414-1.414.89.89a9.075 9.075 0 0 1 5.459-6.998c3.327-1.378 7.261-.596 9.808 1.951L16.95 7.05a7.003 7.003 0 0 0-11.767 3.353l.61-.61 1.414 1.414L4 14.414ZM20 9.586l3.207 3.207-1.414 1.414-.89-.89a9.075 9.075 0 0 1-5.459 6.998c-3.327 1.378-7.261.596-9.808-1.951L7.05 16.95a7.003 7.003 0 0 0 11.767-3.352l-.61.609-1.414-1.414L20 9.586Z" fill="currentColor"/>
       </svg>
-    `}}oe.defaultTagName="turtle-reload-icon";const Se=[vt,ft,bt,Kt,Qt,pt,gt,mt,wt,Jt,te,yt,xt,ee,re,_t,oe],Re=[R,z,et,rt,B,Nt,F,it,at,Dt,Ft,Vt,Wt,Gt,At,P,M,Xt,m,J,...Se];function ze(l){for(const t of l){const[e,r]="defaultTagName"in t?[t.defaultTagName,t]:t;customElements.get(e)||customElements.define(e,r)}}var Le=Object.defineProperty,Ze=Object.getOwnPropertyDescriptor,Ne=(l,t,e,r)=>{for(var i=r>1?void 0:r?Ze(t,e):t,o=l.length-1,a;o>=0;o--)(a=l[o])&&(i=(r?a(t,e,i):a(i))||i);return r&&i&&Le(t,e,i),i};class Tt extends s{constructor(){super(...arguments);this.topHref="./"}static get styles(){return[u,h`
+    `}}oe.defaultTagName="turtle-reload-icon";const Me=[vt,ft,bt,Kt,Qt,pt,gt,mt,wt,Jt,te,yt,xt,ee,re,_t,oe],Se=[S,R,et,rt,B,Nt,F,it,at,Dt,Ft,Vt,Wt,Gt,At,P,z,Xt,m,J,...Me];function Re(l){for(const t of l){const[e,r]="defaultTagName"in t?[t.defaultTagName,t]:t;customElements.get(e)||customElements.define(e,r)}}var Le=Object.defineProperty,Ze=Object.getOwnPropertyDescriptor,Ne=(l,t,e,r)=>{for(var i=r>1?void 0:r?Ze(t,e):t,o=l.length-1,a;o>=0;o--)(a=l[o])&&(i=(r?a(t,e,i):a(i))||i);return r&&i&&Le(t,e,i),i};class Tt extends s{constructor(){super(...arguments);this.topHref="./"}static get styles(){return[u,h`
         :host {
           --site-header--color: hsl(
             var(--turtle-ui--color--tone--mono),
@@ -2193,6 +2193,9 @@ import{r as h,e as c,s,p as v,l as S,i as Pt,a as ie,d as ae,t as jt,b as ne,c a
         :host {
           --header-height: calc(5.6 * var(--turtle-ui--unit));
           --gap: 0px;
+          --z-topmost: 100;
+          --z-top: 50;
+          --z-default: 0;
 
           display: grid;
           grid-template-columns: 1fr;
@@ -2209,10 +2212,14 @@ import{r as h,e as c,s,p as v,l as S,i as Pt,a as ie,d as ae,t as jt,b as ne,c a
           grid-area: header;
           position: sticky;
           top: 0;
+
+          z-index: var(--z-top);
         }
 
         .body::slotted(*) {
           grid-area: body;
+
+          z-index: var(--z-default);
         }
 
         .sidebar::slotted(*) {
@@ -2232,11 +2239,18 @@ import{r as h,e as c,s,p as v,l as S,i as Pt,a as ie,d as ae,t as jt,b as ne,c a
             var(--turtle-ui--color--level--0)
           );
           overflow-y: auto;
+          z-index: var(--z-topmost);
 
-          transform: translateX(var(--x-offset));
+          transform: translate3D(var(--x-offset), 0, 0);
           transition: transform 0.1s ease-out;
         }
-        :host([menu-opened]) .sidebar::slotted(*) {
+        /*
+         * Safari, a.k.a. the new IE, seems to implement the :host selector incorrectly
+         * so when we do ":host([menu-opened]) .sidebar::slotted(*)" the assigned element
+         * does not recieve the styles defined in the rule, while the devtool shows the rule
+         * is applied to the element.
+         */
+        .sidebar.open::slotted(*) {
           --x-offset: 100%;
 
           transition: transform 0.2s ease;
@@ -2246,6 +2260,8 @@ import{r as h,e as c,s,p as v,l as S,i as Pt,a as ie,d as ae,t as jt,b as ne,c a
           position: fixed;
           left: calc(-0.6 * var(--turtle-ui--unit));
           bottom: 8px;
+
+          z-index: var(--z-topmost);
         }
 
         .angle {
@@ -2267,6 +2283,10 @@ import{r as h,e as c,s,p as v,l as S,i as Pt,a as ie,d as ae,t as jt,b as ne,c a
               "blank body";
           }
 
+          .header::slotted(*) {
+            z-index: var(--z-topmost);
+          }
+
           .sidebar::slotted(*) {
             position: fixed;
             top: calc(var(--header-height) + var(--gap));
@@ -2276,6 +2296,7 @@ import{r as h,e as c,s,p as v,l as S,i as Pt,a as ie,d as ae,t as jt,b as ne,c a
             width: var(--sidebar-width);
 
             border-radius: 4px;
+            z-index: var(--z-top);
 
             transform: none;
           }
@@ -2287,7 +2308,10 @@ import{r as h,e as c,s,p as v,l as S,i as Pt,a as ie,d as ae,t as jt,b as ne,c a
       `]}connectedCallback(){super.connectedCallback(),window.addEventListener("hashchange",kt(this,tt))}disconnectedCallback(){super.disconnectedCallback(),window.removeEventListener("hashchange",kt(this,tt))}render(){return v`
       <slot class="header" name="header"></slot>
       <slot class="body"></slot>
-      <slot class="sidebar" name="sidebar"></slot>
+      <slot
+        class="sidebar ${this.menuOpened?"open":"closed"}"
+        name="sidebar"
+      ></slot>
 
       <turtle-button
         class="menu-toggle"
@@ -2300,4 +2324,4 @@ import{r as h,e as c,s,p as v,l as S,i as Pt,a as ie,d as ae,t as jt,b as ne,c a
           direction=${this.menuOpened?"left":"right"}
         ></turtle-angle-icon>
       </turtle-button>
-    `}}Ot=new WeakMap;tt=new WeakMap;Ct.defaultTagName="site-layout";Fe([c({type:Boolean,attribute:"menu-opened",reflect:!0})],Ct.prototype,"menuOpened",2);ze([...Re,Tt,Ct]);ue.exports.highlightAll(!0);
+    `}}Ot=new WeakMap;tt=new WeakMap;Ct.defaultTagName="site-layout";Fe([c({type:Boolean,attribute:"menu-opened",reflect:!0})],Ct.prototype,"menuOpened",2);Re([...Se,Tt,Ct]);ue.exports.highlightAll(!0);
