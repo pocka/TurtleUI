@@ -11,7 +11,7 @@
 :root {
   font-size: 62.5%;
   font-family: "Ubuntu", sans-serif;
-  padding-top: 65px;
+  scroll-padding-top: 7rem;
 }
 
 body {
@@ -24,17 +24,12 @@ body {
   bottom: 0;
   left: 0;
 
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .design-system {
   --turtle-ui--unit: 1rem;
-
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: stretch;
-  align-items: stretch;
 }
 
 .link {
@@ -94,6 +89,32 @@ main h3 {
   margin-block-start: calc(4 * var(--turtle-ui--unit));
 }
 
+@keyframes highlight {
+  0%,
+  20%,
+  70% {
+    box-shadow: 0 0 0 2px
+      hsl(
+        var(--turtle-ui--color--tone--primary),
+        var(--turtle-ui--color--level--4)
+      );
+  }
+
+  10%,
+  100% {
+    box-shadow: 0 0 0 2px
+      hsl(
+        var(--turtle-ui--color--tone--mono),
+        var(--turtle-ui--color--level--10)
+      );
+  }
+}
+main [id]:target {
+  border-radius: 2px;
+
+  animation: 4s 0s ease 1 both highlight;
+}
+
 main pre {
   margin: calc(0.8 * var(--turtle-ui--unit)) 0;
   padding: calc(0.8 * var(--turtle-ui--unit)) 16px;
@@ -145,20 +166,9 @@ main pre {
 }
 
 .sidebar {
-  margin: calc(0.8 * var(--turtle-ui--unit));
   padding: calc(0.8 * var(--turtle-ui--unit)) 8px;
   font-size: calc(1.6 * var(--turtle-ui--unit));
   line-height: 1.71;
-
-  background-color: hsl(
-    var(--turtle-ui--color--tone--mono),
-    var(--turtle-ui--color--level--9)
-  );
-  border-radius: 4px;
-  color: hsl(
-    var(--turtle-ui--color--tone--mono),
-    var(--turtle-ui--color--level--0)
-  );
 }
 .sidebar ul {
   padding: 0;

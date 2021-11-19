@@ -94,7 +94,7 @@ export class TurtleButton extends Pressable(LitElement) {
         }
 
         .button,
-        ::slotted(*) {
+        :host([lightdom]) ::slotted(*) {
           appearance: none;
           display: block;
           width: 100%;
@@ -130,23 +130,23 @@ export class TurtleButton extends Pressable(LitElement) {
           text-decoration: inherit;
         }
         .button:hover,
-        ::slotted(:hover) {
+        :host([lightdom]) ::slotted(:hover) {
           background-color: var(--turtle-ui--button--bg--hover);
         }
         .button:active,
-        ::slotted(:active) {
+        :host([lightdom]) ::slotted(:active) {
           background-color: var(--turtle-ui--button--bg--active);
         }
         .button:focus,
-        ::slotted(:focus) {
+        :host([lightdom]) ::slotted(:focus) {
           box-shadow: 0 0 0 4px var(--turtle-ui--button--highlight-shadow-color)
             inset;
           border-color: var(--turtle-ui--button--highlight-color);
           outline: none;
         }
         .button:disabled,
-        ::slotted(:disabled),
-        ::slotted([aria-disabled="true"]) {
+        :host([lightdom]) ::slotted(:disabled),
+        :host([lightdom]) ::slotted([aria-disabled="true"]) {
           box-shadow: none;
           background-color: hsl(
             var(--turtle-ui--color--tone--mono),

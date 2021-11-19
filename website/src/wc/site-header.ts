@@ -84,6 +84,12 @@ export class SiteHeader extends LitElement {
               0.32
             );
         }
+
+        @media (max-width: 450px) {
+          .nav-list {
+            display: none;
+          }
+        }
       `,
     ];
   }
