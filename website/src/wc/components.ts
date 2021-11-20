@@ -9,10 +9,12 @@ import {
 import { SiteHeader } from "./site-header";
 import { SiteLayout } from "./site-layout";
 import { SiteSandbox } from "./site-sandbox";
+import { SiteSection } from "./site-section";
 
 registerTurtleUIComponents([
   ...allComponents,
   SiteHeader,
   SiteLayout,
   SiteSandbox,
+  SiteSection,
 ]);

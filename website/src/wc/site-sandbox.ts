@@ -57,6 +57,7 @@ export class SiteSandbox extends LitElement {
           padding: 8px 16px;
           border: none;
           resize: vertical;
+          font-size: calc(1.4 * var(--turtle-ui--unit));
 
           background-color: hsl(
             var(--turtle-ui--color--tone--mono),
@@ -78,7 +79,7 @@ export class SiteSandbox extends LitElement {
             );
             color: hsl(
               var(--turtle-ui--color--tone--mono),
-              var(--turtle-ui--color--level--0)
+              var(--turtle-ui--color--level--2)
             );
           }
         }
