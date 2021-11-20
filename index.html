@@ -7,7 +7,7 @@
     
     
     
-    <script type="module" crossorigin src="/TurtleUI/assets/index.e9028018.js"></script>
+    <script type="module" crossorigin src="/TurtleUI/assets/index.0e4f736c.js"></script>
     <link rel="modulepreload" href="/TurtleUI/assets/vendor.3c79d43d.js">
     <link rel="stylesheet" href="/TurtleUI/assets/index.37f23550.css">
   </head>
@@ -65,202 +65,260 @@
         </aside>
 
         <main>
-          <h1>
-            <img
-              class="brand-hero"
-              src="/TurtleUI/assets/hero.a07aa0ed.png"
-              width="1920"
-              height="960"
-              alt="Turtle UI"
-            />
-          </h1>
-          <div>
-            <a href="https://www.npmjs.com/package/@turtleui/webcomponents"
-              ><img
-                src="https://img.shields.io/npm/v/@turtleui/webcomponents"
-                alt="npm version"
-            /></a>
-            <a href="https://github.com/pocka/TurtleUI/blob/master/LICENSE"
-              ><img
-                src="https://img.shields.io/github/license/pocka/TurtleUI"
-                alt="license"
-            /></a>
-          </div>
-          <p>
-            Turtle UI for Web Components is CustomElements implementation of
-            <a
-              class="link"
-              href="https://www.figma.com/community/file/990997715540889664"
-              target="_blank"
-              rel="noopener"
-              >Turtle UI</a
-            >, which aims to make prototyping easier.
-          </p>
+          <site-section>
+            <h1>
+              <img
+                class="brand-hero"
+                src="/TurtleUI/assets/hero.a07aa0ed.png"
+                width="1920"
+                height="960"
+                alt="Turtle UI"
+              />
+            </h1>
+            <div>
+              <a href="https://www.npmjs.com/package/@turtleui/webcomponents"
+                ><img
+                  src="https://img.shields.io/npm/v/@turtleui/webcomponents"
+                  alt="npm version"
+              /></a>
+              <a href="https://github.com/pocka/TurtleUI/blob/master/LICENSE"
+                ><img
+                  src="https://img.shields.io/github/license/pocka/TurtleUI"
+                  alt="license"
+              /></a>
+            </div>
+            <p>
+              Turtle UI for Web Components is CustomElements implementation of
+              <a
+                class="link"
+                href="https://www.figma.com/community/file/990997715540889664"
+                target="_blank"
+                rel="noopener"
+                >Turtle UI</a
+              >, which aims to make prototyping easier.
+            </p>
+            <site-sandbox class="demo">
+              <turtle-button-group>
+                <turtle-button variant="primary">Button</turtle-button>
+                <turtle-button lightdom>
+                  <a href="#installation">Installation</a>
+                </turtle-button>
+              </turtle-button-group>
+            </site-sandbox>
+          </site-section>
 
           <h2 id="usage">Usage</h2>
 
-          <h3 id="installation">Installation</h3>
-          <p>
-            Install <code>@turtleui/webcomponents</code> via JavaScript package
-            manager (e.g. npm, Yarn, pnpm).
-          </p>
-          <pre
-            class="code"
-          ><code class="language-shell">$ npm i @turtleui/webcomponents</code></pre>
-          <turtle-card bordered aria-describedby="typescript-definition">
-            <span id="typescript-definition" slot="title">
-              TypeScript definition
-            </span>
+          <site-section>
+            <h3 id="installation">Installation</h3>
+            <p>
+              Install <code>@turtleui/webcomponents</code> via JavaScript
+              package manager (e.g. npm, Yarn, pnpm).
+            </p>
+            <pre
+              class="code"
+            ><code class="language-shell">$ npm i @turtleui/webcomponents</code></pre>
+            <turtle-card bordered aria-describedby="typescript-definition">
+              <span id="typescript-definition" slot="title">
+                TypeScript definition
+              </span>
 
-            This package provides first-party TypeScript definition files
-            (<code>*.d.ts</code>). No need to install additional packages.
-          </turtle-card>
+              This package provides first-party TypeScript definition files
+              (<code>*.d.ts</code>). No need to install additional packages.
+            </turtle-card>
 
-          <h3 id="registering_components">Registering components</h3>
-          <p>
-            You need to register each CustomElement before using. We provide a
-            convenient way for that.
-          </p>
-          <pre
-            class="code"
-          ><code class="language-js">import { TurtleButton, registerTurtleUIComponents } from "@turtleui/webcomponents";
+            <h3 id="registering_components">Registering components</h3>
+            <p>
+              You need to register each CustomElement before using. We provide a
+              convenient way for that.
+            </p>
+            <pre
+              class="code"
+            ><code class="language-js">import { TurtleButton, registerTurtleUIComponents } from "@turtleui/webcomponents";
 
 // Now you can use &lt;turtle-button&gt;
 registerTurtleUIComponents([TurtleButton]);</code></pre>
-          <p>
-            Also, you can import allComponents and register all Turtle UI Web
-            Components. Please use it with caution as it would increase bundle
-            size if you use only part of our components.
-          </p>
-          <pre
-            class="code"
-          ><code class="language-js">import { allComponents, registerTurtleUIComponents } from "@turtleui/webcomponents";
+            <p>
+              Also, you can import allComponents and register all Turtle UI Web
+              Components. Please use it with caution as it would increase bundle
+              size if you use only part of our components.
+            </p>
+            <pre
+              class="code"
+            ><code class="language-js">import { allComponents, registerTurtleUIComponents } from "@turtleui/webcomponents";
 
 // allComponents is an array contains every CustomElement we provide.
 // [TurtleButton, TurtleCard, TurtleCardAction, ...]
 registerTurtleUIComponents(allComponents)</code></pre>
+          </site-section>
 
-          <h3 id="using_components">Using components</h3>
-          <p>
-            Use them just like native HTML elements, such as
-            <code>&lt;p&gt;</code>. Please make sure to close the tag, even if
-            there is no children node.
-          </p>
-          <pre class="code"><code class="language-html">&lt;body&gt;
+          <site-section>
+            <h3 id="using_components">Using components</h3>
+            <p>
+              Use them just like native HTML elements, such as
+              <code>&lt;p&gt;</code>. Please make sure to close the tag, even if
+              there is no children node.
+            </p>
+            <pre class="code"><code class="language-html">&lt;body&gt;
   &lt;turtle-design-system&gt;
     &lt;turtle-button variant="primary"&gt;Button&lt;/turtle-button&gt;
   &lt;/turtle-design-system&gt;
 &lt;body&gt;</code></pre>
-          <turtle-card bordered aria-describedby="note_design_system_component">
-            <span id="note_design_system_component" slot="title"
-              >Use components inside
-              <code>&lt;turtle-design-system&gt;</code></span
+            <turtle-card
+              bordered
+              aria-describedby="note_design_system_component"
             >
+              <span id="note_design_system_component" slot="title"
+                >Use components inside
+                <code>&lt;turtle-design-system&gt;</code></span
+              >
 
-            In order to use design tokens, every
-            <code>&lt;turtle-*&gt;</code> components MUST be descendants of
-            &lt;turtle-design-system&gt;.
-          </turtle-card>
+              In order to use design tokens, every
+              <code>&lt;turtle-*&gt;</code> components MUST be descendants of
+              &lt;turtle-design-system&gt;.
+            </turtle-card>
+          </site-section>
 
           <h2 id="browser_support">Browser support</h2>
-          <p>
-            This package supports browsers that implement Web Components v1 spec
-            and basic ES2019 features. If you would like to support browsers not
-            compatible with ES2019 syntax, please transpile this package along
-            with your application code.
-          </p>
+          <site-section>
+            <p>
+              This package supports browsers that implement Web Components v1
+              spec and basic ES2019 features. If you would like to support
+              browsers not compatible with ES2019 syntax, please transpile this
+              package along with your application code.
+            </p>
+          </site-section>
 
           <h2 id="styles">Styles</h2>
-          <p>
-            You can tweak styles by providing CSS custom properties to design
-            system.
-          </p>
+          <site-section>
+            <p>
+              You can tweak styles by providing CSS custom properties to design
+              system.
+            </p>
+          </site-section>
 
-          <h3 id="responsive_font_size">Responsive font size</h3>
-          <p>
-            Sine we respect browser font size set by a user, our components
-            heavily use
-            <code>--turtle-ui--unit</code> CSS custom property. Every
-            size/length that scales based on browser font size setting uses the
-            property and assumes the value of the property would be
-            <code>10px</code> with default browser font size setting. If you're
-            using
-            <a
-              class="link"
-              href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size#rems"
-              target="_blank"
-              rel="noopener"
-              >the <code>html { font-size: 62.5%; }</code> technique</a
-            >, set <code>--turtle-ui--unit: 1rem;</code> to the
-            <code>&lt;turtle-design-system&gt;</code>.
-          </p>
-          <pre class="code"><code class="language-css">turtle-design-system {
+          <site-section>
+            <h3 id="responsive_font_size">Responsive font size</h3>
+            <div>
+              <p>
+                Sine we respect browser font size set by a user, our components
+                heavily use
+                <code>--turtle-ui--unit</code> CSS custom property. Every
+                size/length that scales based on browser font size setting uses
+                the property and assumes the value of the property would be
+                <code>10px</code> with default browser font size setting. If
+                you're using
+                <a
+                  class="link"
+                  href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size#rems"
+                  target="_blank"
+                  rel="noopener"
+                  >the <code>html { font-size: 62.5%; }</code> technique</a
+                >, set <code>--turtle-ui--unit: 1rem;</code> to the
+                <code>&lt;turtle-design-system&gt;</code>.
+              </p>
+              <pre
+                class="code"
+              ><code class="language-css">turtle-design-system {
   --turtle-ui--unit: 1rem; /* where 1rem = 10px */
 }</code></pre>
-          <p>
-            Otherwise, set a <code>rem</code> value that equals to
-            <code>10px</code>.
-          </p>
-          <pre class="code"><code class="language-css">turtle-design-system {
+              <p>
+                Otherwise, set a <code>rem</code> value that equals to
+                <code>10px</code>.
+              </p>
+              <pre
+                class="code"
+              ><code class="language-css">turtle-design-system {
   --turtle-ui--unit: 0.625rem; /* when root font-size is 16px (default value in many environment), this would equal to 10px */
 }</code></pre>
-          <p>
-            If you want to disable the responsive font size feature for some
-            reason, specify <code>10px</code> directly.
-          </p>
-          <pre class="code"><code class="language-css">turtle-design-system {
+              <p>
+                If you want to disable the responsive font size feature for some
+                reason, specify <code>10px</code> directly.
+              </p>
+              <pre
+                class="code"
+              ><code class="language-css">turtle-design-system {
   --turtle-ui--unit: 10px;
 }</code></pre>
+            </div>
 
-          <h3 id="font_family">Font family</h3>
-          <p>
-            Turtle UI uses
-            <a
-              class="link"
-              href="https://design.ubuntu.com/font/"
-              target="_blank"
-              rel="noopener"
-              >Ubuntu Font</a
-            >
-            for each design. Please include the font in your page and make it
-            available via <code>font-family: "Ubuntu";</code>. The easiest way
-            to include the family is to use
-            <a
-              class="link"
-              href="https://www.npmjs.com/package/@fontsource/ubuntu"
-              target="_blank"
-              rel="noopener"
-              ><code>@fontsource/ubuntu</code> package</a
-            >
-            when you're using a bundler, or to import via
-            <a
-              class="link"
-              href="https://fonts.google.com/specimen/Ubuntu"
-              target="_blank"
-              rel="noopener"
-              >Google Font</a
-            >
-            when not.
-          </p>
-          <p>
-            If you want to use different font family with Turtle UI or register
-            the Ubuntu Font in different name, specify the
-            <code>font-family</code> for
-            <code>&lt;turtle-design-system&gt;</code>.
-          </p>
-          <pre class="code"><code class="language-css">turtle-design-system {
+            <site-sandbox class="demo">
+              <turtle-design-system style="--turtle-ui--unit: 10px">
+                <turtle-avatar bordered></turtle-avatar>
+              </turtle-design-system>
+
+              <turtle-design-system style="--turtle-ui--unit: 20px">
+                <turtle-avatar bordered></turtle-avatar>
+              </turtle-design-system>
+            </site-sandbox>
+          </site-section>
+
+          <site-section>
+            <h3 id="font_family">Font family</h3>
+            <div>
+              <p>
+                Turtle UI uses
+                <a
+                  class="link"
+                  href="https://design.ubuntu.com/font/"
+                  target="_blank"
+                  rel="noopener"
+                  >Ubuntu Font</a
+                >
+                for each design. Please include the font in your page and make
+                it available via <code>font-family: "Ubuntu";</code>. The
+                easiest way to include the family is to use
+                <a
+                  class="link"
+                  href="https://www.npmjs.com/package/@fontsource/ubuntu"
+                  target="_blank"
+                  rel="noopener"
+                  ><code>@fontsource/ubuntu</code> package</a
+                >
+                when you're using a bundler, or to import via
+                <a
+                  class="link"
+                  href="https://fonts.google.com/specimen/Ubuntu"
+                  target="_blank"
+                  rel="noopener"
+                  >Google Font</a
+                >
+                when not.
+              </p>
+              <p>
+                If you want to use different font family with Turtle UI or
+                register the Ubuntu Font in different name, specify the
+                <code>font-family</code> for
+                <code>&lt;turtle-design-system&gt;</code>.
+              </p>
+              <pre
+                class="code"
+              ><code class="language-css">turtle-design-system {
   font-family: "Your preferred font family", sans-serif;
 }</code></pre>
+            </div>
 
-          <h3 id="changing_color_theme">Changing color theme</h3>
-          <p>
-            We define <b>tone</b>s and <b>level</b>s as CSS custom properties
-            and mix them to create the final colors. A <i>tone</i> here is a
-            combination of hue and saturation, while <i>level</i> is the level
-            in HSL itself. Thanks to this architecture, you can tweak the whole
-            color theme by just changing some tones.
-          </p>
-          <pre class="code"><code class="language-css">turtle-design-system {
+            <site-sandbox class="demo">
+              <turtle-design-system style="font-family: serif">
+                <turtle-button variant="primary">Button</turtle-button>
+              </turtle-design-system>
+            </site-sandbox>
+          </site-section>
+
+          <site-section>
+            <h3 id="changing_color_theme">Changing color theme</h3>
+            <div>
+              <p>
+                We define <b>tone</b>s and <b>level</b>s as CSS custom
+                properties and mix them to create the final colors. A
+                <i>tone</i> here is a combination of hue and saturation, while
+                <i>level</i> is the level in HSL itself. Thanks to this
+                architecture, you can tweak the whole color theme by just
+                changing some tones.
+              </p>
+              <pre
+                class="code"
+              ><code class="language-css">turtle-design-system {
   /* default values */
   --turtle-ui--color--tone--mono: 0, 0%;
   --turtle-ui--color--tone--safe: 123, 46%;
@@ -268,19 +326,67 @@ registerTurtleUIComponents(allComponents)</code></pre>
   --turtle-ui--color--tone--danger: 14, 100%;
   --turtle-ui--color--tone--primary: 204, 100%;
 }</code></pre>
+            </div>
+
+            <site-sandbox class="demo">
+              <!-- default primary tone -->
+              <turtle-design-system style="margin-bottom: 8px">
+                <turtle-button variant="primary">Button</turtle-button>
+                <turtle-toggle-switch>
+                  <input type="checkbox" checked aria-label="Demo" />
+                </turtle-toggle-switch>
+              </turtle-design-system>
+              <!-- custom primary tone -->
+              <turtle-design-system
+                style="--turtle-ui--color--tone--primary: 150, 60%"
+              >
+                <turtle-button variant="primary">Button</turtle-button>
+                <turtle-toggle-switch>
+                  <input type="checkbox" checked aria-label="Demo" />
+                </turtle-toggle-switch>
+              </turtle-design-system>
+            </site-sandbox>
+          </site-section>
 
           <h2 id="components">Components</h2>
           <p>Documentation work in progress.</p>
 
-          <h3 id="turtle-avatar"><code>turtle-avatar</code></h3>
-          <site-sandbox>
-            <turtle-avatar bordered></turtle-avatar>
-          </site-sandbox>
-          <site-sandbox>
-            <turtle-avatar>
-              <img src="/TurtleUI/avatar-sample.jpg" alt="sample avatar image" />
-            </turtle-avatar>
-          </site-sandbox>
+          <site-section>
+            <h3 id="turtle-avatar"><code>turtle-avatar</code></h3>
+            <div>
+              <p>
+                Display an avatar image. Fallbacks to placeholder image if the
+                default slot is empty.
+              </p>
+              <h4>Attributes</h4>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Attribute</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>bordered</code></td>
+                    <td>Boolean. Whether to show borders.</td>
+                  </tr>
+                  <tr>
+                    <td><code>default-alt</code></td>
+                    <td>String. Alternative text for placeholder image.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <site-sandbox class="demo">
+              <turtle-avatar bordered></turtle-avatar>
+            </site-sandbox>
+            <site-sandbox class="demo">
+              <turtle-avatar>
+                <img src="/TurtleUI/avatar-sample.jpg" alt="sample avatar image" />
+              </turtle-avatar>
+            </site-sandbox>
+          </site-section>
 
           <h2 id="api">API</h2>
           <p>Documentation work in progress.</p>
