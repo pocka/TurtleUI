@@ -18,6 +18,7 @@ declare global {
  * NOTE: Due to browsers fire neither `blur` nor `change/input` event on unchecked radio (probably the spec defined), you can't place `<input type="radio">`.
  *
  * @element turtle-toggle-switch
+ * @slot Slot for an `<input type="checkbox" />`.
  */
 export class TurtleToggleSwitch extends LitElement {
   static defaultTagName = "turtle-toggle-switch" as const;
@@ -45,6 +46,7 @@ export class TurtleToggleSwitch extends LitElement {
               var(--turtle-ui--color--tone--mono),
               var(--turtle-ui--color--level--7)
             );
+          box-sizing: border-box;
 
           background: hsl(
             var(--turtle-ui--color--tone--mono),

@@ -92,6 +92,13 @@ main h3 {
 main site-sandbox {
   margin-block-start: calc(1.6 * var(--turtle-ui--unit));
 }
+.demo > site-sandbox:first-child {
+  margin-block-start: 0;
+}
+
+site-section {
+  content-visibility: auto;
+}
 
 @keyframes highlight {
   0%,

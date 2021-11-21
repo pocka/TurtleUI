@@ -14,10 +14,6 @@ export interface PressableProps {
    */
   disabled: boolean;
 
-  /**
-   * Whether to use a slotted element as a button element.
-   * You need to provide an Element to slot, instead of a TextFragment.
-   */
   lightDOM: boolean;
 
   /**
@@ -55,6 +51,10 @@ export function Pressable<T extends Constructor<LitElement>>(
     })
     disabled: boolean = false;
 
+    /**
+     * Whether to use a slotted element as a button element.
+     * You need to provide an Element to slot, instead of a TextFragment.
+     */
     @property({
       type: Boolean,
       attribute: "lightdom",

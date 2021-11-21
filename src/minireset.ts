@@ -1,5 +1,6 @@
 import { css } from "lit";
 
+// minireset.css without the problematic box-sizing: inherit; rule.
 export const minireset = css`
   /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
   html,
@@ -47,11 +48,6 @@ export const minireset = css`
   }
   html {
     box-sizing: border-box;
-  }
-  *,
-  *::before,
-  *::after {
-    box-sizing: inherit;
   }
   img,
   video {

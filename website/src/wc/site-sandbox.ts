@@ -49,6 +49,7 @@ export class SiteSandbox extends LitElement {
               var(--turtle-ui--color--tone--mono),
               var(--turtle-ui--color--level--9)
             );
+          overflow-x: auto;
         }
 
         .code {

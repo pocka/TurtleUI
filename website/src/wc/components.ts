@@ -10,6 +10,7 @@ import { SiteHeader } from "./site-header";
 import { SiteLayout } from "./site-layout";
 import { SiteSandbox } from "./site-sandbox";
 import { SiteSection } from "./site-section";
+import { SiteWcDoc } from "./site-wc-doc";
 
 registerTurtleUIComponents([
   ...allComponents,
@@ -17,4 +18,5 @@ registerTurtleUIComponents([
   SiteLayout,
   SiteSandbox,
   SiteSection,
+  SiteWcDoc,
 ]);

@@ -12,6 +12,7 @@ declare global {
 
 /**
  * @element turtle-avatar
+ * @slot An avatar image (<img> element or any `object-fit`-able element, except `<picture>` element.)
  */
 export class TurtleAvatar extends LitElement {
   static defaultTagName = "turtle-avatar" as const;

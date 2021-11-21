@@ -22,6 +22,8 @@ jobs:
         run: yarn install --immutable --immutable-cache
       - name: Build package
         run: yarn build
+      - name: Generate component documentation
+        run: yarn wc-docs
       - name: Build website
         run: yarn website:build --base /TurtleUI/
       - name: Deploy to GitHub Pages

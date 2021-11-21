@@ -50,8 +50,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@storybook/web-components", "virtual:a3f33df5b5b48a489645f658c316424aa130212ee6a9a27743eaadad2ca74307c30d43e3f06d1667d2f1f24ebc29edc02b9b2d97f797f38bdbc1ffdd284c9715#npm:6.4.0-rc.2"],
             ["@types/prismjs", "npm:1.16.6"],
             ["babel-loader", "virtual:a3f33df5b5b48a489645f658c316424aa130212ee6a9a27743eaadad2ca74307c30d43e3f06d1667d2f1f24ebc29edc02b9b2d97f797f38bdbc1ffdd284c9715#npm:8.2.2"],
+            ["glob", "npm:7.2.0"],
             ["lit", "npm:2.0.2"],
             ["lit-html", "npm:1.4.1"],
+            ["marked", "npm:4.0.4"],
             ["prettier", "npm:2.3.2"],
             ["prismjs", "npm:1.25.0"],
             ["react", "npm:17.0.2"],
@@ -7121,8 +7123,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@storybook/web-components", "virtual:a3f33df5b5b48a489645f658c316424aa130212ee6a9a27743eaadad2ca74307c30d43e3f06d1667d2f1f24ebc29edc02b9b2d97f797f38bdbc1ffdd284c9715#npm:6.4.0-rc.2"],
             ["@types/prismjs", "npm:1.16.6"],
             ["babel-loader", "virtual:a3f33df5b5b48a489645f658c316424aa130212ee6a9a27743eaadad2ca74307c30d43e3f06d1667d2f1f24ebc29edc02b9b2d97f797f38bdbc1ffdd284c9715#npm:8.2.2"],
+            ["glob", "npm:7.2.0"],
             ["lit", "npm:2.0.2"],
             ["lit-html", "npm:1.4.1"],
+            ["marked", "npm:4.0.4"],
             ["prettier", "npm:2.3.2"],
             ["prismjs", "npm:1.25.0"],
             ["react", "npm:17.0.2"],
@@ -12195,6 +12199,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["path-is-absolute", "npm:1.0.1"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:7.2.0", {
+          "packageLocation": "./.yarn/cache/glob-npm-7.2.0-bb4644d239-78a8ea9423.zip/node_modules/glob/",
+          "packageDependencies": [
+            ["glob", "npm:7.2.0"],
+            ["fs.realpath", "npm:1.0.0"],
+            ["inflight", "npm:1.0.6"],
+            ["inherits", "npm:2.0.4"],
+            ["minimatch", "npm:3.0.4"],
+            ["once", "npm:1.4.0"],
+            ["path-is-absolute", "npm:1.0.1"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["glob-parent", [
@@ -14302,6 +14319,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packagePeers": [
             "@types/react",
             "react"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["marked", [
+        ["npm:4.0.4", {
+          "packageLocation": "./.yarn/cache/marked-npm-4.0.4-5e3c2f627a-8f108320ab.zip/node_modules/marked/",
+          "packageDependencies": [
+            ["marked", "npm:4.0.4"]
           ],
           "linkType": "HARD",
         }]
