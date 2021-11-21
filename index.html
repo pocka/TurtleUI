@@ -7,9 +7,9 @@
     
     
     
-    <script type="module" crossorigin src="/TurtleUI/assets/index.0e4f736c.js"></script>
+    <script type="module" crossorigin src="/TurtleUI/assets/index.1b4de51b.js"></script>
     <link rel="modulepreload" href="/TurtleUI/assets/vendor.3c79d43d.js">
-    <link rel="stylesheet" href="/TurtleUI/assets/index.37f23550.css">
+    <link rel="stylesheet" href="/TurtleUI/assets/index.538a504c.css">
   </head>
   <body>
     <turtle-design-system class="design-system">
@@ -55,9 +55,19 @@
               </ul>
             </li>
             <li>
+              <a href="#light_dom">Light DOM</a>
+              <ul>
+                <li>
+                  <a href="#light_dom_button_like">Button-like elements</a>
+                </li>
+                <li><a href="#light_dom_form_items">Form items</a></li>
+              </ul>
+            </li>
+            <li>
               <a href="#components">Components</a>
               <ul>
                 <li><a href="#turtle-avatar">turtle-avatar</a></li>
+                <li><a href="#turtle-button">turtle-button</a></li>
               </ul>
             </li>
             <li><a href="#api">API</a></li>
@@ -98,12 +108,24 @@
               >, which aims to make prototyping easier.
             </p>
             <site-sandbox class="demo">
-              <turtle-button-group>
-                <turtle-button variant="primary">Button</turtle-button>
-                <turtle-button lightdom>
-                  <a href="#installation">Installation</a>
-                </turtle-button>
-              </turtle-button-group>
+              <div>
+                <turtle-form-field>
+                  <label slot="label" for="demo_input">Email</label>
+                  <turtle-textbox>
+                    <input
+                      id="demo_input"
+                      type="email"
+                      placeholder="Enter an email address"
+                    />
+                  </turtle-textbox>
+                  <span slot="description">
+                    This is an example input field.
+                  </span>
+                </turtle-form-field>
+              </div>
+              <turtle-button variant="primary" style="margin-top: 24px">
+                Submit
+              </turtle-button>
             </site-sandbox>
           </site-section>
 
@@ -187,6 +209,129 @@ registerTurtleUIComponents(allComponents)</code></pre>
               browsers not compatible with ES2019 syntax, please transpile this
               package along with your application code.
             </p>
+          </site-section>
+
+          <h2 id="light_dom">Light DOM</h2>
+          <site-section>
+            <div>
+              <turtle-card bordered aria-labelledby="note_about_light_dom">
+                <span slot="title" id="note_about_light_dom">
+                  What is Light DOM?
+                </span>
+
+                Light DOM is an informal word describing nodes/elements slotted
+                to Custom Element that enables Shadow DOM. For more information,
+                see
+                <a
+                  class="link"
+                  href="https://developers.google.com/web/fundamentals/web-components/shadowdom#lightdom"
+                  target="_blank"
+                  rel="noopener"
+                  >explanation on developers.google.com</a
+                >.
+              </turtle-card>
+
+              <p>
+                This package prioritize Light DOM approach: many interactive
+                components require you to write native HTML elements as
+                children. This approach brings several benefits to you:
+              </p>
+              <ul>
+                <li>
+                  component itself has smaller API surface = less learning cost
+                </li>
+                <li>
+                  full platform capability, such as auto-focus, form relation,
+                  and accesibility features
+                </li>
+                <li>framework/library friendly</li>
+              </ul>
+            </div>
+
+            <site-sandbox class="demo">
+              <div style="display: grid; grid-template-columns: 1fr; gap: 8px">
+                <turtle-textbox>
+                  <input type="text" disabled aria-label="Demo" />
+                </turtle-textbox>
+                <turtle-textbox touched>
+                  <input type="text" aria-invalid="true" aria-label="Demo" />
+                </turtle-textbox>
+                <turtle-button lightdom>
+                  <button>Button</button>
+                </turtle-button>
+              </div>
+            </site-sandbox>
+
+            <h3 id="light_dom_button_like">Button-like elements</h3>
+            <p>
+              Every elements that its primary purpose is let a user
+              click/tap/press the element, for example
+              <code>&lt;turtle-button&gt;</code>, implements
+              <code>lightdom</code> attribute (and correspond
+              <code>lightDOM</code> property). When the attribute is present,
+              the element assumes that a user places a
+              <code>&lt;button&gt;</code> or an <code>&lt;a&gt;</code> element
+              to its light DOM. This is useful when you want to show a submit
+              button or a link in the component's appearance.
+            </p>
+            <site-sandbox class="demo">
+              <turtle-button lightdom>
+                <button>Button</button>
+              </turtle-button>
+            </site-sandbox>
+            <p>
+              When using <code>lightdom</code> mode, please provide
+              <code>disabled</code> or <code>aria-disabled</code> attribute to
+              the slotted element instead of the containing
+              <code>turtle-*</code> element. Button-like components change
+              styles and add custom event handler based on the attributes.
+            </p>
+            <site-sandbox class="demo">
+              <turtle-button lightdom>
+                <a href="#light_dom_button_like" aria-disabled="true">Button</a>
+              </turtle-button>
+            </site-sandbox>
+
+            <h3 id="light_dom_form_items">Form items</h3>
+            <p>
+              Every form items, which maintains states and lets a user change
+              its states, requires you to put a certain type of HTML elements to
+              its light DOM. Unlike button-like elements, this is required and
+              you cannot opt-out this behaviour.
+            </p>
+            <site-sandbox class="demo">
+              <turtle-toggle-switch>
+                <input type="checkbox" checked aria-label="Demo" />
+              </turtle-toggle-switch>
+            </site-sandbox>
+            <p>
+              These components synchronize states such as disabled or invalid
+              when the attributes changed or <code>change</code> and
+              <code>input</code> event happened. By default, the components
+              check <code>(Slotted Element).validity.valid</code> property to
+              determine whether the slotted element is valid or not. If you want
+              to explicitly set/override validity, use
+              <code>aria-invalid</code> attribute.
+            </p>
+            <site-sandbox class="demo">
+              <turtle-form-field>
+                <label slot="label" for="demo_aria_inavlid">
+                  Explicity validity demo
+                </label>
+                <turtle-textbox touched>
+                  <input
+                    type="text"
+                    required
+                    value="Pre-filled text"
+                    aria-invalid="true"
+                  />
+                </turtle-textbox>
+                <span slot="description">
+                  This demo sets <code>touched</code> attribute so the component
+                  goes to error state without touching it.
+                </span>
+              </turtle-form-field>
+            </site-sandbox>
           </site-section>
 
           <h2 id="styles">Styles</h2>
@@ -353,39 +498,31 @@ registerTurtleUIComponents(allComponents)</code></pre>
 
           <site-section>
             <h3 id="turtle-avatar"><code>turtle-avatar</code></h3>
-            <div>
-              <p>
-                Display an avatar image. Fallbacks to placeholder image if the
-                default slot is empty.
-              </p>
-              <h4>Attributes</h4>
-              <table>
-                <thead>
-                  <tr>
-                    <th>Attribute</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><code>bordered</code></td>
-                    <td>Boolean. Whether to show borders.</td>
-                  </tr>
-                  <tr>
-                    <td><code>default-alt</code></td>
-                    <td>String. Alternative text for placeholder image.</td>
-                  </tr>
-                </tbody>
-              </table>
+            <site-wc-doc name="turtle-avatar"></site-wc-doc>
+            <div class="demo">
+              <site-sandbox>
+                <turtle-avatar bordered></turtle-avatar>
+              </site-sandbox>
+              <site-sandbox>
+                <turtle-avatar>
+                  <img src="/TurtleUI/avatar-sample.jpg" alt="sample avatar image" />
+                </turtle-avatar>
+              </site-sandbox>
             </div>
-            <site-sandbox class="demo">
-              <turtle-avatar bordered></turtle-avatar>
-            </site-sandbox>
-            <site-sandbox class="demo">
-              <turtle-avatar>
-                <img src="/TurtleUI/avatar-sample.jpg" alt="sample avatar image" />
-              </turtle-avatar>
-            </site-sandbox>
+          </site-section>
+
+          <site-section>
+            <h3 id="turtle-button"><code>turtle-button</code></h3>
+            <site-wc-doc name="turtle-button"></site-wc-doc>
+            <div class="demo">
+              <site-sandbox>
+                <div style="display: inline-flex; gap: 8px">
+                  <turtle-button variant="primary">Primary</turtle-button>
+                  <turtle-button variant="danger">Danger</turtle-button>
+                  <turtle-button>Neutral</turtle-button>
+                </div>
+              </site-sandbox>
+            </div>
           </site-section>
 
           <h2 id="api">API</h2>
