@@ -8,11 +8,31 @@ declare global {
 }
 
 /**
- * Design System wrapper
+ * Design System wrapper.
  *
  * This component provides CSS custom properties and set basic styles to itself.
  *
  * @element turtle-design-system
+ *
+ * @slot - Your app.
+ *
+ * @cssprop [--turtle-ui--unit=10px] Base unit size for responsive font size.
+ * @cssprop [--turtle-ui--color--level--0] - L%
+ * @cssprop [--turtle-ui--color--level--1] - L%
+ * @cssprop [--turtle-ui--color--level--2] - L%
+ * @cssprop [--turtle-ui--color--level--3] - L%
+ * @cssprop [--turtle-ui--color--level--4] - L%
+ * @cssprop [--turtle-ui--color--level--5] - L%
+ * @cssprop [--turtle-ui--color--level--6] - L%
+ * @cssprop [--turtle-ui--color--level--7] - L%
+ * @cssprop [--turtle-ui--color--level--8] - L%
+ * @cssprop [--turtle-ui--color--level--9] - L%
+ * @cssprop [--turtle-ui--color--level--10] - L%
+ * @cssprop [--turtle-ui--color--tone--mono] - H, S%
+ * @cssprop [--turtle-ui--color--tone--safe] - H, S%
+ * @cssprop [--turtle-ui--color--tone--warning] - H, S%
+ * @cssprop [--turtle-ui--color--tone--danger] - H, S%
+ * @cssprop [--turtle-ui--color--tone--primary] - H, S%
  */
 export class TurtleDesignSystem extends LitElement {
   static defaultTagName = "turtle-design-system" as const;

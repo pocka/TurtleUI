@@ -3,7 +3,12 @@ import { css, LitElement, html } from "lit";
 import { minireset } from "./minireset.js";
 
 /**
+ * Label styling helper for `<turtle-checkbox>` and `<turtle-radio-button>`.
+ *
  * @element turtle-labelled-item
+ *
+ * @slot - Checkbox or Radio button.
+ * @slot label - `<label>` element.
  */
 export class TurtleLabelledItem extends LitElement {
   static defaultTagName = "turtle-labelled-item" as const;

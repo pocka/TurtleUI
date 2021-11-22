@@ -29,6 +29,13 @@ declare global {
  * ```
  *
  * @element turtle-card
+ *
+ * @cssprop [--turtle-ui--card--radius=8px] Corner radius of the card. Please use this property instead of overwriting `border-radius` property.
+ *
+ * @slot - Body contents.
+ * @slot title - Title of the card.
+ * @slot image - A representive image.
+ * @slot action - An action related to the card. Up to 2.
  */
 export class TurtleCard extends LitElement {
   static defaultTagName = "turtle-card" as const;
@@ -37,7 +44,7 @@ export class TurtleCard extends LitElement {
   #imageSensor = new SlotSensorController(this, "image");
 
   /**
-   * Whether to display shadow.
+   * Whether to display shadows.
    */
   @property({
     type: Boolean,
@@ -47,7 +54,7 @@ export class TurtleCard extends LitElement {
   shadowed: boolean = false;
 
   /**
-   * Whether to display borders around.
+   * Whether to display a surrounding border.
    */
   @property({
     type: Boolean,

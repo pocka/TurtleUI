@@ -8,7 +8,13 @@ declare global {
 }
 
 /**
+ * A list of actionable items.
+ *
  * @element turtle-list
+ *
+ * @slot - One or more of `<turtle-list-item>`.
+ *
+ * @cssprop [--turtle-list--radius=8px] - Corner radius.
  */
 export class TurtleList extends LitElement {
   static defaultTagName = "turtle-list" as const;
@@ -18,7 +24,7 @@ export class TurtleList extends LitElement {
       minireset,
       css`
         :host {
-          --turtle-ui--list--radius: 8px;
+          --turtle-list--radius: 8px;
 
           box-sizing: border-box;
           display: inline-grid;
@@ -31,7 +37,7 @@ export class TurtleList extends LitElement {
             var(--turtle-ui--color--tone--mono),
             var(--turtle-ui--color--level--7)
           );
-          border-radius: var(--turtle-ui--list--radius);
+          border-radius: var(--turtle-list--radius);
           overflow: hidden;
         }
       `,

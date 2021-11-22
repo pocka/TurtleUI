@@ -10,7 +10,11 @@ declare global {
 }
 
 /**
+ * An action related to a `<turtle-card>`.
+ *
  * @element turtle-card-action
+ *
+ * @slot - Button-like element if `lightdom` is set to `true`, TextFragment otherwise.
  */
 export class TurtleCardAction extends Pressable(LitElement) {
   static defaultTagName = "turtle-card-action" as const;

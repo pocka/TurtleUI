@@ -12,7 +12,16 @@ declare global {
 }
 
 /**
+ * A distinguishable property of a form.
+ *
+ * If you provide `<turtle-textbox>` or `<turtle-selectbox>` for the default slot and text element for the `description` slot,
+ * a color of the `description` slot will change depends on the validity state of the slotted `<turtle-textbox>` (or `<turtle-selectbox>`).
+ *
  * @element turtle-form-field
+ *
+ * @slot - Form item, required.
+ * @slot label - `<label>` element, required.
+ * @slot description - Description text, optional.
  */
 export class TurtleFormField extends LitElement {
   static defaultTagName = "turtle-form-field" as const;

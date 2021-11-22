@@ -10,6 +10,19 @@ declare global {
   }
 }
 
+/**
+ * An item of the `<turtle-list>`.
+ *
+ * @element turtle-list-item
+ *
+ * @slot - Button-like element if `lightdom` is `true`, TextFragment otherwise.
+ * @slot icon-start - A visual element placed to start position.
+ * @slot icon-end - A visual element placed to end position.
+ *
+ * @cssprop [--turtle-list-item--icon-size=calc(2.4 * var(--turtle-ui--unit))] - Size of icons (if exist).
+ * @cssprop [--turtle-list-item--padding=12px] - Padding of the item.
+ * @cssprop [--turtle-list-item--gap=8px] - Gap between icons and text.
+ */
 export class TurtleListItem extends Pressable(LitElement) {
   static defaultTagName = "turtle-list-item" as const;
 
@@ -18,9 +31,9 @@ export class TurtleListItem extends Pressable(LitElement) {
       minireset,
       css`
         :host {
-          --turtle-ui--list-item--icon-size: calc(2.4 * var(--turtle-ui--unit));
-          --turtle-ui--list-item--padding: 12px;
-          --turtle-ui--list-item--gap: 8px;
+          --turtle-list-item--icon-size: calc(2.4 * var(--turtle-ui--unit));
+          --turtle-list-item--padding: 12px;
+          --turtle-list-item--gap: 8px;
 
           display: block;
           position: relative;
@@ -33,10 +46,9 @@ export class TurtleListItem extends Pressable(LitElement) {
           display: block;
           width: 100%;
           height: calc(
-            2.4 * var(--turtle-ui--unit) + var(--turtle-ui--list-item--padding) *
-              2
+            2.4 * var(--turtle-ui--unit) + var(--turtle-list-item--padding) * 2
           );
-          padding: var(--turtle-ui--list-item--padding);
+          padding: var(--turtle-list-item--padding);
           font-size: calc(1.6 * var(--turtle-ui--unit));
           line-height: 1.5;
           border: none;
@@ -97,30 +109,28 @@ export class TurtleListItem extends Pressable(LitElement) {
         }
         :host(:first-child) .button,
         :host(:first-child) .body-slot::slotted(*) {
-          border-radius: var(--turtle-ui--list--radius)
-            var(--turtle-ui--list--radius) 0 0;
+          border-radius: var(--turtle-list--radius) var(--turtle-list--radius) 0
+            0;
         }
         :host(:last-child) .button,
         :host(:last-child) .body-slot::slotted(*) {
-          border-radius: 0 0 var(--turtle-ui--list--radius)
-            var(--turtle-ui--list--radius);
+          border-radius: 0 0 var(--turtle-list--radius)
+            var(--turtle-list--radius);
         }
 
         .icon-start,
         .icon-start::slotted(*) {
           padding-inline-start: calc(
-            var(--turtle-ui--list-item--padding) +
-              var(--turtle-ui--list-item--icon-size) +
-              var(--turtle-ui--list-item--gap)
+            var(--turtle-list-item--padding) +
+              var(--turtle-list-item--icon-size) + var(--turtle-list-item--gap)
           );
         }
 
         .icon-end,
         .icon-end::slotted(*) {
           padding-inline-end: calc(
-            var(--turtle-ui--list-item--padding) +
-              var(--turtle-ui--list-item--icon-size) +
-              var(--turtle-ui--list-item--gap)
+            var(--turtle-list-item--padding) +
+              var(--turtle-list-item--icon-size) + var(--turtle-list-item--gap)
           );
         }
 
@@ -128,7 +138,7 @@ export class TurtleListItem extends Pressable(LitElement) {
         [name="icon-end"]::slotted(*) {
           position: absolute;
           top: 50%;
-          font-size: var(--turtle-ui--list-item--icon-size);
+          font-size: var(--turtle-list-item--icon-size);
 
           color: inherit;
           pointer-events: none;
@@ -137,10 +147,10 @@ export class TurtleListItem extends Pressable(LitElement) {
         }
 
         [name="icon-start"]::slotted(*) {
-          left: var(--turtle-ui--list-item--padding);
+          left: var(--turtle-list-item--padding);
         }
         [name="icon-end"]::slotted(*) {
-          right: var(--turtle-ui--list-item--padding);
+          right: var(--turtle-list-item--padding);
         }
 
         :host([disabled]) [name^="icon-"]::slotted(*) {

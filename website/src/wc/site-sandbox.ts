@@ -107,7 +107,7 @@ export class SiteSandbox extends LitElement {
 
   override render() {
     return html`
-      <span class="badge">Preview</span>
+      <span class="badge">Demo</span>
 
       <div class="preview">${unsafeHTML(this.code)}</div>
 
@@ -139,8 +139,6 @@ function dedent(text: string): string {
 
   return lines.map((line) => line.replace(remover, "")).join("\n");
 }
-
-declare var process: any;
 
 if (process.env.NODE_ENV === "development") {
   function assert<T>(description: string, actual: T, expected: T) {

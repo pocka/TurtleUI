@@ -203,7 +203,12 @@ export class SiteWcDoc extends LitElement {
       return html` <span>Component definition not found.</span> `;
     }
 
-    console.log(this.spec);
+    if (process.env.NODE_ENV === "development") {
+      console.groupCollapsed(this.spec.name);
+      console.dir(this.spec);
+      console.groupEnd();
+    }
+
     const className = kebabToPascal(this.spec.name);
 
     return html`
@@ -244,7 +249,6 @@ function kebabToPascal(input: string): string {
     .join("");
 }
 
-declare var process: any;
 if (process.env.NODE_ENV === "development") {
   function assert<T>(description: string, actual: T, expected: T) {
     console.assert(expected === actual, description, { expected, actual });
