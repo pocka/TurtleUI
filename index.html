@@ -14,8 +14,8 @@
       content="https://pocka.github.io/TurtleUI/ogp.png"
     />
     <meta property="og:url" content="https://pocka.github.io/TurtleUI/" />
-    <script type="module" crossorigin src="/TurtleUI/assets/index.46e1001f.js"></script>
-    <link rel="modulepreload" href="/TurtleUI/assets/vendor.afad3e45.js">
+    <script type="module" crossorigin src="/TurtleUI/assets/index.24f1f3ae.js"></script>
+    <link rel="modulepreload" href="/TurtleUI/assets/vendor.10ea095f.js">
     <link rel="stylesheet" href="/TurtleUI/assets/index.2f9178b0.css">
   </head>
   <body>
@@ -108,7 +108,26 @@
               </ul>
             </li>
             <li><a href="#icons">Icons</a></li>
-            <li><a href="#api">API</a></li>
+            <li>
+              <a href="#api">API</a>
+              <ul>
+                <li>
+                  <a href="#api_register_turtle_ui_components">
+                    <code>registerTurtleUIComponents</code>
+                  </a>
+                </li>
+                <li>
+                  <a href="#api_all_components">
+                    <code>allComponents</code>
+                  </a>
+                </li>
+                <li>
+                  <a href="#api_icons">
+                    <code>icons</code>
+                  </a>
+                </li>
+              </ul>
+            </li>
           </ul>
         </aside>
 
@@ -969,10 +988,57 @@ registerTurtleUIComponents(allComponents)</code></pre>
           </site-section>
 
           <h2 id="icons">Icons</h2>
-          <p>Documentation work in progress.</p>
+          <p>
+            Icons are available as CustomElements. Click each icon to show
+            details.
+          </p>
+          <site-icon-catalogue></site-icon-catalogue>
 
           <h2 id="api">API</h2>
-          <p>Documentation work in progress.</p>
+          <site-section>
+            <h3 id="api_register_turtle_ui_components">
+              <code>registerTurtleUIComponents(components)</code>
+            </h3>
+            <pre><code>function registerTurtleUIComponents(components: ComponentRegistration[]): void
+
+type ComponentRegistration =
+  | (CustomElementConstructor & { defaultTagName: string })
+  | [string, CustomElementConstructor]</code></pre>
+            <p>
+              Registers given Turtle UI Web Components. In fact, this function
+              just checks whether each CustomElement is already registered and
+              registers it if not.
+            </p>
+            <p>
+              If you want to use custom tag name instead of the default one
+              (<code>&lt;turtle-*&gt;</code>), specify a tuple of
+              <code>[tagName, CustomElementConstructor]</code>.
+            </p>
+            <pre><code class="language-js">import { registerTurtleUIComponents, TurtleButton, TurtleCard } from "@turtleui/webcomponents";
+
+registerTurtleUIComponents([
+  TurtleButton,
+  ["rabbit-card", TurtleCard],
+]);
+
+// You can now use &lt;turtle-button&gt; and &lt;rabbit-card&gt;</code></pre>
+          </site-section>
+
+          <site-section>
+            <h3 id="api_all_components"><code>allComponents</code></h3>
+            <p>An array of every exported components, including icons.</p>
+            <pre><code class="language-js">import { allComponents, registerTurtleUIComponents  from "turtleui/webcomponents";
+
+registerTurtleUIComponents(allComponents);</code></pre>
+          </site-section>
+
+          <site-section>
+            <h3 id="api_icons"><code>icons</code></h3>
+            <p>An array of every exported icon components.</p>
+            <pre><code class="language-js">import { icons, registerTurtleUIComponents  from "turtleui/webcomponents";
+
+registerTurtleUIComponents(icons);</code></pre>
+          </site-section>
         </main>
       </site-layout>
     </turtle-design-system>
