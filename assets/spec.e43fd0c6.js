@@ -35,7 +35,8 @@ Specify <code>disabled</code> or <code>aria-disabled</code> attribute for the sl
 `,type:"boolean",default:"false"},{name:"lightDOM",attribute:"lightdom",description:`<p>Whether to use a slotted element as a button element.
 You need to provide an Element to slot, instead of a TextFragment.</p>
 `,type:"boolean",default:"false"}],cssProperties:[{name:"--turtle-button--base-radius",description:`<p>The size of corner radius.</p>
-`,default:'"8px"'}]},{name:"turtle-card-action",attributes:[{name:"disabled",description:`<p>Whether the element itself is disabled or not.</p>
+`,default:'"8px"'}]},{name:"turtle-card-action",description:`<p>An action related to a <code>&lt;turtle-card&gt;</code>.</p>
+`,attributes:[{name:"disabled",description:`<p>Whether the element itself is disabled or not.</p>
 <p>When the <code>lightDOM</code> property is <code>true</code>, this property does not affect to anything.
 Specify <code>disabled</code> or <code>aria-disabled</code> attribute for the slotted element (e.g. <code>&lt;button disabled/&gt;</code>, <code>&lt;a aria-disabled=&quot;true&quot;/&gt;</code>).</p>
 `,type:"boolean",default:"false"},{name:"lightdom",description:`<p>Whether to use a slotted element as a button element.
@@ -45,7 +46,8 @@ You need to provide an Element to slot, instead of a TextFragment.</p>
 Specify <code>disabled</code> or <code>aria-disabled</code> attribute for the slotted element (e.g. <code>&lt;button disabled/&gt;</code>, <code>&lt;a aria-disabled=&quot;true&quot;/&gt;</code>).</p>
 `,type:"boolean",default:"false"},{name:"lightDOM",attribute:"lightdom",description:`<p>Whether to use a slotted element as a button element.
 You need to provide an Element to slot, instead of a TextFragment.</p>
-`,type:"boolean",default:"false"}]},{name:"turtle-card",description:`<p>A card with optional title, image, and actions.</p>
+`,type:"boolean",default:"false"}],slots:[{name:"",description:`<p>Button-like element if <code>lightdom</code> is set to <code>true</code>, TextFragment otherwise.</p>
+`}]},{name:"turtle-card",description:`<p>A card with optional title, image, and actions.</p>
 <h2 id="limitations">Limitations</h2>
 <h3 id="picture-ignores-our-slotted-styles"><code>&lt;picture&gt;</code> ignores our <code>::slotted</code> styles</h3>
 <p>When you place <code>&lt;picture&gt;</code> element for <code>image</code> slot, due to the poor design of <code>&lt;picture&gt;</code> element,
@@ -56,18 +58,71 @@ you need to style <code>&lt;img&gt;</code> element inside so it does fit to the 
   object-fit: cover;
 }
 </code></pre>
-`,attributes:[{name:"shadowed",description:`<p>Whether to display shadow.</p>
-`,type:"boolean",default:"false"},{name:"bordered",description:`<p>Whether to display borders around.</p>
-`,type:"boolean",default:"false"}],properties:[{name:"shadowed",attribute:"shadowed",description:`<p>Whether to display shadow.</p>
-`,type:"boolean",default:"false"},{name:"bordered",attribute:"bordered",description:`<p>Whether to display borders around.</p>
-`,type:"boolean",default:"false"}]},{name:"turtle-checkbox",properties:[{name:"sync",description:`<p>Update the component&#39;s internal state based on asiggned slot contents.
-You need to call this method after changing <code>indeterminate</code> property of the <code>&lt;input&gt;</code>, since
-we have neither property equivalent for MutationObserver nor a change event for the property.</p>
-`,type:"() => void",default:'"() => {}"'}]},{name:"turtle-design-system",description:`<p>Design System wrapper</p>
+`,attributes:[{name:"shadowed",description:`<p>Whether to display shadows.</p>
+`,type:"boolean",default:"false"},{name:"bordered",description:`<p>Whether to display a surrounding border.</p>
+`,type:"boolean",default:"false"}],properties:[{name:"shadowed",attribute:"shadowed",description:`<p>Whether to display shadows.</p>
+`,type:"boolean",default:"false"},{name:"bordered",attribute:"bordered",description:`<p>Whether to display a surrounding border.</p>
+`,type:"boolean",default:"false"}],slots:[{name:"",description:`<p>Body contents.</p>
+`},{name:"title",description:`<p>Title of the card.</p>
+`},{name:"image",description:`<p>A representive image.</p>
+`},{name:"action",description:`<p>An action related to the card. Up to 2.</p>
+`}],cssProperties:[{name:"--turtle-ui--card--radius",description:`<p>Corner radius of the card. Please use this property instead of overwriting <code>border-radius</code> property.</p>
+`,default:'"8px"'}]},{name:"turtle-checkbox",description:`<p>A simple checkbox.</p>
+<p>After you changed <code>indeterminate</code> property of the slotted input, please make sure to call <code>sync</code> method on this component.
+Otherwise the visual appearance won&#39;t update.</p>
+`,properties:[],slots:[{name:"",description:`<p><code>&lt;input type=&quot;checkbox&quot;&gt;</code></p>
+`}]},{name:"turtle-design-system",description:`<p>Design System wrapper.</p>
 <p>This component provides CSS custom properties and set basic styles to itself.</p>
 `,attributes:[{name:"theme",description:`<p>Explicitly set the color theme.</p>
 `,type:'"light" | "dark" | undefined'}],properties:[{name:"theme",attribute:"theme",description:`<p>Explicitly set the color theme.</p>
-`,type:'"light" | "dark" | undefined'}]},{name:"turtle-textbox",attributes:[{name:"touched",type:"boolean",default:"false"},{name:"novalidity",type:"boolean",default:"false"}],properties:[{name:"touched",attribute:"touched",type:"boolean",default:"false"},{name:"noValidity",attribute:"novalidity",type:"boolean",default:"false"},{name:"isValid",type:"boolean"},{name:"touch",type:"() => void",default:'"() => {\\n    if (!this.touched) {\\n      this.touched = true;\\n      this.dispatchEvent(new CustomEvent(\\"fieldtouch\\"));\\n    }\\n  }"'}],events:[{name:"validitychange"},{name:"fieldtouch"}]},{name:"turtle-form-field",properties:[]},{name:"turtle-labelled-item",properties:[]},{name:"turtle-list",properties:[]},{name:"turtle-notification-action",attributes:[{name:"disabled",description:`<p>Whether the element itself is disabled or not.</p>
+`,type:'"light" | "dark" | undefined'}],slots:[{name:"",description:`<p>Your app.</p>
+`}],cssProperties:[{name:"--turtle-ui--unit",description:`<p>Base unit size for responsive font size.</p>
+`,default:'"10px"'},{name:"--turtle-ui--color--level--0",description:`<p>L%</p>
+`},{name:"--turtle-ui--color--level--1",description:`<p>L%</p>
+`},{name:"--turtle-ui--color--level--2",description:`<p>L%</p>
+`},{name:"--turtle-ui--color--level--3",description:`<p>L%</p>
+`},{name:"--turtle-ui--color--level--4",description:`<p>L%</p>
+`},{name:"--turtle-ui--color--level--5",description:`<p>L%</p>
+`},{name:"--turtle-ui--color--level--6",description:`<p>L%</p>
+`},{name:"--turtle-ui--color--level--7",description:`<p>L%</p>
+`},{name:"--turtle-ui--color--level--8",description:`<p>L%</p>
+`},{name:"--turtle-ui--color--level--9",description:`<p>L%</p>
+`},{name:"--turtle-ui--color--level--10",description:`<p>L%</p>
+`},{name:"--turtle-ui--color--tone--mono",description:`<p>H, S%</p>
+`},{name:"--turtle-ui--color--tone--safe",description:`<p>H, S%</p>
+`},{name:"--turtle-ui--color--tone--warning",description:`<p>H, S%</p>
+`},{name:"--turtle-ui--color--tone--danger",description:`<p>H, S%</p>
+`},{name:"--turtle-ui--color--tone--primary",description:`<p>H, S%</p>
+`}]},{name:"turtle-textbox",attributes:[{name:"touched",type:"boolean",default:"false"},{name:"novalidity",type:"boolean",default:"false"}],properties:[{name:"touched",attribute:"touched",type:"boolean",default:"false"},{name:"noValidity",attribute:"novalidity",type:"boolean",default:"false"},{name:"isValid",type:"boolean"},{name:"touch",type:"() => void",default:'"() => {\\n    if (!this.touched) {\\n      this.touched = true;\\n      this.dispatchEvent(new CustomEvent(\\"fieldtouch\\"));\\n    }\\n  }"'}],events:[{name:"validitychange"},{name:"fieldtouch"}]},{name:"turtle-form-field",description:`<p>A distinguishable property of a form.</p>
+<p>If you provide <code>&lt;turtle-textbox&gt;</code> or <code>&lt;turtle-selectbox&gt;</code> for the default slot and text element for the <code>description</code> slot,
+a color of the <code>description</code> slot will change depends on the validity state of the slotted <code>&lt;turtle-textbox&gt;</code> (or <code>&lt;turtle-selectbox&gt;</code>).</p>
+`,properties:[],slots:[{name:"",description:`<p>Form item, required.</p>
+`},{name:"label",description:`<p><code>&lt;label&gt;</code> element, required.</p>
+`},{name:"description",description:`<p>Description text, optional.</p>
+`}]},{name:"turtle-labelled-item",description:`<p>Label styling helper for <code>&lt;turtle-checkbox&gt;</code> and <code>&lt;turtle-radio-button&gt;</code>.</p>
+`,properties:[],slots:[{name:"",description:`<p>Checkbox or Radio button.</p>
+`},{name:"label",description:`<p><code>&lt;label&gt;</code> element.</p>
+`}]},{name:"turtle-list-item",description:`<p>An item of the <code>&lt;turtle-list&gt;</code>.</p>
+`,attributes:[{name:"disabled",description:`<p>Whether the element itself is disabled or not.</p>
+<p>When the <code>lightDOM</code> property is <code>true</code>, this property does not affect to anything.
+Specify <code>disabled</code> or <code>aria-disabled</code> attribute for the slotted element (e.g. <code>&lt;button disabled/&gt;</code>, <code>&lt;a aria-disabled=&quot;true&quot;/&gt;</code>).</p>
+`,type:"boolean",default:"false"},{name:"lightdom",description:`<p>Whether to use a slotted element as a button element.
+You need to provide an Element to slot, instead of a TextFragment.</p>
+`,type:"boolean",default:"false"}],properties:[{name:"disabled",attribute:"disabled",description:`<p>Whether the element itself is disabled or not.</p>
+<p>When the <code>lightDOM</code> property is <code>true</code>, this property does not affect to anything.
+Specify <code>disabled</code> or <code>aria-disabled</code> attribute for the slotted element (e.g. <code>&lt;button disabled/&gt;</code>, <code>&lt;a aria-disabled=&quot;true&quot;/&gt;</code>).</p>
+`,type:"boolean",default:"false"},{name:"lightDOM",attribute:"lightdom",description:`<p>Whether to use a slotted element as a button element.
+You need to provide an Element to slot, instead of a TextFragment.</p>
+`,type:"boolean",default:"false"}],slots:[{name:"",description:`<p>Button-like element if <code>lightdom</code> is <code>true</code>, TextFragment otherwise.</p>
+`},{name:"icon-start",description:`<p>A visual element placed to start position.</p>
+`},{name:"icon-end",description:`<p>A visual element placed to end position.</p>
+`}],cssProperties:[{name:"--turtle-list-item--icon-size",description:`<p>Size of icons (if exist).</p>
+`,default:'"calc(2.4 * var(--turtle-ui--unit))"'},{name:"--turtle-list-item--padding",description:`<p>Padding of the item.</p>
+`,default:'"12px"'},{name:"--turtle-list-item--gap",description:`<p>Gap between icons and text.</p>
+`,default:'"8px"'}]},{name:"turtle-list",description:`<p>A list of actionable items.</p>
+`,properties:[],slots:[{name:"",description:`<p>One or more of <code>&lt;turtle-list-item&gt;</code>.</p>
+`}],cssProperties:[{name:"--turtle-list--radius",description:`<p>Corner radius.</p>
+`,default:'"8px"'}]},{name:"turtle-notification-action",attributes:[{name:"disabled",description:`<p>Whether the element itself is disabled or not.</p>
 <p>When the <code>lightDOM</code> property is <code>true</code>, this property does not affect to anything.
 Specify <code>disabled</code> or <code>aria-disabled</code> attribute for the slotted element (e.g. <code>&lt;button disabled/&gt;</code>, <code>&lt;a aria-disabled=&quot;true&quot;/&gt;</code>).</p>
 `,type:"boolean",default:"false"},{name:"lightdom",description:`<p>Whether to use a slotted element as a button element.

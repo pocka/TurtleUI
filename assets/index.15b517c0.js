@@ -975,7 +975,7 @@ import{r as v,e as d,s,p as c,i as Mt,a as be,d as ge,t as Rt,b as me,l as lt,c 
       <slot class="label" name="label"></slot>
     `}}At.defaultTagName="turtle-labelled-item";class Ht extends s{static get styles(){return[u,v`
         :host {
-          --turtle-ui--list--radius: 8px;
+          --turtle-list--radius: 8px;
 
           box-sizing: border-box;
           display: inline-grid;
@@ -988,14 +988,14 @@ import{r as v,e as d,s,p as c,i as Mt,a as be,d as ge,t as Rt,b as me,l as lt,c 
             var(--turtle-ui--color--tone--mono),
             var(--turtle-ui--color--level--7)
           );
-          border-radius: var(--turtle-ui--list--radius);
+          border-radius: var(--turtle-list--radius);
           overflow: hidden;
         }
       `]}render(){return c` <slot></slot> `}}Ht.defaultTagName="turtle-list";var Ut=globalThis&&globalThis.__classPrivateFieldGet||function(r,t,e,o){if(e==="a"&&!o)throw new TypeError("Private accessor was defined without a getter");if(typeof t=="function"?r!==t||!o:!t.has(r))throw new TypeError("Cannot read private member from an object whose class did not declare it");return e==="m"?o:e==="a"?o.call(r):o?o.value:t.get(r)},ht,vt;class qt extends z(s){constructor(){super(...arguments);ht.set(this,new T(this,"icon-start")),vt.set(this,new T(this,"icon-end"))}static get styles(){return[u,v`
         :host {
-          --turtle-ui--list-item--icon-size: calc(2.4 * var(--turtle-ui--unit));
-          --turtle-ui--list-item--padding: 12px;
-          --turtle-ui--list-item--gap: 8px;
+          --turtle-list-item--icon-size: calc(2.4 * var(--turtle-ui--unit));
+          --turtle-list-item--padding: 12px;
+          --turtle-list-item--gap: 8px;
 
           display: block;
           position: relative;
@@ -1008,10 +1008,9 @@ import{r as v,e as d,s,p as c,i as Mt,a as be,d as ge,t as Rt,b as me,l as lt,c 
           display: block;
           width: 100%;
           height: calc(
-            2.4 * var(--turtle-ui--unit) + var(--turtle-ui--list-item--padding) *
-              2
+            2.4 * var(--turtle-ui--unit) + var(--turtle-list-item--padding) * 2
           );
-          padding: var(--turtle-ui--list-item--padding);
+          padding: var(--turtle-list-item--padding);
           font-size: calc(1.6 * var(--turtle-ui--unit));
           line-height: 1.5;
           border: none;
@@ -1072,30 +1071,28 @@ import{r as v,e as d,s,p as c,i as Mt,a as be,d as ge,t as Rt,b as me,l as lt,c 
         }
         :host(:first-child) .button,
         :host(:first-child) .body-slot::slotted(*) {
-          border-radius: var(--turtle-ui--list--radius)
-            var(--turtle-ui--list--radius) 0 0;
+          border-radius: var(--turtle-list--radius) var(--turtle-list--radius) 0
+            0;
         }
         :host(:last-child) .button,
         :host(:last-child) .body-slot::slotted(*) {
-          border-radius: 0 0 var(--turtle-ui--list--radius)
-            var(--turtle-ui--list--radius);
+          border-radius: 0 0 var(--turtle-list--radius)
+            var(--turtle-list--radius);
         }
 
         .icon-start,
         .icon-start::slotted(*) {
           padding-inline-start: calc(
-            var(--turtle-ui--list-item--padding) +
-              var(--turtle-ui--list-item--icon-size) +
-              var(--turtle-ui--list-item--gap)
+            var(--turtle-list-item--padding) +
+              var(--turtle-list-item--icon-size) + var(--turtle-list-item--gap)
           );
         }
 
         .icon-end,
         .icon-end::slotted(*) {
           padding-inline-end: calc(
-            var(--turtle-ui--list-item--padding) +
-              var(--turtle-ui--list-item--icon-size) +
-              var(--turtle-ui--list-item--gap)
+            var(--turtle-list-item--padding) +
+              var(--turtle-list-item--icon-size) + var(--turtle-list-item--gap)
           );
         }
 
@@ -1103,7 +1100,7 @@ import{r as v,e as d,s,p as c,i as Mt,a as be,d as ge,t as Rt,b as me,l as lt,c 
         [name="icon-end"]::slotted(*) {
           position: absolute;
           top: 50%;
-          font-size: var(--turtle-ui--list-item--icon-size);
+          font-size: var(--turtle-list-item--icon-size);
 
           color: inherit;
           pointer-events: none;
@@ -1112,10 +1109,10 @@ import{r as v,e as d,s,p as c,i as Mt,a as be,d as ge,t as Rt,b as me,l as lt,c 
         }
 
         [name="icon-start"]::slotted(*) {
-          left: var(--turtle-ui--list-item--padding);
+          left: var(--turtle-list-item--padding);
         }
         [name="icon-end"]::slotted(*) {
-          right: var(--turtle-ui--list-item--padding);
+          right: var(--turtle-list-item--padding);
         }
 
         :host([disabled]) [name^="icon-"]::slotted(*) {
@@ -2400,7 +2397,7 @@ import{r as v,e as d,s,p as c,i as Mt,a as be,d as ge,t as Rt,b as me,l as lt,c 
         }
       `]}connectedCallback(){super.connectedCallback(),this.code||(this.code=or(this.innerHTML).trim(),this.initialLineCount=this.code.split(`
 `).length)}render(){return c`
-      <span class="badge">Preview</span>
+      <span class="badge">Demo</span>
 
       <div class="preview">${it(this.code)}</div>
 
@@ -2592,7 +2589,7 @@ import{r as v,e as d,s,p as c,i as Mt,a as be,d as ge,t as Rt,b as me,l as lt,c 
         .component-description p:not(:first-child) {
           margin-top: 0.75em;
         }
-      `]}async connectedCallback(){super.connectedCallback(),this._spec=await ar(()=>import("./spec.486c193a.js"),[])}get spec(){var t;return((t=this._spec)==null?void 0:t.tags.find(e=>e.name===this.name))||null}render(){var e;if(!this.spec)return c` <span>Component definition not found.</span> `;console.log(this.spec);const t=ur(this.spec.name);return c`
+      `]}async connectedCallback(){super.connectedCallback(),this._spec=await ar(()=>import("./spec.e43fd0c6.js"),[])}get spec(){var t;return((t=this._spec)==null?void 0:t.tags.find(e=>e.name===this.name))||null}render(){var e;if(!this.spec)return c` <span>Component definition not found.</span> `;const t=ur(this.spec.name);return c`
       ${this.spec.description?c`<div class="component-description">
             ${it(this.spec.description)}
           </div>`:g}
