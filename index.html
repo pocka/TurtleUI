@@ -7,9 +7,9 @@
     
     
     
-    <script type="module" crossorigin src="/TurtleUI/assets/index.1b4de51b.js"></script>
-    <link rel="modulepreload" href="/TurtleUI/assets/vendor.3c79d43d.js">
-    <link rel="stylesheet" href="/TurtleUI/assets/index.538a504c.css">
+    <script type="module" crossorigin src="/TurtleUI/assets/index.7928fd9a.js"></script>
+    <link rel="modulepreload" href="/TurtleUI/assets/vendor.afad3e45.js">
+    <link rel="stylesheet" href="/TurtleUI/assets/index.2f9178b0.css">
   </head>
   <body>
     <turtle-design-system class="design-system">
@@ -67,7 +67,9 @@
               <a href="#components">Components</a>
               <ul>
                 <li><a href="#turtle-avatar">turtle-avatar</a></li>
+                <li><a href="#turtle-balloon">turtle-balloon</a></li>
                 <li><a href="#turtle-button">turtle-button</a></li>
+                <li><a href="#turtle-button-group">turtle-button-group</a></li>
               </ul>
             </li>
             <li><a href="#api">API</a></li>
@@ -501,12 +503,28 @@ registerTurtleUIComponents(allComponents)</code></pre>
             <site-wc-doc name="turtle-avatar"></site-wc-doc>
             <div class="demo">
               <site-sandbox>
-                <turtle-avatar bordered></turtle-avatar>
+                <turtle-avatar
+                  bordered
+                  placeholder-alt="Placeholder"
+                ></turtle-avatar>
               </site-sandbox>
               <site-sandbox>
                 <turtle-avatar>
                   <img src="/TurtleUI/avatar-sample.jpg" alt="sample avatar image" />
                 </turtle-avatar>
+              </site-sandbox>
+            </div>
+          </site-section>
+
+          <site-section>
+            <h3 id="turtle-balloon"><code>turtle-balloon</code></h3>
+            <site-wc-doc name="turtle-balloon"></site-wc-doc>
+            <div class="demo">
+              <site-sandbox>
+                <turtle-balloon tail-position="top">Top</turtle-balloon>
+                <turtle-balloon tail-position="right">Right</turtle-balloon>
+                <turtle-balloon tail-position="bottom">Bottom</turtle-balloon>
+                <turtle-balloon tail-position="left">Left</turtle-balloon>
               </site-sandbox>
             </div>
           </site-section>
@@ -519,8 +537,31 @@ registerTurtleUIComponents(allComponents)</code></pre>
                 <div style="display: inline-flex; gap: 8px">
                   <turtle-button variant="primary">Primary</turtle-button>
                   <turtle-button variant="danger">Danger</turtle-button>
-                  <turtle-button>Neutral</turtle-button>
+                  <turtle-button>Normal</turtle-button>
                 </div>
+              </site-sandbox>
+            </div>
+          </site-section>
+
+          <site-section>
+            <h3 id="turtle-button-group"><code>turtle-button-group</code></h3>
+            <site-wc-doc name="turtle-button-group"></site-wc-doc>
+            <div class="demo">
+              <site-sandbox>
+                <turtle-button-group>
+                  <turtle-button variant="primary">Primary</turtle-button>
+                  <turtle-button variant="danger">Danger</turtle-button>
+                  <turtle-button>Normal</turtle-button>
+                </turtle-button-group>
+              </site-sandbox>
+              <site-sandbox>
+                <turtle-button-group evenly style="width: 100%">
+                  <turtle-button variant="primary">
+                    Long Long Button
+                  </turtle-button>
+                  <turtle-button variant="danger">Button</turtle-button>
+                  <turtle-button>Btn</turtle-button>
+                </turtle-button-group>
               </site-sandbox>
             </div>
           </site-section>
