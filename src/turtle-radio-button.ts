@@ -8,7 +8,11 @@ declare global {
 }
 
 /**
+ * Radio button.
+ *
  * @element turtle-radio-button
+ *
+ * @slot - `<input type="radio">`
  */
 export class TurtleRadioButton extends LitElement {
   static defaultTagName = "turtle-radio-button" as const;

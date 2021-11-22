@@ -5,9 +5,6 @@ import { property } from "lit/decorators/property.js";
 type Constructor<T = {}> = new (...args: any[]) => T;
 
 export interface AutoFocusableProps {
-  /**
-   * Same to native `autofocus` element.
-   */
   autofocus: boolean;
 }
 
@@ -19,6 +16,10 @@ export function AutoFocusable<T extends Constructor<LitElement>>(
   Base: T
 ): Constructor<AutoFocusableProps> & T {
   class AutoFocusableClass extends Base {
+    /**
+     * Whether to recieve a focus when the element appears in the DOM tree.
+     * Same to native `autofocus` attribute.
+     */
     @property({
       type: Boolean,
     })

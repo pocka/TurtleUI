@@ -16,7 +16,11 @@ declare global {
 }
 
 /**
+ * Snackbar component, which delivers an uninterreputible message.
+ *
  * @element turtle-snackbar
+ *
+ * @fires timerend - Countdown ended.
  */
 export class TurtleSnackbar extends AutoFocusable(LitElement) {
   static defaultTagName = "turtle-snackbar" as const;
@@ -139,6 +143,11 @@ export class TurtleSnackbar extends AutoFocusable(LitElement) {
 
   #actionsSensor = new SlotSensorController(this, "action");
 
+  /**
+   * Severity of the message.
+   *
+   * @type {"info" | "success" | "warning" | "danger"}
+   */
   @property({
     type: String,
     reflect: true,
@@ -146,13 +155,16 @@ export class TurtleSnackbar extends AutoFocusable(LitElement) {
   severity: Severity = "info";
 
   /**
-   * in seconds
+   * Countdown duration in seconds. When not present, neither countdown nor event dispatching starts.
    */
   @property({
     type: Number,
   })
   lifetime?: number;
 
+  /**
+   * Label text for the countdown graphic. Recommended when you set `lifetime` attribute.
+   */
   @property({
     type: String,
     attribute: "lifetime-label",

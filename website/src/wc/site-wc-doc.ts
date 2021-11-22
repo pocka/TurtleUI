@@ -11,6 +11,7 @@ type PropertyDefinition = ComponentDefinition["properties"][number];
 type AttributeDefinition = NonNullable<
   ComponentDefinition["attributes"]
 >[number];
+type EventDefinition = NonNullable<ComponentDefinition["events"]>[number];
 type SlotDefinition = NonNullable<ComponentDefinition["slots"]>[number];
 type CSSPropDefinition = NonNullable<
   ComponentDefinition["cssProperties"]
@@ -145,7 +146,8 @@ export class SiteWcDoc extends LitElement {
         }
 
         .property-name,
-        .attr-name {
+        .attr-name,
+        .event-name {
           flex-basis: 50%;
           font-weight: bold;
         }
@@ -232,6 +234,7 @@ export class SiteWcDoc extends LitElement {
       ${this.spec.properties && this.spec.properties.length > 0
         ? propertiesTable(this.spec.properties)
         : nothing}
+      ${this.spec.events?.length ? eventsTable(this.spec.events) : nothing}
       ${this.spec.slots && this.spec.slots.length > 0
         ? slotsTable(this.spec.slots)
         : nothing}
@@ -312,6 +315,33 @@ function attributesTable(
               <td class="attr-name"><code>${attr.name}</code></td>
               <td class="data-type"><code>${attr.type}</code></td>
               <td class="description">${renderDescription(attr)}</td>
+            </tr>
+          `
+        )}
+      </tbody>
+    </table>
+  `;
+}
+
+function eventsTable(events: readonly EventDefinition[]): TemplateResult {
+  return html`
+    <table>
+      <thead>
+        <tr>
+          <th class="event-name">Event</th>
+          <th class="description">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${events.map(
+          (event) => html`
+            <tr>
+              <td class="event-name"><code>${event.name}</code></td>
+              <td class="description">
+                ${"description" in event
+                  ? unsafeHTML(event.description)
+                  : nothing}
+              </td>
             </tr>
           `
         )}

@@ -5,6 +5,8 @@ import { Pressable } from "./mixins/Pressable.js";
 
 /**
  * @element turtle-snackbar-action
+ *
+ * @slot - Button-like element if `lightdom` is set to `true`, otherwise `TextFragment`.
  */
 export class TurtleSnackbarAction extends Pressable(LitElement) {
   static defaultTagName = "turtle-snackbar-action" as const;

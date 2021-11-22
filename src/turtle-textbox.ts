@@ -27,7 +27,14 @@ declare global {
 }
 
 /**
+ * Textbox.
+ *
  * @element turtle-textbox
+ *
+ * @fires validitychange - Validity state changed.
+ * @fires fieldtouch - The user interacted the slotted input first time.
+ *
+ * @slot - `<input>`, except `type="radio"` and `type="checkbox"` at least.
  */
 export class TurtleTextbox extends LitElement {
   static defaultTagName = "turtle-textbox" as const;
@@ -195,18 +202,27 @@ export class TurtleTextbox extends LitElement {
     ];
   }
 
+  /**
+   * Whether the user interacted to the slotted item.
+   */
   @property({
     type: Boolean,
     reflect: true,
   })
   touched: boolean = false;
 
+  /**
+   * When this attribute or property is set to `true`, the component goes into neither invalid nor valid state.
+   */
   @property({
     type: Boolean,
     attribute: "novalidity",
   })
   noValidity: boolean = false;
 
+  /**
+   * Whether the slotted input is in valid state.
+   */
   get isValid() {
     return !!this._isElementValid;
   }
@@ -299,6 +315,9 @@ export class TurtleTextbox extends LitElement {
     }
   };
 
+  /**
+   * @ignore
+   */
   touch = () => {
     if (!this.touched) {
       this.touched = true;

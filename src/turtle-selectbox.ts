@@ -17,7 +17,11 @@ declare global {
 }
 
 /**
+ * Select box.
+ *
  * @element turtle-selectbox
+ *
+ * @slot - `<select>`.
  */
 export class TurtleSelectbox extends LitElement {
   static defaultTagName = "turtle-selectbox" as const;
@@ -77,12 +81,18 @@ export class TurtleSelectbox extends LitElement {
     ];
   }
 
+  /**
+   * Whether the user interacted to the slotted item.
+   */
   @property({
     type: Boolean,
     reflect: true,
   })
   touched: boolean = false;
 
+  /**
+   * When this attribute or property is set to `true`, the component goes into neither invalid nor valid state.
+   */
   @property({
     type: Boolean,
     attribute: "novalidity",
@@ -163,6 +173,9 @@ export class TurtleSelectbox extends LitElement {
     );
   };
 
+  /**
+   * @ignore
+   */
   touch = () => {
     this.touched = true;
   };

@@ -12,13 +12,12 @@ declare global {
 
 /**
  * Toggle Switch UI for representing an on/off value.
- * This component only works with Light DOM approach: you need to provide `<input type="checkbox">`
- * and set properties on them, not this component.
  *
- * NOTE: Due to browsers fire neither `blur` nor `change/input` event on unchecked radio (probably the spec defined), you can't place `<input type="radio">`.
+ * **NOTE:** Due to browsers fire neither `blur` nor `change/input` event on unchecked radio (probably the spec defined), you can't place `<input type="radio">`.
  *
  * @element turtle-toggle-switch
- * @slot Slot for an `<input type="checkbox" />`.
+ *
+ * @slot - `<input type="checkbox" />`.
  */
 export class TurtleToggleSwitch extends LitElement {
   static defaultTagName = "turtle-toggle-switch" as const;

@@ -10,7 +10,15 @@ declare global {
 }
 
 /**
+ * Notification card with user actions. Use when you want a user to perform an action, but don't want to interrupt the user.
+ *
  * @element turtle-notification
+ *
+ * @slot - Body texts.
+ * @slot image - Thumbnail `<img>` or icon.
+ * @slot action - An action related to the content. Up to 2.
+ *
+ * @cssprop [--turtle-notifiaction--radius=8px] - Corner radius size.
  */
 export class TurtleNotification extends LitElement {
   static defaultTagName = "turtle-notification" as const;
