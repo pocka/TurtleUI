@@ -11,17 +11,18 @@ declare global {
 }
 
 /**
- * A basic button element.
+ * A button UI.
  *
  * @element turtle-button
+ *
+ * @cssprop [--turtle-button--base-radius=8px] The size of corner radius.
  */
 export class TurtleButton extends Pressable(LitElement) {
   static defaultTagName = "turtle-button" as const;
 
   /**
-   * Color variant
-   *
-   * Unsupported value will be treated as `"normal"`.
+   * Color variant of the button.
+   * If an unsupported value was provided, it fallbacks to `"normal"`.
    */
   @property({
     type: String,
@@ -98,6 +99,7 @@ export class TurtleButton extends Pressable(LitElement) {
           appearance: none;
           display: block;
           width: 100%;
+          height: 100%;
           font: inherit;
           font-size: 1em;
           line-height: 1.5;

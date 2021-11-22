@@ -9,6 +9,8 @@ declare global {
 }
 
 /**
+ * Combines multiple buttons. Useful for grouping buttons by relations.
+ *
  * @element turtle-button-group
  */
 export class TurtleButtonGroup extends LitElement {
@@ -20,6 +22,9 @@ export class TurtleButtonGroup extends LitElement {
       css`
         :host {
           display: inline-flex;
+        }
+        :host([evenly]) {
+          align-items: stretch;
         }
         :host([evenly]) ::slotted(*) {
           flex: 1;
@@ -37,6 +42,10 @@ export class TurtleButtonGroup extends LitElement {
     ];
   }
 
+  /**
+   * When this attribute/property is set, each child buttons have same width.
+   * Make sure to specify the width.
+   */
   @property({
     type: Boolean,
     reflect: true,

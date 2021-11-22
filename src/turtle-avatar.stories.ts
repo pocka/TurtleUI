@@ -33,7 +33,7 @@ export default {
 } as Meta<Args>;
 
 const Template: Story<Args> = ({ bordered, src, defaultAlt }) => html`
-  <turtle-avatar ?bordered=${bordered} default-alt=${ifDefined(defaultAlt)}
+  <turtle-avatar ?bordered=${bordered} placeholder-alt=${ifDefined(defaultAlt)}
     >${src
       ? html`<img src=${ifDefined(src)} alt="Demo" />`
       : undefined}</turtle-avatar

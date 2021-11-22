@@ -8,10 +8,6 @@ import { wormhole } from "../directives/wormhole.js";
 type Constructor<T = {}> = new (...args: any[]) => T;
 
 export interface PressableProps {
-  /**
-   * Whether the element itself is disabled or not.
-   * Does not effect when `lightDOM` property is `true`.
-   */
   disabled: boolean;
 
   lightDOM: boolean;
@@ -45,6 +41,12 @@ export function Pressable<T extends Constructor<LitElement>>(
   Base: T
 ): Constructor<PressableProps> & T {
   class PressableClass extends Base {
+    /**
+     * Whether the element itself is disabled or not.
+     *
+     * When the `lightDOM` property is `true`, this property does not affect to anything.
+     * Specify `disabled` or `aria-disabled` attribute for the slotted element (e.g. `<button disabled/>`, `<a aria-disabled="true"/>`).
+     */
     @property({
       type: Boolean,
       reflect: true,

@@ -88,6 +88,12 @@ async function main() {
                 description:
                   event.description && marked.parse(event.description),
               })),
+            cssProperties:
+              def.cssProperties &&
+              def.cssProperties.map((prop) => ({
+                ...prop,
+                description: prop.description && marked.parse(prop.description),
+              })),
           };
         }),
     })

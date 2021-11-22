@@ -1,6 +1,5 @@
 import { css, LitElement, html } from "lit";
 import { property } from "lit/decorators/property.js";
-import { ifDefined } from "lit/directives/if-defined.js";
 
 import { minireset } from "./minireset.js";
 
@@ -11,8 +10,11 @@ declare global {
 }
 
 /**
+ * Displays an avatar image. When the image is not specified, the component shows a placeholder image.
+ *
  * @element turtle-avatar
- * @slot An avatar image (<img> element or any `object-fit`-able element, except `<picture>` element.)
+ * @slot An avatar image (`<img>` element or any `object-fit`-able element, except `<picture>` element.)
+ * @cssprop [--turtle-avatar--size=calc(4.8 * var(--turtle-ui--unit))] Width and Height of the component.
  */
 export class TurtleAvatar extends LitElement {
   static defaultTagName = "turtle-avatar" as const;
@@ -85,12 +87,13 @@ export class TurtleAvatar extends LitElement {
 
   /**
    * Label text for the fallback image.
+   * Strongly recommended to set unless the slot is always assigned.
    */
   @property({
     type: String,
-    attribute: "default-alt",
+    attribute: "placeholder-alt",
   })
-  defaultAlt?: string;
+  placeholderAlt: string = "";
 
   override render() {
     // Although users can slot `<picture>` element, the current HTML spec prevents us from styling the element.
@@ -107,7 +110,7 @@ export class TurtleAvatar extends LitElement {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           role="img"
-          aria-label=${ifDefined(this.defaultAlt)}
+          aria-label=${this.placeholderAlt}
         >
           <g clip-path="url(#a)">
             <path class="placeholder-bg" d="M0 0h32v32H0z" />

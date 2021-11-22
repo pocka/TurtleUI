@@ -90,10 +90,7 @@ main h3 {
 }
 
 main site-sandbox {
-  margin-block-start: calc(1.6 * var(--turtle-ui--unit));
-}
-.demo > site-sandbox:first-child {
-  margin-block-start: 0;
+  margin: calc(1.6 * var(--turtle-ui--unit)) 0;
 }
 
 site-section {

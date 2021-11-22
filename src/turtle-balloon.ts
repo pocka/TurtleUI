@@ -12,6 +12,8 @@ declare global {
 export type TailPosition = "left" | "right" | "bottom" | "top";
 
 /**
+ * Balloon UI component. In other words, Callout.
+ *
  * @element turtle-balloon
  */
 export class TurtleBalloon extends LitElement {
@@ -110,6 +112,7 @@ export class TurtleBalloon extends LitElement {
 
   /**
    * Where to show the balloon tail?
+   * @type {"top" | "right" | "bottom" | "left"}
    */
   @property({
     type: String,
@@ -119,7 +122,7 @@ export class TurtleBalloon extends LitElement {
 
   /**
    * Horizontal position of the tail, in ratio (0.0 ~ 1.0, where 0.0 = 0%, 1.0 = 100%).
-   * Ignored when tail-position is "left" or "right".
+   * Ignored when `tail-position` is `"left"` or `"right"`.
    */
   @property({
     type: Number,
