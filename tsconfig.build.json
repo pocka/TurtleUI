@@ -5,5 +5,5 @@
     "noEmit": false,
     "outDir": "es2019"
   },
-  "exclude": ["**/*.stories.ts"]
+  "exclude": ["**/*.stories.ts", "**/*.dev.ts"]
 }

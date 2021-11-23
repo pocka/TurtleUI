@@ -6,9 +6,6 @@
 # Although this project uses "Zero-Installs", this is required probably due to
 # unplugged packages. Not actually "Zero-Installs" :(
 $ yarn
-
-# Start Storybook on http://localhost:6006
-$ yarn storybook
 ```
 
 ## Editor/IDE integration
