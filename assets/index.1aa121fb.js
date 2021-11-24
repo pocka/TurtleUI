@@ -1007,7 +1007,7 @@ import{r as v,e as d,s,p as u,i as Nt,a as ye,d as xe,t as Dt,b as _e,l as nt,c 
           appearance: none;
           display: block;
           width: 100%;
-          height: calc(
+          min-height: calc(
             2.4 * var(--turtle-ui--unit) + var(--turtle-list-item--padding) * 2
           );
           padding: var(--turtle-list-item--padding);
