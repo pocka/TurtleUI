@@ -45,7 +45,7 @@ export class TurtleListItem extends Pressable(LitElement) {
           appearance: none;
           display: block;
           width: 100%;
-          height: calc(
+          min-height: calc(
             2.4 * var(--turtle-ui--unit) + var(--turtle-list-item--padding) * 2
           );
           padding: var(--turtle-list-item--padding);
