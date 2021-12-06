@@ -14,7 +14,7 @@
       content="https://pocka.github.io/TurtleUI/ogp.png"
     />
     <meta property="og:url" content="https://pocka.github.io/TurtleUI/" />
-    <script type="module" crossorigin src="/TurtleUI/assets/index.1aa121fb.js"></script>
+    <script type="module" crossorigin src="/TurtleUI/assets/index.f7462eb6.js"></script>
     <link rel="modulepreload" href="/TurtleUI/assets/vendor.10ea095f.js">
     <link rel="stylesheet" href="/TurtleUI/assets/index.2f9178b0.css">
   </head>
@@ -80,6 +80,19 @@
                 <li><a href="#turtle-card">turtle-card</a></li>
                 <li><a href="#turtle-card-action">turtle-card-action</a></li>
                 <li><a href="#turtle-checkbox">turtle-checkbox</a></li>
+                <li>
+                  <a href="#turtle-command-palette">turtle-command-palette</a>
+                </li>
+                <li>
+                  <a href="#turtle-command-palette-listbox"
+                    >turtle-command-palette-listbox</a
+                  >
+                </li>
+                <li>
+                  <a href="#turtle-command-palette-option"
+                    >turtle-command-palette-option</a
+                  >
+                </li>
                 <li>
                   <a href="#turtle-design-system">turtle-design-system</a>
                 </li>
@@ -676,6 +689,70 @@ registerTurtleUIComponents(allComponents)</code></pre>
                 </turtle-checkbox>
               </site-sandbox>
             </div>
+          </site-section>
+
+          <site-section>
+            <h3 id="turtle-command-palette">
+              <code>turtle-command-palette</code>
+            </h3>
+            <site-wc-doc name="turtle-command-palette"></site-wc-doc>
+            <div class="demo">
+              <site-sandbox>
+                <turtle-command-palette>
+                  <input
+                    slot="search"
+                    id="command_palette_demo_text"
+                    type="text"
+                    placeholder="Search commands..."
+                  />
+
+                  <turtle-command-palette-listbox
+                    id="command_palette_demo_listbox"
+                    slot="listbox"
+                  >
+                    <turtle-command-palette-option
+                      id="command_palette_demo_option"
+                    >
+                      Command Palette Demo
+
+                      <p slot="description">
+                        <code>turtle-command-palette</code> does not filter
+                        commands (options) based on input text. You need to
+                        implement filtering logic in your application.
+                      </p>
+                    </turtle-command-palette-option>
+
+                    <turtle-command-palette-option
+                      id="command_palette_demo_option2"
+                    >
+                      Keyboard controls
+
+                      <p slot="description">
+                        Press <kbd>Arrow Up</kbd> and <kbd>Arrow Down</kbd> to
+                        navigate, <kbd>Enter</kbd> to select, <kbd>Esc</kbd> to
+                        cancel.
+                      </p>
+                    </turtle-command-palette-option>
+                  </turtle-command-palette-listbox>
+
+                  <p slot="placeholder">Not found text.</p>
+                </turtle-command-palette>
+              </site-sandbox>
+            </div>
+          </site-section>
+
+          <site-section>
+            <h3 id="turtle-command-palette-listbox">
+              <code>turtle-command-palette-listbox</code>
+            </h3>
+            <site-wc-doc name="turtle-command-palette-listbox"></site-wc-doc>
+          </site-section>
+
+          <site-section>
+            <h3 id="turtle-command-palette-option">
+              <code>turtle-command-palette-option</code>
+            </h3>
+            <site-wc-doc name="turtle-command-palette-option"></site-wc-doc>
           </site-section>
 
           <site-section>

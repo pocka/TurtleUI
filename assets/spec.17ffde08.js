@@ -71,6 +71,32 @@ you need to style <code>&lt;img&gt;</code> element inside so it does fit to the 
 <p>After you changed <code>indeterminate</code> property of the slotted input, please make sure to call <code>sync</code> method on this component.
 Otherwise the visual appearance won&#39;t update.</p>
 `,properties:[],slots:[{name:"",description:`<p><code>&lt;input type=&quot;checkbox&quot;&gt;</code></p>
+`}]},{name:"turtle-command-palette-listbox",description:`<p>Listbox for <code>&lt;turtle-command-palette&gt;</code>.</p>
+<p>You need to provide <code>id</code> attribute to the element to enable automatic
+WAI-ARIA attributes management.</p>
+`,attributes:[{name:"role",description:`<p>WAI-ARIA role. Do not change unless you know what you&#39;re doing.</p>
+`,type:"string",default:'"listbox"'}],properties:[{name:"role",attribute:"role",description:`<p>WAI-ARIA role. Do not change unless you know what you&#39;re doing.</p>
+`,type:"string",default:'"listbox"'}],slots:[{name:"",description:`<p>A list of <code>&lt;turtle-command-palette-option&gt;</code>.</p>
+`}]},{name:"turtle-command-palette-option",attributes:[{name:"role",description:`<p>WAI-ARIA role. Do not change unless you know what you&#39;re doing.</p>
+`,type:"string",default:'"option"'}],properties:[{name:"role",attribute:"role",description:`<p>WAI-ARIA role. Do not change unless you know what you&#39;re doing.</p>
+`,type:"string",default:'"option"'}],events:[{name:"selectoption",description:`<p>User selected the option. Bubbles.</p>
+`}],slots:[{name:"",description:`<p>A name of the option.</p>
+`},{name:"description",description:`<p>Descriptive text for the option. Recommended to fill the slot for clarity.</p>
+`}]},{name:"turtle-command-palette",description:`<p>Command palette UI, which enables a user to search/select a command from a list of commands.</p>
+<p>This component handles basic keyboard controls, such as <kbd>Arrow Up</kbd> and <kbd>Enter</kbd>.
+However, this component <strong>does not</strong> handles filtering: you need to filter <code>&lt;turtle-command-palette-option&gt;</code>
+element based on the input text.</p>
+<p>Also, you need to implement exit actions (e.g. global <kbd>Esc</kbd> handling, backdrop) when you use this element as a modal dialog.</p>
+`,attributes:[{name:"role",description:`<p>WAI-ARIA role. Do not change unless you know what you&#39;re doing.</p>
+`,type:"string",default:'"combobox"'},{name:"noautoaria",description:`<p>Disables automatic WAI-ARIA attributes management.</p>
+`,type:"boolean",default:"false"}],properties:[{name:"role",attribute:"role",description:`<p>WAI-ARIA role. Do not change unless you know what you&#39;re doing.</p>
+`,type:"string",default:'"combobox"'},{name:"noAutoAria",attribute:"noautoaria",description:`<p>Disables automatic WAI-ARIA attributes management.</p>
+`,type:"boolean",default:"false"}],events:[{name:"cancel",description:`<p>When the user press <code>ESC</code> key on textbox.</p>
+`}],slots:[{name:"icon",description:`<p>Icon next to the textbox.</p>
+`},{name:"search",description:`<p>Textbox. Use <code>&lt;input type=&quot;text&quot;&gt;</code> with <code>id</code> attribute set.</p>
+`},{name:"listbox",description:`<p>Container list of options. Use <code>&lt;turtle-command-palette-listbox&gt;</code> with <code>id</code> attribute set.</p>
+`},{name:"placeholder",description:`<p>Placeholder text for when there are no options available.</p>
+`}],cssParts:[{name:"icon",description:`<p>The default icon element (<code>&lt;svg&gt;</code>).</p>
 `}]},{name:"turtle-design-system",description:`<p>Design System wrapper.</p>
 <p>This component provides CSS custom properties and set basic styles to itself.</p>
 `,attributes:[{name:"theme",description:`<p>Explicitly set the color theme.</p>
