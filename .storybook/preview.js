@@ -15,6 +15,9 @@ import TurtleButtonGroup from "../src/turtle-button-group?spec";
 import TurtleCard from "../src/turtle-card?spec";
 import TurtleCardAction from "../src/turtle-card-action?spec";
 import TurtleCheckbox from "../src/turtle-checkbox?spec";
+import TurtleCommandPalette from "../src/turtle-command-palette?spec";
+import TurtleCommandPaletteListbox from "../src/turtle-command-palette-listbox?spec";
+import TurtleCommandPaletteOption from "../src/turtle-command-palette-option?spec";
 import TurtleDesignSystem from "../src/turtle-design-system?spec";
 import TurtleFormField from "../src/turtle-form-field?spec";
 import TurtleLabelledItem from "../src/turtle-labelled-item?spec";
@@ -39,6 +42,9 @@ const components = [
   TurtleCard,
   TurtleCardAction,
   TurtleCheckbox,
+  TurtleCommandPalette,
+  TurtleCommandPaletteListbox,
+  TurtleCommandPaletteOption,
   TurtleDesignSystem,
   TurtleFormField,
   TurtleLabelledItem,

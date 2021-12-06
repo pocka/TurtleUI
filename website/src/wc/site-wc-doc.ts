@@ -16,6 +16,7 @@ type SlotDefinition = NonNullable<ComponentDefinition["slots"]>[number];
 type CSSPropDefinition = NonNullable<
   ComponentDefinition["cssProperties"]
 >[number];
+type CSSPartsDefinition = NonNullable<ComponentDefinition["cssParts"]>[number];
 
 export class SiteWcDoc extends LitElement {
   static defaultTagName = "site-wc-doc" as const;
@@ -147,7 +148,8 @@ export class SiteWcDoc extends LitElement {
 
         .property-name,
         .attr-name,
-        .event-name {
+        .event-name,
+        .part-name {
           flex-basis: 50%;
           font-weight: bold;
         }
@@ -240,6 +242,9 @@ export class SiteWcDoc extends LitElement {
         : nothing}
       ${this.spec.cssProperties?.length
         ? cssPropsTable(this.spec.cssProperties)
+        : nothing}
+      ${this.spec.cssParts?.length
+        ? cssPartsTable(this.spec.cssParts)
         : nothing}
     `;
   }
@@ -366,7 +371,7 @@ function slotsTable(slots: readonly SlotDefinition[]): TemplateResult {
               <td class="slot-name">
                 <code>${renderSlot(slot.name)}</code>
               </td>
-              <td class="description">${renderDescription(slot)}</td>
+              <td class="description">${renderDescription(slot as any)}</td>
             </tr>
           `
         )}
@@ -398,6 +403,29 @@ function cssPropsTable(props: readonly CSSPropDefinition[]): TemplateResult {
             <tr>
               <td class="property-name">${prop.name}</td>
               <td class="description">${renderDescription(prop)}</td>
+            </tr>
+          `
+        )}
+      </tbody>
+    </table>
+  `;
+}
+
+function cssPartsTable(parts: readonly CSSPartsDefinition[]): TemplateResult {
+  return html`
+    <table>
+      <thead>
+        <tr>
+          <th class="part-name">CSS Part</th>
+          <th class="description">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${parts.map(
+          (part) => html`
+            <tr>
+              <td class="part-name">${part.name}</td>
+              <td class="description">${renderDescription(part)}</td>
             </tr>
           `
         )}

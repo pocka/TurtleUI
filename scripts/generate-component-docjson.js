@@ -94,6 +94,12 @@ async function main() {
                 ...prop,
                 description: prop.description && marked.parse(prop.description),
               })),
+            cssParts:
+              def.cssParts &&
+              def.cssParts.map((part) => ({
+                ...part,
+                description: part.description && marked.parse(part.description),
+              })),
           };
         }),
     })

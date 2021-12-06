@@ -6,6 +6,9 @@ import { TurtleButtonGroup } from "./turtle-button-group";
 import { TurtleCard } from "./turtle-card.js";
 import { TurtleCardAction } from "./turtle-card-action.js";
 import { TurtleCheckbox } from "./turtle-checkbox.js";
+import { TurtleCommandPalette } from "./turtle-command-palette.js";
+import { TurtleCommandPaletteListbox } from "./turtle-command-palette-listbox.js";
+import { TurtleCommandPaletteOption } from "./turtle-command-palette-option.js";
 import { TurtleDesignSystem } from "./turtle-design-system.js";
 import { TurtleFormField } from "./turtle-form-field";
 import { TurtleLabelledItem } from "./turtle-labelled-item";
@@ -48,6 +51,9 @@ export {
   TurtleCard,
   TurtleCardAction,
   TurtleCheckbox,
+  TurtleCommandPalette,
+  TurtleCommandPaletteListbox,
+  TurtleCommandPaletteOption,
   TurtleDesignSystem,
   TurtleFormField,
   TurtleLabelledItem,
@@ -115,6 +121,9 @@ export const allComponents = [
   TurtleCard,
   TurtleCardAction,
   TurtleCheckbox,
+  TurtleCommandPalette,
+  TurtleCommandPaletteListbox,
+  TurtleCommandPaletteOption,
   TurtleDesignSystem,
   TurtleFormField,
   TurtleLabelledItem,
