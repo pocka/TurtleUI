@@ -16,6 +16,8 @@ declare global {
  * @element turtle-button
  *
  * @cssprop [--turtle-button--base-radius=8px] The size of corner radius.
+ *
+ * @csspart button - `<button>` element in a Shadow Tree when `lightdom` is not set.
  */
 export class TurtleButton extends Pressable(LitElement) {
   static defaultTagName = "turtle-button" as const;
@@ -184,7 +186,7 @@ export class TurtleButton extends Pressable(LitElement) {
     return this.lightDOM
       ? this.renderLightDOMSlot()
       : html`
-          <button class="button" ?disabled=${this.disabled}>
+          <button class="button" ?disabled=${this.disabled} part="button">
             <slot></slot>
           </button>
         `;
