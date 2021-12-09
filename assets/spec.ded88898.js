@@ -22,20 +22,23 @@ Make sure to specify the width.</p>
 `,type:"boolean",default:"false"}]},{name:"turtle-button",description:`<p>A button UI.</p>
 `,attributes:[{name:"variant",description:`<p>Color variant of the button.
 If an unsupported value was provided, it fallbacks to <code>&quot;normal&quot;</code>.</p>
-`,type:'"normal" | "danger" | "primary"',default:'"normal"'},{name:"disabled",description:`<p>Whether the element itself is disabled or not.</p>
+`,type:'"normal" | "danger" | "primary"',default:'"normal"'},{name:"rounded",description:`<p>Whether to apply bigger radius to corners.</p>
+`,type:"boolean",default:"false"},{name:"disabled",description:`<p>Whether the element itself is disabled or not.</p>
 <p>When the <code>lightDOM</code> property is <code>true</code>, this property does not affect to anything.
 Specify <code>disabled</code> or <code>aria-disabled</code> attribute for the slotted element (e.g. <code>&lt;button disabled/&gt;</code>, <code>&lt;a aria-disabled=&quot;true&quot;/&gt;</code>).</p>
 `,type:"boolean",default:"false"},{name:"lightdom",description:`<p>Whether to use a slotted element as a button element.
 You need to provide an Element to slot, instead of a TextFragment.</p>
 `,type:"boolean",default:"false"}],properties:[{name:"variant",attribute:"variant",description:`<p>Color variant of the button.
 If an unsupported value was provided, it fallbacks to <code>&quot;normal&quot;</code>.</p>
-`,type:'"normal" | "danger" | "primary"',default:'"normal"'},{name:"disabled",attribute:"disabled",description:`<p>Whether the element itself is disabled or not.</p>
+`,type:'"normal" | "danger" | "primary"',default:'"normal"'},{name:"rounded",attribute:"rounded",description:`<p>Whether to apply bigger radius to corners.</p>
+`,type:"boolean",default:"false"},{name:"disabled",attribute:"disabled",description:`<p>Whether the element itself is disabled or not.</p>
 <p>When the <code>lightDOM</code> property is <code>true</code>, this property does not affect to anything.
 Specify <code>disabled</code> or <code>aria-disabled</code> attribute for the slotted element (e.g. <code>&lt;button disabled/&gt;</code>, <code>&lt;a aria-disabled=&quot;true&quot;/&gt;</code>).</p>
 `,type:"boolean",default:"false"},{name:"lightDOM",attribute:"lightdom",description:`<p>Whether to use a slotted element as a button element.
 You need to provide an Element to slot, instead of a TextFragment.</p>
 `,type:"boolean",default:"false"}],cssProperties:[{name:"--turtle-button--base-radius",description:`<p>The size of corner radius.</p>
-`,default:'"8px"'}]},{name:"turtle-card-action",description:`<p>An action related to a <code>&lt;turtle-card&gt;</code>.</p>
+`,default:'"8px"'}],cssParts:[{name:"button",description:`<p><code>&lt;button&gt;</code> element in a Shadow Tree when <code>lightdom</code> is not set.</p>
+`}]},{name:"turtle-card-action",description:`<p>An action related to a <code>&lt;turtle-card&gt;</code>.</p>
 `,attributes:[{name:"disabled",description:`<p>Whether the element itself is disabled or not.</p>
 <p>When the <code>lightDOM</code> property is <code>true</code>, this property does not affect to anything.
 Specify <code>disabled</code> or <code>aria-disabled</code> attribute for the slotted element (e.g. <code>&lt;button disabled/&gt;</code>, <code>&lt;a aria-disabled=&quot;true&quot;/&gt;</code>).</p>
