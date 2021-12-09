@@ -23,6 +23,7 @@ Make sure to specify the width.</p>
 `,attributes:[{name:"variant",description:`<p>Color variant of the button.
 If an unsupported value was provided, it fallbacks to <code>&quot;normal&quot;</code>.</p>
 `,type:'"normal" | "danger" | "primary"',default:'"normal"'},{name:"rounded",description:`<p>Whether to apply bigger radius to corners.</p>
+`,type:"boolean",default:"false"},{name:"icon-only",description:`<p>Whether to hide inner text. Make sure to set <code>title</code> attribute when setting this attribute on.</p>
 `,type:"boolean",default:"false"},{name:"disabled",description:`<p>Whether the element itself is disabled or not.</p>
 <p>When the <code>lightDOM</code> property is <code>true</code>, this property does not affect to anything.
 Specify <code>disabled</code> or <code>aria-disabled</code> attribute for the slotted element (e.g. <code>&lt;button disabled/&gt;</code>, <code>&lt;a aria-disabled=&quot;true&quot;/&gt;</code>).</p>
@@ -31,6 +32,7 @@ You need to provide an Element to slot, instead of a TextFragment.</p>
 `,type:"boolean",default:"false"}],properties:[{name:"variant",attribute:"variant",description:`<p>Color variant of the button.
 If an unsupported value was provided, it fallbacks to <code>&quot;normal&quot;</code>.</p>
 `,type:'"normal" | "danger" | "primary"',default:'"normal"'},{name:"rounded",attribute:"rounded",description:`<p>Whether to apply bigger radius to corners.</p>
+`,type:"boolean",default:"false"},{name:"iconOnly",attribute:"icon-only",description:`<p>Whether to hide inner text. Make sure to set <code>title</code> attribute when setting this attribute on.</p>
 `,type:"boolean",default:"false"},{name:"disabled",attribute:"disabled",description:`<p>Whether the element itself is disabled or not.</p>
 <p>When the <code>lightDOM</code> property is <code>true</code>, this property does not affect to anything.
 Specify <code>disabled</code> or <code>aria-disabled</code> attribute for the slotted element (e.g. <code>&lt;button disabled/&gt;</code>, <code>&lt;a aria-disabled=&quot;true&quot;/&gt;</code>).</p>
