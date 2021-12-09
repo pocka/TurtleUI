@@ -29,6 +29,15 @@ export class TurtleButton extends Pressable(LitElement) {
   })
   variant: "normal" | "danger" | "primary" = "normal";
 
+  /**
+   * Whether to apply bigger radius to corners.
+   */
+  @property({
+    type: Boolean,
+    reflect: true,
+  })
+  rounded: boolean = false;
+
   static override get styles() {
     return [
       minireset,
@@ -58,6 +67,9 @@ export class TurtleButton extends Pressable(LitElement) {
           font-size: var(--base-font-size);
           width: auto;
           box-sizing: border-box;
+        }
+        :host([rounded]) {
+          --turtle-button--base-radius: 40px;
         }
 
         :host([variant="primary"]) {

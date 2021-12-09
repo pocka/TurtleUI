@@ -9,6 +9,7 @@ import { TurtleButtonGroup } from "./turtle-button-group";
 
 interface Args {
   evenly: boolean;
+  rounded: boolean;
 }
 
 export default {
@@ -22,22 +23,23 @@ export default {
   },
   args: {
     evenly: false,
+    rounded: false,
   },
   argTypes: {
     ...disableControls([]),
   },
 } as Meta<Args>;
 
-const Template: Story<Args> = ({ evenly }) => html`
+const Template: Story<Args> = ({ evenly, rounded }) => html`
   <turtle-button-group
     ?evenly=${evenly}
     style=${ifDefined(evenly ? "display: flex;" : undefined)}
   >
-    <turtle-button variant="primary">Button</turtle-button>
-    <turtle-button lightdom>
+    <turtle-button variant="primary" ?rounded=${rounded}>Button</turtle-button>
+    <turtle-button lightdom ?rounded=${rounded}>
       <button>LightDOM Button</button>
     </turtle-button>
-    <turtle-button lightdom>
+    <turtle-button lightdom ?rounded=${rounded}>
       <a href="#">LightDOM Button (Anchor Link)</a>
     </turtle-button>
   </turtle-button-group>
@@ -48,4 +50,9 @@ export const Default = Template.bind({});
 export const Evenly = Template.bind({});
 Evenly.args = {
   evenly: true,
+};
+
+export const Rounded = Template.bind({});
+Rounded.args = {
+  rounded: true,
 };

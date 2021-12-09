@@ -9,6 +9,7 @@ import { TurtleButton } from "./turtle-button";
 
 interface Args {
   variant: TurtleButton["variant"];
+  rounded: boolean;
   disabled: boolean;
 }
 
@@ -23,6 +24,7 @@ export default {
   },
   args: {
     variant: "normal",
+    rounded: false,
     disabled: false,
   },
   argTypes: {
@@ -36,12 +38,20 @@ export default {
   },
 } as Meta<Args>;
 
-const Template: Story<Args> = ({ disabled, variant }) =>
-  html`<turtle-button variant=${variant} ?disabled=${disabled}
+const Template: Story<Args> = ({ disabled, rounded, variant }) =>
+  html`<turtle-button
+    variant=${variant}
+    ?disabled=${disabled}
+    ?rounded=${rounded}
     >Button</turtle-button
   >`;
 
 export const Default = Template.bind({});
+
+export const Rounded = Template.bind({});
+Rounded.args = {
+  rounded: true,
+};
 
 export const Primary = Template.bind({});
 Primary.args = {
@@ -58,20 +68,21 @@ Disabled.args = {
   disabled: true,
 };
 
-export const FullWidth: Story<Args> = ({ variant }) =>
+export const FullWidth: Story<Args> = ({ rounded, variant }) =>
   html`<turtle-button
     variant=${variant}
+    ?rounded=${rounded}
     style=${styleMap({ display: "block", width: "100%" })}
     >Button</turtle-button
   >`;
 
-export const LightDOM: Story<Args> = ({ variant, disabled }) =>
+export const LightDOM: Story<Args> = ({ variant, rounded, disabled }) =>
   html`
     <div>
-      <turtle-button lightdom variant=${variant}>
+      <turtle-button lightdom variant=${variant} ?rounded=${rounded}>
         <button ?disabled=${disabled}>Button</button>
       </turtle-button>
-      <turtle-button lightdom variant=${variant}>
+      <turtle-button lightdom variant=${variant} ?rounded=${rounded}>
         <a aria-disabled=${disabled ? "true" : "false"} href="#">Anchor</a>
       </turtle-button>
     </div>
