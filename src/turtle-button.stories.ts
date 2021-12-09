@@ -1,5 +1,5 @@
 import type { Meta, Story } from "@storybook/web-components";
-import { html } from "lit-html";
+import { html, nothing } from "lit-html";
 import { styleMap } from "lit-html/directives/style-map";
 import { config } from "storybook-addon-designs";
 
@@ -11,6 +11,8 @@ interface Args {
   variant: TurtleButton["variant"];
   rounded: boolean;
   disabled: boolean;
+  icon: boolean;
+  iconOnly: boolean;
 }
 
 export default {
@@ -26,6 +28,8 @@ export default {
     variant: "normal",
     rounded: false,
     disabled: false,
+    icon: false,
+    iconOnly: false,
   },
   argTypes: {
     variant: {
@@ -38,13 +42,24 @@ export default {
   },
 } as Meta<Args>;
 
-const Template: Story<Args> = ({ disabled, rounded, variant }) =>
+const Template: Story<Args> = ({
+  disabled,
+  rounded,
+  variant,
+  icon,
+  iconOnly,
+}) =>
   html`<turtle-button
     variant=${variant}
     ?disabled=${disabled}
     ?rounded=${rounded}
-    >Button</turtle-button
-  >`;
+    ?icon-only=${iconOnly}
+  >
+    Button
+    ${icon
+      ? html`<turtle-brand-icon slot="icon"></turtle-brand-icon>`
+      : nothing}
+  </turtle-button>`;
 
 export const Default = Template.bind({});
 
@@ -68,22 +83,60 @@ Disabled.args = {
   disabled: true,
 };
 
-export const FullWidth: Story<Args> = ({ rounded, variant }) =>
+export const WithIcon = Template.bind({});
+WithIcon.args = {
+  icon: true,
+};
+
+export const IconOnly = Template.bind({});
+IconOnly.args = {
+  icon: true,
+  iconOnly: true,
+};
+
+export const FullWidth: Story<Args> = ({ rounded, icon, iconOnly, variant }) =>
   html`<turtle-button
     variant=${variant}
     ?rounded=${rounded}
+    ?icon-only=${iconOnly}
     style=${styleMap({ display: "block", width: "100%" })}
-    >Button</turtle-button
-  >`;
+  >
+    ${icon
+      ? html`<turtle-brand-icon slot="icon"></turtle-brand-icon>`
+      : nothing}
+    Button
+  </turtle-button>`;
 
-export const LightDOM: Story<Args> = ({ variant, rounded, disabled }) =>
+export const LightDOM: Story<Args> = ({
+  variant,
+  rounded,
+  disabled,
+  icon,
+  iconOnly,
+}) =>
   html`
     <div>
-      <turtle-button lightdom variant=${variant} ?rounded=${rounded}>
+      <turtle-button
+        lightdom
+        variant=${variant}
+        ?rounded=${rounded}
+        ?icon-only=${iconOnly}
+      >
         <button ?disabled=${disabled}>Button</button>
+        ${icon
+          ? html`<turtle-brand-icon slot="icon"></turtle-brand-icon>`
+          : nothing}
       </turtle-button>
-      <turtle-button lightdom variant=${variant} ?rounded=${rounded}>
+      <turtle-button
+        lightdom
+        variant=${variant}
+        ?rounded=${rounded}
+        ?icon-only=${iconOnly}
+      >
         <a aria-disabled=${disabled ? "true" : "false"} href="#">Anchor</a>
+        ${icon
+          ? html`<turtle-brand-icon slot="icon"></turtle-brand-icon>`
+          : nothing}
       </turtle-button>
     </div>
   `;

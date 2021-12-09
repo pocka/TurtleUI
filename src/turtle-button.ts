@@ -2,6 +2,7 @@ import { css, LitElement, html } from "lit";
 import { property } from "lit/decorators/property.js";
 import { minireset } from "./minireset.js";
 
+import { SlotSensorController } from "./controllers/SlotSensorController.js";
 import { Pressable } from "./mixins/Pressable.js";
 
 declare global {
@@ -40,6 +41,16 @@ export class TurtleButton extends Pressable(LitElement) {
   })
   rounded: boolean = false;
 
+  /**
+   * Whether to hide inner text. Make sure to set `title` attribute when setting this attribute on.
+   */
+  @property({
+    type: Boolean,
+    reflect: true,
+    attribute: "icon-only",
+  })
+  iconOnly: boolean = false;
+
   static override get styles() {
     return [
       minireset,
@@ -69,6 +80,7 @@ export class TurtleButton extends Pressable(LitElement) {
           font-size: var(--base-font-size);
           width: auto;
           box-sizing: border-box;
+          position: relative;
         }
         :host([rounded]) {
           --turtle-button--base-radius: 40px;
@@ -109,7 +121,7 @@ export class TurtleButton extends Pressable(LitElement) {
         }
 
         .button,
-        :host([lightdom]) ::slotted(*) {
+        :host([lightdom]) .lightdom::slotted(*) {
           appearance: none;
           display: block;
           width: 100%;
@@ -145,24 +157,35 @@ export class TurtleButton extends Pressable(LitElement) {
           text-align: center;
           text-decoration: inherit;
         }
+        .button.with-icon,
+        :host([lightdom]) .lightdom.with-icon::slotted(*) {
+          padding-inline-start: calc(4 * var(--turtle-ui--unit));
+        }
+        :host([icon-only]) .button.with-icon,
+        :host([icon-only][lightdom]) .lightdom.with-icon::slotted(*) {
+          font-size: 0;
+          padding: calc(2 * var(--turtle-ui--unit));
+
+          color: transparent;
+        }
         .button:hover,
-        :host([lightdom]) ::slotted(:hover) {
+        :host([lightdom]) .lightdom::slotted(:hover) {
           background-color: var(--turtle-ui--button--bg--hover);
         }
         .button:active,
-        :host([lightdom]) ::slotted(:active) {
+        :host([lightdom]) .lightdom::slotted(:active) {
           background-color: var(--turtle-ui--button--bg--active);
         }
         .button:focus,
-        :host([lightdom]) ::slotted(:focus) {
+        :host([lightdom]) .lightdom::slotted(:focus) {
           box-shadow: 0 0 0 4px var(--turtle-ui--button--highlight-shadow-color)
             inset;
           border-color: var(--turtle-ui--button--highlight-color);
           outline: none;
         }
         .button:disabled,
-        :host([lightdom]) ::slotted(:disabled),
-        :host([lightdom]) ::slotted([aria-disabled="true"]) {
+        :host([lightdom]) .lightdom::slotted(:disabled),
+        :host([lightdom]) .lightdom::slotted([aria-disabled="true"]) {
           box-shadow: none;
           background-color: hsl(
             var(--turtle-ui--color--tone--mono),
@@ -178,17 +201,56 @@ export class TurtleButton extends Pressable(LitElement) {
           );
           cursor: not-allowed;
         }
+
+        [data-hidden] {
+          display: none;
+        }
+
+        .icon {
+          position: absolute;
+          left: 8px;
+          top: 0;
+          bottom: 0;
+          margin: auto 0;
+          font-size: calc(2.4 * var(--turtle-ui--unit));
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          color: var(--turtle-ui--button--fg);
+          pointer-events: none;
+        }
+        :host([icon-only]) .icon {
+          left: 0;
+          right: 0;
+        }
       `,
     ];
   }
 
+  #iconSlot = new SlotSensorController(this, "icon");
+
   override render() {
-    return this.lightDOM
-      ? this.renderLightDOMSlot()
+    const buttonModifierClass = this.#iconSlot.assigned ? "with-icon" : "";
+
+    const button = this.lightDOM
+      ? this.renderLightDOMSlot(`lightdom ${buttonModifierClass}`)
       : html`
-          <button class="button" ?disabled=${this.disabled} part="button">
+          <button
+            class="button ${buttonModifierClass}"
+            ?disabled=${this.disabled}
+            part="button"
+          >
             <slot></slot>
           </button>
         `;
+
+    return html`
+      ${button}
+
+      <span class="icon" ?data-hidden=${!this.#iconSlot.assigned}>
+        <slot name="icon"></slot>
+      </span>
+    `;
   }
 }
