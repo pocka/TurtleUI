@@ -604,6 +604,32 @@ registerTurtleUIComponents(allComponents)</code></pre>
                   <turtle-button>Normal</turtle-button>
                 </div>
               </site-sandbox>
+
+              <site-sandbox>
+                <div style="display: inline-flex; gap: 8px">
+                  <turtle-button lightdom>
+                    <button>LightDOM (<code>&lt;button&gt;</code>)</button>
+                  </turtle-button>
+                  <turtle-button lightdom>
+                    <a href="#light_dom_button_like"
+                      >Light DOM (<code>&lt;a&gt;</code>)</a
+                    >
+                  </turtle-button>
+                </div>
+              </site-sandbox>
+
+              <site-sandbox>
+                <div style="display: inline-flex; gap: 8px">
+                  <turtle-button variant="primary">
+                    <turtle-brand-icon slot="icon"></turtle-brand-icon>
+                    With Icon
+                  </turtle-button>
+                  <turtle-button variant="danger" title="icon-only" icon-only>
+                    <turtle-brand-icon slot="icon"></turtle-brand-icon>
+                    Icon Only
+                  </turtle-button>
+                </div>
+              </site-sandbox>
             </div>
           </site-section>
 

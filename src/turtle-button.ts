@@ -16,6 +16,8 @@ declare global {
  *
  * @element turtle-button
  *
+ * @slot icon - Icon element, assuming width=height=1em.
+ *
  * @cssprop [--turtle-button--base-radius=8px] The size of corner radius.
  *
  * @csspart button - `<button>` element in a Shadow Tree when `lightdom` is not set.
