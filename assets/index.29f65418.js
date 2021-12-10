@@ -2976,7 +2976,7 @@ import{r as h,e as d,s as u,p as s,i as Qt,a as Ze,d as Be,t as Jt,b as Ae,l as 
         .component-description p:not(:first-child) {
           margin-top: 0.75em;
         }
-      `]}async connectedCallback(){super.connectedCallback(),this._spec=await Mo(()=>import("./spec.0ffa891e.js"),[])}get spec(){var t;return((t=this._spec)==null?void 0:t.tags.find(e=>e.name===this.name))||null}render(){var e,o,i;if(!this.spec)return s` <span>Component definition not found.</span> `;const t=Do(this.spec.name);return s`
+      `]}async connectedCallback(){super.connectedCallback(),this._spec=await Mo(()=>import("./spec.e58017fd.js"),[])}get spec(){var t;return((t=this._spec)==null?void 0:t.tags.find(e=>e.name===this.name))||null}render(){var e,o,i;if(!this.spec)return s` <span>Component definition not found.</span> `;const t=Do(this.spec.name);return s`
       ${this.spec.description?s`<div class="component-description">
             ${I(this.spec.description)}
           </div>`:m}
