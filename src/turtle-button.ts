@@ -226,6 +226,12 @@ export class TurtleButton extends Pressable(LitElement) {
           left: 0;
           right: 0;
         }
+        .icon[data-disabled] {
+          color: hsl(
+            var(--turtle-ui--color--tone--mono),
+            var(--turtle-ui--color--level--7)
+          );
+        }
       `,
     ];
   }
@@ -250,7 +256,11 @@ export class TurtleButton extends Pressable(LitElement) {
     return html`
       ${button}
 
-      <span class="icon" ?data-hidden=${!this.#iconSlot.assigned}>
+      <span
+        class="icon"
+        ?data-hidden=${!this.#iconSlot.assigned}
+        ?data-disabled=${this.disabled}
+      >
         <slot name="icon"></slot>
       </span>
     `;
