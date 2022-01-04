@@ -176,6 +176,19 @@ export class SiteWcDoc extends LitElement {
           );
         }
 
+        .component-description a {
+          color: hsl(
+            var(--turtle-ui--color--tone--primary),
+            var(--turtle-ui--color--level--3)
+          );
+        }
+
+        .component-description ul {
+          list-style: disc;
+          padding-left: 1em;
+          margin-top: 0.5em;
+        }
+
         .description p:not(:first-child),
         .component-description p:not(:first-child) {
           margin-top: 0.75em;
