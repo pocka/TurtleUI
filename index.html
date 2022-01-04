@@ -14,7 +14,7 @@
       content="https://pocka.github.io/TurtleUI/ogp.png"
     />
     <meta property="og:url" content="https://pocka.github.io/TurtleUI/" />
-    <script type="module" crossorigin src="/TurtleUI/assets/index.7a18e521.js"></script>
+    <script type="module" crossorigin src="/TurtleUI/assets/index.a8136029.js"></script>
     <link rel="modulepreload" href="/TurtleUI/assets/vendor.10ea095f.js">
     <link rel="stylesheet" href="/TurtleUI/assets/index.2f9178b0.css">
   </head>
@@ -108,6 +108,7 @@
                     >turtle-notification-action</a
                   >
                 </li>
+                <li><a href="#turtle-pill">turtle-pill</a></li>
                 <li><a href="#turtle-radio-button">turtle-radio-button</a></li>
                 <li><a href="#turtle-selectbox">turtle-selectbox</a></li>
                 <li><a href="#turtle-snackbar">turtle-snackbar</a></li>
@@ -932,6 +933,36 @@ registerTurtleUIComponents(allComponents)</code></pre>
                     </a>
                   </turtle-notification-action>
                 </turtle-notification>
+              </site-sandbox>
+            </div>
+          </site-section>
+
+          <site-section>
+            <h3 id="turtle-pill">
+              <code>turtle-pill</code>
+            </h3>
+            <site-wc-doc name="turtle-pill"></site-wc-doc>
+            <div class="demo">
+              <site-sandbox>
+                <turtle-pill>
+                  <turtle-brand-icon slot="icon"></turtle-brand-icon>
+                  Label
+                </turtle-pill>
+              </site-sandbox>
+              <site-sandbox>
+                <turtle-pill pressable>
+                  TypeScript
+                  <turtle-circle-cross-icon
+                    slot="action-icon"
+                  ></turtle-circle-cross-icon>
+                </turtle-pill>
+              </site-sandbox>
+              <site-sandbox>
+                <turtle-pill lightdom>
+                  <turtle-terminal-icon slot="icon"></turtle-terminal-icon>
+                  <a href="#turtle-radio-button">COMPLETE</a>
+                  <turtle-check-icon slot="action-icon"></turtle-check-icon>
+                </turtle-pill>
               </site-sandbox>
             </div>
           </site-section>
