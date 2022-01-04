@@ -5,6 +5,12 @@ import { minireset } from "./minireset.js";
 import { SlotSensorController } from "./controllers/SlotSensorController.js";
 import { Pressable } from "./mixins/Pressable.js";
 
+declare global {
+  interface HTMLElementTagNameMap {
+    [TurtlePill.defaultTagName]: TurtlePill;
+  }
+}
+
 /**
  * Label element, with or without a user action triggered by click/touch.
  *
