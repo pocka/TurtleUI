@@ -26,6 +26,7 @@ import TurtleListItem from "../src/turtle-list-item?spec";
 import TurtleNotification from "../src/turtle-notification?spec";
 import TurtleNotificationAction from "../src/turtle-notification-action?spec";
 import TurtlePill from "../src/turtle-pill?spec";
+import TurtleProgressbar from "../src/turtle-progressbar?spec";
 import TurtleRadioButton from "../src/turtle-radio-button?spec";
 import TurtleSelectbox from "../src/turtle-selectbox?spec";
 import TurtleSnackbar from "../src/turtle-snackbar?spec";
@@ -54,6 +55,7 @@ const components = [
   TurtleNotification,
   TurtleNotificationAction,
   TurtlePill,
+  TurtleProgressbar,
   TurtleRadioButton,
   TurtleSelectbox,
   TurtleSnackbar,

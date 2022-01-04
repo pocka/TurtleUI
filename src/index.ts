@@ -17,6 +17,7 @@ import { TurtleListItem } from "./turtle-list-item.js";
 import { TurtleNotification } from "./turtle-notification.js";
 import { TurtleNotificationAction } from "./turtle-notification-action.js";
 import { TurtlePill } from "./turtle-pill.js";
+import { TurtleProgressbar } from "./turtle-progressbar.js";
 import { TurtleRadioButton } from "./turtle-radio-button.js";
 import { TurtleSelectbox } from "./turtle-selectbox.js";
 import { TurtleSnackbar } from "./turtle-snackbar.js";
@@ -67,6 +68,7 @@ export {
   TurtleNotification,
   TurtleNotificationAction,
   TurtlePill,
+  TurtleProgressbar,
   TurtleRadioButton,
   TurtleSelectbox,
   TurtleSnackbar,
@@ -146,6 +148,7 @@ export const allComponents = [
   TurtleNotification,
   TurtleNotificationAction,
   TurtlePill,
+  TurtleProgressbar,
   TurtleRadioButton,
   TurtleSelectbox,
   TurtleSnackbar,
