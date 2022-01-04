@@ -141,6 +141,8 @@ const Template: Story<Args> = ({ color, fontSize }) => html`
     ></turtle-circle-cross-icon>
 
     <turtle-dots-icon title="<turtle-dots-icon>"></turtle-dots-icon>
+
+    <turtle-terminal-icon title="<turtle-terminal-icon>"></turtle-terminal-icon>
   </div>
 `;
 

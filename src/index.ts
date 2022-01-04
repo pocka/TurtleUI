@@ -41,6 +41,7 @@ import { TurtleMinusIcon } from "./icons/turtle-minus-icon.js";
 import { TurtlePlusIcon } from "./icons/turtle-plus-icon.js";
 import { TurtleQuestionIcon } from "./icons/turtle-question-icon.js";
 import { TurtleReloadIcon } from "./icons/turtle-reload-icon.js";
+import { TurtleTerminalIcon } from "./icons/turtle-terminal-icon.js";
 
 export {
   // Basic Components
@@ -85,6 +86,7 @@ export {
   TurtlePlusIcon,
   TurtleQuestionIcon,
   TurtleReloadIcon,
+  TurtleTerminalIcon,
 };
 
 export const icons = [
@@ -105,6 +107,7 @@ export const icons = [
   TurtlePlusIcon,
   TurtleQuestionIcon,
   TurtleReloadIcon,
+  TurtleTerminalIcon,
 ];
 
 /**
