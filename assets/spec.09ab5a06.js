@@ -208,6 +208,22 @@ You need to provide an Element to slot, instead of a TextFragment.</p>
 `},{name:"label",description:`<p>the main <code>&lt;span&gt;</code> element, which is rendered when neither <code>pressable</code> nor <code>lightdom</code> is present.</p>
 `},{name:"icon",description:`<p>Icon wrapper element.</p>
 `},{name:"action-icon",description:`<p>Action icon wrapper element.</p>
+`}]},{name:"turtle-progressbar",description:`<p>Progress bar element.</p>
+<p>Strictly speaking, this element only provides a custom visual appearance for the slotted <code>&lt;progress&gt;</code> element.
+You MUST put non-indeterminate <code>&lt;progress&gt;</code> element to the default slot.</p>
+<p><strong>IMPORTANT:</strong> This element <strong>DOES NOT</strong> support indeterminate state. Always set <code>value</code> to the <code>&lt;progress&gt;</code>.</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress</a></p>
+<p>You should follow the best practice of the usage for <code>&lt;progress&gt;</code>, especially for a11y ones.</p>
+<ul>
+<li>Refer to the slotted <code>&lt;progress&gt;</code> element at the loading section, via <code>aria-describedby</code>.</li>
+<li>Set <code>aria-busy=&quot;true&quot;</code> on the loading the loading section.</li>
+<li>Use <code>aria-label</code> / <code>aria-labelledby</code> attribute or label with <code>&lt;label&gt;</code> element with <code>for</code> attribute.</li>
+</ul>
+<p><strong>NOTE:</strong> In the future, this element may adapt to the Element Internals API and remove the slotted usage.</p>
+`,properties:[],slots:[{name:"",description:`<p><code>&lt;progress&gt;</code> element.</p>
+`}],cssProperties:[{name:"--turtle-progressbar--inner-bar--color",description:`<p>The color of the inner bar.</p>
+`,default:'"hsl(var(--turtle-ui--color--tone--primary), var(--turtle-ui--color--level--4))"'},{name:"--turtle-progressbar--height",description:`<p>Height of the progress bar.</p>
+`,default:'"8px"'}],cssParts:[{name:"inner-bar",description:`<p>The inner bar indicates completed section.</p>
 `}]},{name:"turtle-radio-button",description:`<p>Radio button.</p>
 `,properties:[],slots:[{name:"",description:`<p><code>&lt;input type=&quot;radio&quot;&gt;</code></p>
 `}]},{name:"turtle-selectbox",description:`<p>Select box.</p>
