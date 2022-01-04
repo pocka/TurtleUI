@@ -35,8 +35,11 @@ import { TurtleCircleMinusIcon } from "./icons/turtle-circle-minus-icon.js";
 import { TurtleCirclePlusIcon } from "./icons/turtle-circle-plus-icon.js";
 import { TurtleCrossIcon } from "./icons/turtle-cross-icon.js";
 import { TurtleDotsIcon } from "./icons/turtle-dots-icon.js";
+import { TurtleFileUploadIcon } from "./icons/turtle-file-upload-icon.js";
+import { TurtleFirstPageIcon } from "./icons/turtle-first-page-icon.js";
 import { TurtleHeartIcon } from "./icons/turtle-heart-icon.js";
 import { TurtleInfoIcon } from "./icons/turtle-info-icon.js";
+import { TurtleLastPageIcon } from "./icons/turtle-last-page-icon.js";
 import { TurtleMinusIcon } from "./icons/turtle-minus-icon.js";
 import { TurtlePlusIcon } from "./icons/turtle-plus-icon.js";
 import { TurtleQuestionIcon } from "./icons/turtle-question-icon.js";
@@ -80,8 +83,11 @@ export {
   TurtleCirclePlusIcon,
   TurtleCrossIcon,
   TurtleDotsIcon,
+  TurtleFileUploadIcon,
+  TurtleFirstPageIcon,
   TurtleHeartIcon,
   TurtleInfoIcon,
+  TurtleLastPageIcon,
   TurtleMinusIcon,
   TurtlePlusIcon,
   TurtleQuestionIcon,
@@ -101,8 +107,11 @@ export const icons = [
   TurtleCirclePlusIcon,
   TurtleCrossIcon,
   TurtleDotsIcon,
+  TurtleFileUploadIcon,
+  TurtleFirstPageIcon,
   TurtleHeartIcon,
   TurtleInfoIcon,
+  TurtleLastPageIcon,
   TurtleMinusIcon,
   TurtlePlusIcon,
   TurtleQuestionIcon,

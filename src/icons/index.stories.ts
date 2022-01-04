@@ -143,6 +143,18 @@ const Template: Story<Args> = ({ color, fontSize }) => html`
     <turtle-dots-icon title="<turtle-dots-icon>"></turtle-dots-icon>
 
     <turtle-terminal-icon title="<turtle-terminal-icon>"></turtle-terminal-icon>
+
+    <turtle-first-page-icon
+      title="<turtle-first-page-icon>"
+    ></turtle-first-page-icon>
+
+    <turtle-last-page-icon
+      title="<turtle-last-page-icon>"
+    ></turtle-last-page-icon>
+
+    <turtle-file-upload-icon
+      title="<turtle-file-upload-icon>"
+    ></turtle-file-upload-icon>
   </div>
 `;
 
