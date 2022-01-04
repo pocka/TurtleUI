@@ -21,6 +21,7 @@ declare global {
  * @cssprop [--turtle-button--base-radius=8px] The size of corner radius.
  *
  * @csspart button - `<button>` element in a Shadow Tree when `lightdom` is not set.
+ * @csspart icon - A container element of the `icon` slot.
  */
 export class TurtleButton extends Pressable(LitElement) {
   static defaultTagName = "turtle-button" as const;
@@ -260,6 +261,7 @@ export class TurtleButton extends Pressable(LitElement) {
         class="icon"
         ?data-hidden=${!this.#iconSlot.assigned}
         ?data-disabled=${this.disabled}
+        part="icon"
       >
         <slot name="icon"></slot>
       </span>
