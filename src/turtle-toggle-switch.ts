@@ -101,7 +101,7 @@ export class TurtleToggleSwitch extends LitElement {
 
           background-color: hsl(
             var(--turtle-ui--color--tone--mono),
-            var(--turtle-ui--color--level--10)
+            var(--turtle-ui--color--level--light-10)
           );
           border-radius: 50%;
           pointer-events: none;
@@ -112,15 +112,6 @@ export class TurtleToggleSwitch extends LitElement {
         .knob[data-checked] {
           transform: translate(100%, -50%)
             translateX(calc(-0.6 * var(--turtle-ui--unit)));
-        }
-
-        @media (prefers-color-scheme: dark) {
-          .knob {
-            background-color: hsl(
-              var(--turtle-ui--color--tone--mono),
-              var(--turtle-ui--color--level--2)
-            );
-          }
         }
 
         .knob[data-disabled] {

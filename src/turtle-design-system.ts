@@ -52,23 +52,70 @@ export class TurtleDesignSystem extends LitElement {
         --turtle-ui--unit: 10px;
         --turtle-ui--base-font-size: calc(1.6 * var(--turtle-ui--unit));
 
-        --turtle-ui--color--level--0: 0%;
-        --turtle-ui--color--level--1: 10%;
-        --turtle-ui--color--level--2: 20%;
-        --turtle-ui--color--level--3: 30%;
-        --turtle-ui--color--level--4: 40%;
-        --turtle-ui--color--level--5: 50%;
-        --turtle-ui--color--level--6: 60%;
-        --turtle-ui--color--level--7: 70%;
-        --turtle-ui--color--level--8: 80%;
-        --turtle-ui--color--level--9: 90%;
-        --turtle-ui--color--level--10: 100%;
-        --turtle-ui--color--level--safe: 34%;
-        --turtle-ui--color--level--danger: 44%;
-        --turtle-ui--color--level--primary: 40%;
-        --turtle-ui--level--modifier--darker: -1;
-        --turtle-ui--level--modifier--lighter: 1;
-        --turtle-ui--level--modifier--amount: 16%;
+        /* Levels (light) */
+        --turtle-ui--color--level--light-0: 0%;
+        --turtle-ui--color--level--light-1: 10%;
+        --turtle-ui--color--level--light-2: 20%;
+        --turtle-ui--color--level--light-3: 30%;
+        --turtle-ui--color--level--light-4: 40%;
+        --turtle-ui--color--level--light-5: 50%;
+        --turtle-ui--color--level--light-6: 60%;
+        --turtle-ui--color--level--light-7: 70%;
+        --turtle-ui--color--level--light-8: 80%;
+        --turtle-ui--color--level--light-9: 90%;
+        --turtle-ui--color--level--light-10: 100%;
+        --turtle-ui--color--level--light-safe: 34%;
+        --turtle-ui--color--level--light-danger: 44%;
+        --turtle-ui--color--level--light-primary: 40%;
+        --turtle-ui--level--modifier--light-darker: -1;
+        --turtle-ui--level--modifier--light-lighter: 1;
+        --turtle-ui--level--modifier--light-amount: 16%;
+
+        /* Levels (dark) */
+        --turtle-ui--color--level--dark-0: 100%;
+        --turtle-ui--color--level--dark-1: 92%;
+        --turtle-ui--color--level--dark-2: 84%;
+        --turtle-ui--color--level--dark-3: 76%;
+        --turtle-ui--color--level--dark-4: 68%;
+        --turtle-ui--color--level--dark-5: 60%;
+        --turtle-ui--color--level--dark-6: 52%;
+        --turtle-ui--color--level--dark-7: 44%;
+        --turtle-ui--color--level--dark-8: 36%;
+        --turtle-ui--color--level--dark-9: 28%;
+        --turtle-ui--color--level--dark-10: 20%;
+        --turtle-ui--level--modifier--dark-darker: 1;
+        --turtle-ui--level--modifier--dark-lighter: -1;
+
+        /* Default levels */
+        --turtle-ui--color--level--0: var(--turtle-ui--color--level--light-0);
+        --turtle-ui--color--level--1: var(--turtle-ui--color--level--light-1);
+        --turtle-ui--color--level--2: var(--turtle-ui--color--level--light-2);
+        --turtle-ui--color--level--3: var(--turtle-ui--color--level--light-3);
+        --turtle-ui--color--level--4: var(--turtle-ui--color--level--light-4);
+        --turtle-ui--color--level--5: var(--turtle-ui--color--level--light-5);
+        --turtle-ui--color--level--6: var(--turtle-ui--color--level--light-6);
+        --turtle-ui--color--level--7: var(--turtle-ui--color--level--light-7);
+        --turtle-ui--color--level--8: var(--turtle-ui--color--level--light-8);
+        --turtle-ui--color--level--9: var(--turtle-ui--color--level--light-9);
+        --turtle-ui--color--level--10: var(--turtle-ui--color--level--light-10);
+        --turtle-ui--color--level--safe: var(
+          --turtle-ui--color--level--light-safe
+        );
+        --turtle-ui--color--level--danger: var(
+          --turtle-ui--color--level--light-danger
+        );
+        --turtle-ui--color--level--primary: var(
+          --turtle-ui--color--level--light-primary
+        );
+        --turtle-ui--level--modifier--darker: var(
+          --turtle-ui--level--modifier--light-darker
+        );
+        --turtle-ui--level--modifier--lighter: var(
+          --turtle-ui--level--modifier--light-lighter
+        );
+        --turtle-ui--level--modifier--amount: var(
+          --turtle-ui--level--modifier--light-amount
+        );
 
         --turtle-ui--color--tone--mono: 0, 0%;
         --turtle-ui--color--tone--safe: 123, 46%;
@@ -175,52 +222,178 @@ export class TurtleDesignSystem extends LitElement {
 
       @media (prefers-color-scheme: dark) {
         :host {
-          --turtle-ui--color--level--0: 100%;
-          --turtle-ui--color--level--1: 92%;
-          --turtle-ui--color--level--2: 84%;
-          --turtle-ui--color--level--3: 76%;
-          --turtle-ui--color--level--4: 68%;
-          --turtle-ui--color--level--5: 60%;
-          --turtle-ui--color--level--6: 52%;
-          --turtle-ui--color--level--7: 44%;
-          --turtle-ui--color--level--8: 36%;
-          --turtle-ui--color--level--9: 28%;
-          --turtle-ui--color--level--10: 20%;
-          --turtle-ui--level--modifier--darker: 1;
-          --turtle-ui--level--modifier--lighter: -1;
+          --turtle-ui--color--level--0: var(
+            --turtle-ui--color--level--dark-0,
+            var(--turtle-ui--color--level--light-0)
+          );
+          --turtle-ui--color--level--1: var(
+            --turtle-ui--color--level--dark-1,
+            var(--turtle-ui--color--level--light-1)
+          );
+          --turtle-ui--color--level--2: var(
+            --turtle-ui--color--level--dark-2,
+            var(--turtle-ui--color--level--light-2)
+          );
+          --turtle-ui--color--level--3: var(
+            --turtle-ui--color--level--dark-3,
+            var(--turtle-ui--color--level--light-3)
+          );
+          --turtle-ui--color--level--4: var(
+            --turtle-ui--color--level--dark-4,
+            var(--turtle-ui--color--level--light-4)
+          );
+          --turtle-ui--color--level--5: var(
+            --turtle-ui--color--level--dark-5,
+            var(--turtle-ui--color--level--light-5)
+          );
+          --turtle-ui--color--level--6: var(
+            --turtle-ui--color--level--dark-6,
+            var(--turtle-ui--color--level--light-6)
+          );
+          --turtle-ui--color--level--7: var(
+            --turtle-ui--color--level--dark-7,
+            var(--turtle-ui--color--level--light-7)
+          );
+          --turtle-ui--color--level--8: var(
+            --turtle-ui--color--level--dark-8,
+            var(--turtle-ui--color--level--light-8)
+          );
+          --turtle-ui--color--level--9: var(
+            --turtle-ui--color--level--dark-9,
+            var(--turtle-ui--color--level--light-9)
+          );
+          --turtle-ui--color--level--10: var(
+            --turtle-ui--color--level--dark-10,
+            var(--turtle-ui--color--level--light-10)
+          );
+          --turtle-ui--color--level--safe: var(
+            --turtle-ui--color--level--dark-safe,
+            var(--turtle-ui--color--level--light-safe)
+          );
+          --turtle-ui--color--level--danger: var(
+            --turtle-ui--color--level--dark-danger,
+            var(--turtle-ui--color--level--light-danger)
+          );
+          --turtle-ui--color--level--primary: var(
+            --turtle-ui--color--level--dark-primary,
+            var(--turtle-ui--color--level--light-primary)
+          );
+          --turtle-ui--level--modifier--darker: var(
+            --turtle-ui--level--modifier--dark-darker,
+            var(--turtle-ui--level--modifier--light-darker)
+          );
+          --turtle-ui--level--modifier--lighter: var(
+            --turtle-ui--level--modifier--dark-lighter,
+            var(--turtle-ui--level--modifier--light-lighter)
+          );
+          --turtle-ui--level--modifier--amount: var(
+            --turtle-ui--level--modifier--dark-amount,
+            var(--turtle-ui--level--modifier--light-amount)
+          );
         }
       }
 
       :host([theme="light"]) {
-        --turtle-ui--color--level--0: 0%;
-        --turtle-ui--color--level--1: 10%;
-        --turtle-ui--color--level--2: 20%;
-        --turtle-ui--color--level--3: 30%;
-        --turtle-ui--color--level--4: 40%;
-        --turtle-ui--color--level--5: 50%;
-        --turtle-ui--color--level--6: 60%;
-        --turtle-ui--color--level--7: 70%;
-        --turtle-ui--color--level--8: 80%;
-        --turtle-ui--color--level--9: 90%;
-        --turtle-ui--color--level--10: 100%;
-        --turtle-ui--level--modifier--darker: -1;
-        --turtle-ui--level--modifier--lighter: 1;
+        --turtle-ui--color--level--0: var(--turtle-ui--color--level--light-0);
+        --turtle-ui--color--level--1: var(--turtle-ui--color--level--light-1);
+        --turtle-ui--color--level--2: var(--turtle-ui--color--level--light-2);
+        --turtle-ui--color--level--3: var(--turtle-ui--color--level--light-3);
+        --turtle-ui--color--level--4: var(--turtle-ui--color--level--light-4);
+        --turtle-ui--color--level--5: var(--turtle-ui--color--level--light-5);
+        --turtle-ui--color--level--6: var(--turtle-ui--color--level--light-6);
+        --turtle-ui--color--level--7: var(--turtle-ui--color--level--light-7);
+        --turtle-ui--color--level--8: var(--turtle-ui--color--level--light-8);
+        --turtle-ui--color--level--9: var(--turtle-ui--color--level--light-9);
+        --turtle-ui--color--level--10: var(--turtle-ui--color--level--light-10);
+        --turtle-ui--color--level--safe: var(
+          --turtle-ui--color--level--light-safe
+        );
+        --turtle-ui--color--level--danger: var(
+          --turtle-ui--color--level--light-danger
+        );
+        --turtle-ui--color--level--primary: var(
+          --turtle-ui--color--level--light-primary
+        );
+        --turtle-ui--level--modifier--darker: var(
+          --turtle-ui--level--modifier--light-darker
+        );
+        --turtle-ui--level--modifier--lighter: var(
+          --turtle-ui--level--modifier--light-lighter
+        );
+        --turtle-ui--level--modifier--amount: var(
+          --turtle-ui--level--modifier--light-amount
+        );
       }
 
       :host([theme="dark"]) {
-        --turtle-ui--color--level--0: 100%;
-        --turtle-ui--color--level--1: 92%;
-        --turtle-ui--color--level--2: 84%;
-        --turtle-ui--color--level--3: 76%;
-        --turtle-ui--color--level--4: 68%;
-        --turtle-ui--color--level--5: 60%;
-        --turtle-ui--color--level--6: 52%;
-        --turtle-ui--color--level--7: 44%;
-        --turtle-ui--color--level--8: 36%;
-        --turtle-ui--color--level--9: 28%;
-        --turtle-ui--color--level--10: 20%;
-        --turtle-ui--level--modifier--darker: 1;
-        --turtle-ui--level--modifier--lighter: -1;
+        --turtle-ui--color--level--0: var(
+          --turtle-ui--color--level--dark-0,
+          var(--turtle-ui--color--level--light-0)
+        );
+        --turtle-ui--color--level--1: var(
+          --turtle-ui--color--level--dark-1,
+          var(--turtle-ui--color--level--light-1)
+        );
+        --turtle-ui--color--level--2: var(
+          --turtle-ui--color--level--dark-2,
+          var(--turtle-ui--color--level--light-2)
+        );
+        --turtle-ui--color--level--3: var(
+          --turtle-ui--color--level--dark-3,
+          var(--turtle-ui--color--level--light-3)
+        );
+        --turtle-ui--color--level--4: var(
+          --turtle-ui--color--level--dark-4,
+          var(--turtle-ui--color--level--light-4)
+        );
+        --turtle-ui--color--level--5: var(
+          --turtle-ui--color--level--dark-5,
+          var(--turtle-ui--color--level--light-5)
+        );
+        --turtle-ui--color--level--6: var(
+          --turtle-ui--color--level--dark-6,
+          var(--turtle-ui--color--level--light-6)
+        );
+        --turtle-ui--color--level--7: var(
+          --turtle-ui--color--level--dark-7,
+          var(--turtle-ui--color--level--light-7)
+        );
+        --turtle-ui--color--level--8: var(
+          --turtle-ui--color--level--dark-8,
+          var(--turtle-ui--color--level--light-8)
+        );
+        --turtle-ui--color--level--9: var(
+          --turtle-ui--color--level--dark-9,
+          var(--turtle-ui--color--level--light-9)
+        );
+        --turtle-ui--color--level--10: var(
+          --turtle-ui--color--level--dark-10,
+          var(--turtle-ui--color--level--light-10)
+        );
+        --turtle-ui--color--level--safe: var(
+          --turtle-ui--color--level--dark-safe,
+          var(--turtle-ui--color--level--light-safe)
+        );
+        --turtle-ui--color--level--danger: var(
+          --turtle-ui--color--level--dark-danger,
+          var(--turtle-ui--color--level--light-danger)
+        );
+        --turtle-ui--color--level--primary: var(
+          --turtle-ui--color--level--dark-primary,
+          var(--turtle-ui--color--level--light-primary)
+        );
+        --turtle-ui--level--modifier--darker: var(
+          --turtle-ui--level--modifier--dark-darker,
+          var(--turtle-ui--level--modifier--light-darker)
+        );
+        --turtle-ui--level--modifier--lighter: var(
+          --turtle-ui--level--modifier--dark-lighter,
+          var(--turtle-ui--level--modifier--light-lighter)
+        );
+        --turtle-ui--level--modifier--amount: var(
+          --turtle-ui--level--modifier--dark-amount,
+          var(--turtle-ui--level--modifier--light-amount)
+        );
       }
 
       :host {
