@@ -41,6 +41,7 @@ You need to provide an Element to slot, instead of a TextFragment.</p>
 `,type:"boolean",default:"false"}],slots:[{name:"icon",description:`<p>Icon element, assuming width=height=1em.</p>
 `}],cssProperties:[{name:"--turtle-button--base-radius",description:`<p>The size of corner radius.</p>
 `,default:'"8px"'}],cssParts:[{name:"button",description:`<p><code>&lt;button&gt;</code> element in a Shadow Tree when <code>lightdom</code> is not set.</p>
+`},{name:"icon",description:`<p>A container element of the <code>icon</code> slot.</p>
 `}]},{name:"turtle-card-action",description:`<p>An action related to a <code>&lt;turtle-card&gt;</code>.</p>
 `,attributes:[{name:"disabled",description:`<p>Whether the element itself is disabled or not.</p>
 <p>When the <code>lightDOM</code> property is <code>true</code>, this property does not affect to anything.
