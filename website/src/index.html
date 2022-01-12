@@ -93,6 +93,7 @@
                 <li>
                   <a href="#turtle-design-system">turtle-design-system</a>
                 </li>
+                <li><a href="#turtle-file-input">turtle-file-input</a></li>
                 <li><a href="#turtle-form-field">turtle-form-field</a></li>
                 <li>
                   <a href="#turtle-labelled-item">turtle-labelled-item</a>
@@ -791,6 +792,30 @@ registerTurtleUIComponents(allComponents)</code></pre>
                 <turtle-design-system style="padding: 1em" theme="dark">
                   <turtle-button>Button</turtle-button>
                 </turtle-design-system>
+              </site-sandbox>
+            </div>
+          </site-section>
+
+          <site-section>
+            <h3 id="turtle-file-input"><code>turtle-file-input</code></h3>
+            <site-wc-doc name="turtle-file-input"></site-wc-doc>
+            <div class="demo">
+              <site-sandbox>
+                <turtle-file-input multiple accept="image/png,image/jpeg">
+                  <turtle-button>Select images</turtle-button>
+
+                  <span slot="placeholder">No image selected.</span>
+                </turtle-file-input>
+              </site-sandbox>
+              <site-sandbox>
+                <input id="turtle_file_input__demo" type="file" hidden />
+                <turtle-file-input>
+                  <turtle-button aria-controls="turtle_file__input__demo"
+                    >Select file</turtle-button
+                  >
+
+                  <span slot="placeholder">Not selected.</span>
+                </turtle-file-input>
               </site-sandbox>
             </div>
           </site-section>
