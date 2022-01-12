@@ -64,11 +64,11 @@ You need to provide an Element to slot, instead of a TextFragment.</p>
 <h3 id="picture-ignores-our-slotted-styles"><code>&lt;picture&gt;</code> ignores our <code>::slotted</code> styles</h3>
 <p>When you place <code>&lt;picture&gt;</code> element for <code>image</code> slot, due to the unthoughtful design of <code>&lt;picture&gt;</code> element,
 you need to style <code>&lt;img&gt;</code> element inside so it does fit to the container.</p>
-<pre><code class="language-css">turtle-card &gt; picture[slot=&quot;image&quot;] &gt; img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+<pre><code class="language-css"><span class="token selector">turtle-card > picture[slot="image"] > img</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+  <span class="token property">object-fit</span><span class="token punctuation">:</span> cover<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 `,attributes:[{name:"shadowed",description:`<p>Whether to display shadows.</p>
 `,type:"boolean",default:"false"},{name:"bordered",description:`<p>Whether to display a surrounding border.</p>
@@ -129,6 +129,40 @@ element based on the input text.</p>
 `},{name:"--turtle-ui--color--tone--warning",description:`<p>H, S%</p>
 `},{name:"--turtle-ui--color--tone--danger",description:`<p>H, S%</p>
 `},{name:"--turtle-ui--color--tone--primary",description:`<p>H, S%</p>
+`}]},{name:"turtle-file-input",description:`<p>File selector element.
+Unlike the native <code>&lt;input type=&quot;file&quot;&gt;</code>, this elements does not open OS file picker when a user clicks outside the button.</p>
+<p>By default, this element creates <code>&lt;input type=&quot;file&quot;&gt;</code> then click it when a user click the slotted button.
+You can change the <code>&lt;input type=&quot;file&quot;&gt;</code> by giving an ID of the input to the button via <code>aria-controls</code> attribute.
+This is useful when you use this element in server-side template.</p>
+<pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>sample_file<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>file<span class="token punctuation">"</span></span> <span class="token attr-name">hidden</span> <span class="token punctuation">/></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>turtle-file-input</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>turtle-button</span> <span class="token attr-name">aria-controls</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>sample_file<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Select file<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>turtle-button</span><span class="token punctuation">></span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>placeholder<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>No file selected.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>turtle-file-input</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span>
+</code></pre>
+`,attributes:[{name:"accept",description:`<p><code>accept</code> attribute for generated <code>&lt;input type=&quot;file&quot;&gt;</code>.
+Ignored when you explicitly set <code>&lt;input type=&quot;file&quot;&gt;</code> via <code>aria-controls</code> at the slotted button.</p>
+`,type:"string | undefined"},{name:"capture",description:`<p><code>capture</code> attribute for generated <code>&lt;input type=&quot;file&quot;&gt;</code>.
+Ignored when you explicitly set <code>&lt;input type=&quot;file&quot;&gt;</code> via <code>aria-controls</code> at the slotted button.</p>
+`,type:"string | undefined"},{name:"multiple",description:`<p><code>multiple</code> attribute for generated <code>&lt;input type=&quot;file&quot;&gt;</code>.
+Ignored when you explicitly set <code>&lt;input type=&quot;file&quot;&gt;</code> via <code>aria-controls</code> at the slotted button.</p>
+`,type:"boolean",default:"false"},{name:"delimiter",description:`<p>Delimiter string to use for filename text.</p>
+`,type:"string",default:'", "'}],properties:[{name:"accept",attribute:"accept",description:`<p><code>accept</code> attribute for generated <code>&lt;input type=&quot;file&quot;&gt;</code>.
+Ignored when you explicitly set <code>&lt;input type=&quot;file&quot;&gt;</code> via <code>aria-controls</code> at the slotted button.</p>
+`,type:"string | undefined"},{name:"capture",attribute:"capture",description:`<p><code>capture</code> attribute for generated <code>&lt;input type=&quot;file&quot;&gt;</code>.
+Ignored when you explicitly set <code>&lt;input type=&quot;file&quot;&gt;</code> via <code>aria-controls</code> at the slotted button.</p>
+`,type:"string | undefined"},{name:"multiple",attribute:"multiple",description:`<p><code>multiple</code> attribute for generated <code>&lt;input type=&quot;file&quot;&gt;</code>.
+Ignored when you explicitly set <code>&lt;input type=&quot;file&quot;&gt;</code> via <code>aria-controls</code> at the slotted button.</p>
+`,type:"boolean",default:"false"},{name:"delimiter",attribute:"delimiter",description:`<p>Delimiter string to use for filename text.</p>
+`,type:"string",default:'", "'},{name:"files",description:`<p>Same as <code>HTMLInputElement.files</code>.</p>
+`,type:"FileList | null"}],events:[{name:"selectfile",description:`<p>When a user selected file(s).
+You can access selected file(s) via <code>(event).detail.files</code> or <code>(element).files</code>, which are <code>FileList | null</code>.</p>
+`}],slots:[{name:"",description:`<p>A button that launches OS file picker when pressed by a user. This element adds custom event listener.</p>
+`},{name:"placeholder",description:`<p>Text shown when file is not selected.</p>
+`}],cssParts:[{name:"text",description:`<p>The text section displaying status and filename.</p>
 `}]},{name:"turtle-textbox",description:`<p>Textbox.</p>
 `,attributes:[{name:"touched",description:`<p>Whether the user interacted to the slotted item.</p>
 `,type:"boolean",default:"false"},{name:"novalidity",description:`<p>When this attribute or property is set to <code>true</code>, the component goes into neither invalid nor valid state.</p>
