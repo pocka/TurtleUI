@@ -17,7 +17,7 @@ declare global {
  *
  * ### `<picture>` ignores our `::slotted` styles
  *
- * When you place `<picture>` element for `image` slot, due to the poor design of `<picture>` element,
+ * When you place `<picture>` element for `image` slot, due to the unthoughtful design of `<picture>` element,
  * you need to style `<img>` element inside so it does fit to the container.
  *
  * ```css

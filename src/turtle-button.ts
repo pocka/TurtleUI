@@ -16,6 +16,7 @@ declare global {
  *
  * @element turtle-button
  *
+ * @slot - Button-like element if `lightdom` is set to `true`, TextFragment otherwise.
  * @slot icon - Icon element, assuming width=height=1em.
  *
  * @cssprop [--turtle-button--base-radius=8px] The size of corner radius.

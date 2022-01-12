@@ -8,7 +8,7 @@ declare global {
 }
 
 /**
- * Radio button.
+ * Radio button UI.
  *
  * @element turtle-radio-button
  *

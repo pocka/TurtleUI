@@ -44,7 +44,7 @@ export class TurtleButtonGroup extends LitElement {
 
   /**
    * When this attribute/property is set, each child buttons have same width.
-   * Make sure to specify the width.
+   * Make sure to specify the width for this element.
    */
   @property({
     type: Boolean,

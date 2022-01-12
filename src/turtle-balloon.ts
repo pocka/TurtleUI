@@ -12,7 +12,10 @@ declare global {
 export type TailPosition = "left" | "right" | "bottom" | "top";
 
 /**
- * Balloon UI component. In other words, Callout.
+ * Displays a balloon UI. a.k.a. Callout.
+ *
+ * This element is static placed: no `position: absolute` or `position: fixed`.
+ * You need provide styles in your own to make this element a popover or a popup.
  *
  * @element turtle-balloon
  */

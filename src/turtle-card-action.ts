@@ -10,7 +10,7 @@ declare global {
 }
 
 /**
- * An action related to a `<turtle-card>`.
+ * An action related to a specific `<turtle-card>`.
  *
  * @element turtle-card-action
  *

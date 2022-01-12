@@ -10,7 +10,10 @@ declare global {
 }
 
 /**
- * Displays an avatar image. When the image is not specified, the component shows a placeholder image.
+ * Displays an image tied to an identity. Makes identities easier to distinguish among others.
+ *
+ * When the image is not specified, this element shows a placeholder image.
+ * Please consider providing `placeholder-alt` whenever the possibility of the default slot being empty is not zero.
  *
  * @element turtle-avatar
  * @slot An avatar image (`<img>` element or any `object-fit`-able element, except `<picture>` element.)
