@@ -80,8 +80,6 @@ you need to style <code>&lt;img&gt;</code> element inside so it does fit to the 
 `},{name:"action",description:`<p>An action related to the card. Up to 2.</p>
 `}],cssProperties:[{name:"--turtle-ui--card--radius",description:`<p>Corner radius of the card. Please use this property instead of overwriting <code>border-radius</code> property.</p>
 `,default:'"8px"'}]},{name:"turtle-checkbox",description:`<p>A simple checkbox.</p>
-<p>After you changed <code>indeterminate</code> property of the slotted input, please make sure to call <code>sync</code> method on this component.
-Otherwise the visual appearance won&#39;t update.</p>
 `,properties:[],slots:[{name:"",description:`<p><code>&lt;input type=&quot;checkbox&quot;&gt;</code></p>
 `}]},{name:"turtle-command-palette-listbox",description:`<p>Listbox for <code>&lt;turtle-command-palette&gt;</code>.</p>
 <p>You need to provide <code>id</code> attribute to the element to enable automatic
