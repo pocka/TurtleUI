@@ -3,11 +3,18 @@ import { promisify } from "util";
 
 import glob from "glob";
 import { marked } from "marked";
+import Prism from "prismjs";
 import ts from "typescript";
 import {
   analyzeSourceFile,
   transformAnalyzerResult,
 } from "web-component-analyzer";
+
+marked.setOptions({
+  highlight(code, lang, callback) {
+    return Prism.highlight(code, Prism.languages[lang]);
+  },
+});
 
 async function main() {
   // Yarn PnP does not support JSON import

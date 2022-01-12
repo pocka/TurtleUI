@@ -189,6 +189,66 @@ export class SiteWcDoc extends LitElement {
           margin-top: 0.5em;
         }
 
+        .component-description p code {
+          padding: 0 4px;
+
+          background-color: hsl(
+            var(--turtle-ui--color--tone--mono),
+            var(--turtle-ui--color--level--9)
+          );
+          border-radius: 4px;
+        }
+
+        .component-description pre {
+          margin: calc(0.8 * var(--turtle-ui--unit)) 0;
+          padding: calc(0.8 * var(--turtle-ui--unit)) 16px;
+          min-width: 0;
+          max-width: 100%;
+          overflow-x: auto;
+
+          background-color: hsl(
+            var(--turtle-ui--color--tone--mono),
+            var(--turtle-ui--color--level--9)
+          );
+          border-radius: 4px;
+        }
+
+        /* syntax highlighting */
+        .component-description .token.attr-name {
+          color: hsl(
+            var(--turtle-ui--color--tone--mono),
+            var(--turtle-ui--color--level--1)
+          );
+        }
+        .component-description .token.string,
+        .component-description .token.attr-value {
+          color: hsl(
+            var(--turtle-ui--color--tone--safe),
+            var(--turtle-ui--color--level--3)
+          );
+        }
+        .component-description .token.keyword,
+        .component-description .token.tag,
+        .component-description .token.selector {
+          color: hsl(
+            var(--turtle-ui--color--tone--danger),
+            var(--turtle-ui--color--level--3)
+          );
+        }
+        .component-description .token.function,
+        .component-description .token.property {
+          color: hsl(
+            var(--turtle-ui--color--tone--primary),
+            var(--turtle-ui--color--level--3)
+          );
+        }
+        .component-description .token.comment {
+          color: hsl(
+            var(--turtle-ui--color--tone--mono),
+            var(--turtle-ui--color--level--4)
+          );
+        }
+
         .description p:not(:first-child),
         .component-description p:not(:first-child) {
           margin-top: 0.75em;
