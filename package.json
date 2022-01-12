@@ -12,6 +12,7 @@
     ".": "./es2019/index.js"
   },
   "main": "./es2019/index.js",
+  "types": "./es2019/index.d.ts",
   "sideEffects": false,
   "repository": {
     "type": "git",
