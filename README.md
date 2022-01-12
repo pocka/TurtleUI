@@ -11,6 +11,32 @@ This repository contains a source code for the Web Component implementation of [
 ![License](https://img.shields.io/github/license/pocka/TurtleUI)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat)](https://github.com/prettier/prettier)
 
+## Getting started
+
+```sh
+# In your project...
+$ npm i @turtleui/webcomponents
+```
+
+```js
+// index.js
+import {
+  allComponents,
+  registerTurtleUIComponents,
+} from "@turtleui/webcomponents";
+
+registerTurtleUIComponents(allComponents);
+```
+
+```html
+<!-- index.html -->
+<body>
+  <turtle-design-system>
+    <turtle-button variant="primary">Hello, World!</turtle-button>
+  </turtle-design-system>
+</body>
+```
+
 ## How to contribute
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md).
