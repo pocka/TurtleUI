@@ -26,6 +26,16 @@ export class TurtleCheckbox extends LitElement {
   static defaultTagName = "turtle-checkbox" as const;
 
   static override get styles() {
+    // # Why `transition: 1ms background` for the slotted input?
+    //
+    // Because we can't listen for changes for `checked` property due to lack of DOM API and events.
+    // This element not knowing the current `checked` property causes inconsistent visual appearance,
+    // e.g. background is filled in primary color but check icon is not visible.
+    //
+    // In order to work-around this platform limitation, this element sets transition to the slotted
+    // element and listen for `transitionstart` event for the transition. When a user changes `checked`
+    // property, `input:checked` rule goes active and change the background color, then this element
+    // will sync state inside `transitionstart` event handler.
     return [
       minireset,
       css`
@@ -62,6 +72,8 @@ export class TurtleCheckbox extends LitElement {
             var(--turtle-ui--color--level--10)
           );
           border-radius: calc(0.4 * var(--turtle-ui--unit));
+
+          transition: 1ms 0s linear background-color;
         }
         ::slotted(input:checked),
         ::slotted(input:indeterminate) {
@@ -167,6 +179,7 @@ export class TurtleCheckbox extends LitElement {
 
           el.addEventListener("change", this.#onSlottedElementUpdated);
           el.addEventListener("input", this.#onSlottedElementUpdated);
+          el.addEventListener("transitionstart", this.#onSlottedElementUpdated);
 
           this.#attributeSyncObserver.observe(el, {
             attributes: true,
@@ -180,6 +193,10 @@ export class TurtleCheckbox extends LitElement {
           return () => {
             el.removeEventListener("change", this.#onSlottedElementUpdated);
             el.removeEventListener("input", this.#onSlottedElementUpdated);
+            el.removeEventListener(
+              "transitionstart",
+              this.#onSlottedElementUpdated
+            );
 
             this.#attributeSyncObserver.disconnect();
 

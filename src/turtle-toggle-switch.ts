@@ -13,8 +13,6 @@ declare global {
 /**
  * Toggle Switch UI for representing an on/off value.
  *
- * **NOTE:** Due to browsers fire neither `blur` nor `change/input` event on unchecked radio (probably the spec defined), you can't place `<input type="radio">`.
- *
  * @element turtle-toggle-switch
  *
  * @slot - `<input type="checkbox" />`.
@@ -23,6 +21,7 @@ export class TurtleToggleSwitch extends LitElement {
   static defaultTagName = "turtle-toggle-switch" as const;
 
   static override get styles() {
+    // This element does the same `transitionstart` hack of `<turtle-checkbox>`
     return [
       minireset,
       css`
@@ -52,6 +51,8 @@ export class TurtleToggleSwitch extends LitElement {
             var(--turtle-ui--color--level--9)
           );
           border-radius: calc(4 * var(--turtle-ui--unit));
+
+          transition: 1ms 0s linear background-color;
         }
         ::slotted(input:checked) {
           background-color: hsl(
@@ -161,6 +162,7 @@ export class TurtleToggleSwitch extends LitElement {
           this._checked = el.checked;
 
           el.addEventListener("input", this.#syncChecked);
+          el.addEventListener("transitionstart", this.#syncChecked);
 
           this.#attributeSyncObserver.observe(el, {
             attributes: true,
@@ -169,6 +171,7 @@ export class TurtleToggleSwitch extends LitElement {
 
           return () => {
             el.removeEventListener("input", this.#syncChecked);
+            el.removeEventListener("transitionstart", this.#syncChecked);
 
             this.#attributeSyncObserver.disconnect();
           };
