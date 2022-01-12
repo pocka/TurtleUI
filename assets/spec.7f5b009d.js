@@ -1,4 +1,6 @@
-const e="experimental",t=[{name:"turtle-angle-icon",attributes:[{name:"direction",type:'"up" | "down" | "right" | "left"',default:'"down"'}],properties:[{name:"direction",attribute:"direction",type:'"up" | "down" | "right" | "left"',default:'"down"'}]},{name:"turtle-arrow-icon",attributes:[{name:"direction",type:'"up" | "down" | "right" | "left"',default:'"down"'}],properties:[{name:"direction",attribute:"direction",type:'"up" | "down" | "right" | "left"',default:'"down"'}]},{name:"turtle-attention-icon",attributes:[{name:"outlined",type:"boolean",default:"false"}],properties:[{name:"outlined",attribute:"outlined",type:"boolean",default:"false"}]},{name:"turtle-brand-icon",properties:[]},{name:"turtle-check-icon",properties:[]},{name:"turtle-circle-check-icon",attributes:[{name:"outlined",type:"boolean",default:"false"}],properties:[{name:"outlined",attribute:"outlined",type:"boolean",default:"false"}]},{name:"turtle-circle-cross-icon",attributes:[{name:"outlined",type:"boolean",default:"false"}],properties:[{name:"outlined",attribute:"outlined",type:"boolean",default:"false"}]},{name:"turtle-circle-minus-icon",attributes:[{name:"outlined",type:"boolean",default:"false"}],properties:[{name:"outlined",attribute:"outlined",type:"boolean",default:"false"}]},{name:"turtle-circle-plus-icon",attributes:[{name:"outlined",type:"boolean",default:"false"}],properties:[{name:"outlined",attribute:"outlined",type:"boolean",default:"false"}]},{name:"turtle-cross-icon",properties:[]},{name:"turtle-dots-icon",properties:[]},{name:"turtle-file-upload-icon",properties:[]},{name:"turtle-first-page-icon",properties:[]},{name:"turtle-heart-icon",attributes:[{name:"outlined",type:"boolean",default:"false"}],properties:[{name:"outlined",attribute:"outlined",type:"boolean",default:"false"}]},{name:"turtle-info-icon",attributes:[{name:"outlined",type:"boolean",default:"false"}],properties:[{name:"outlined",attribute:"outlined",type:"boolean",default:"false"}]},{name:"turtle-last-page-icon",properties:[]},{name:"turtle-minus-icon",properties:[]},{name:"turtle-plus-icon",properties:[]},{name:"turtle-question-icon",attributes:[{name:"outlined",type:"boolean",default:"false"}],properties:[{name:"outlined",attribute:"outlined",type:"boolean",default:"false"}]},{name:"turtle-reload-icon",properties:[]},{name:"turtle-terminal-icon",properties:[]},{name:"turtle-avatar",description:`<p>Displays an avatar image. When the image is not specified, the component shows a placeholder image.</p>
+const e="experimental",t=[{name:"turtle-angle-icon",attributes:[{name:"direction",type:'"up" | "down" | "right" | "left"',default:'"down"'}],properties:[{name:"direction",attribute:"direction",type:'"up" | "down" | "right" | "left"',default:'"down"'}]},{name:"turtle-arrow-icon",attributes:[{name:"direction",type:'"up" | "down" | "right" | "left"',default:'"down"'}],properties:[{name:"direction",attribute:"direction",type:'"up" | "down" | "right" | "left"',default:'"down"'}]},{name:"turtle-attention-icon",attributes:[{name:"outlined",type:"boolean",default:"false"}],properties:[{name:"outlined",attribute:"outlined",type:"boolean",default:"false"}]},{name:"turtle-brand-icon",properties:[]},{name:"turtle-check-icon",properties:[]},{name:"turtle-circle-check-icon",attributes:[{name:"outlined",type:"boolean",default:"false"}],properties:[{name:"outlined",attribute:"outlined",type:"boolean",default:"false"}]},{name:"turtle-circle-cross-icon",attributes:[{name:"outlined",type:"boolean",default:"false"}],properties:[{name:"outlined",attribute:"outlined",type:"boolean",default:"false"}]},{name:"turtle-circle-minus-icon",attributes:[{name:"outlined",type:"boolean",default:"false"}],properties:[{name:"outlined",attribute:"outlined",type:"boolean",default:"false"}]},{name:"turtle-circle-plus-icon",attributes:[{name:"outlined",type:"boolean",default:"false"}],properties:[{name:"outlined",attribute:"outlined",type:"boolean",default:"false"}]},{name:"turtle-cross-icon",properties:[]},{name:"turtle-dots-icon",properties:[]},{name:"turtle-file-upload-icon",properties:[]},{name:"turtle-first-page-icon",properties:[]},{name:"turtle-heart-icon",attributes:[{name:"outlined",type:"boolean",default:"false"}],properties:[{name:"outlined",attribute:"outlined",type:"boolean",default:"false"}]},{name:"turtle-info-icon",attributes:[{name:"outlined",type:"boolean",default:"false"}],properties:[{name:"outlined",attribute:"outlined",type:"boolean",default:"false"}]},{name:"turtle-last-page-icon",properties:[]},{name:"turtle-minus-icon",properties:[]},{name:"turtle-plus-icon",properties:[]},{name:"turtle-question-icon",attributes:[{name:"outlined",type:"boolean",default:"false"}],properties:[{name:"outlined",attribute:"outlined",type:"boolean",default:"false"}]},{name:"turtle-reload-icon",properties:[]},{name:"turtle-terminal-icon",properties:[]},{name:"turtle-avatar",description:`<p>Displays an image tied to an identity. Makes identities easier to distinguish among others.</p>
+<p>When the image is not specified, this element shows a placeholder image.
+Please consider providing <code>placeholder-alt</code> whenever the possibility of the default slot being empty is not zero.</p>
 `,attributes:[{name:"bordered",description:`<p>Whether to display a border line.</p>
 `,type:"boolean",default:"false"},{name:"placeholder-alt",description:`<p>Label text for the fallback image.
 Strongly recommended to set unless the slot is always assigned.</p>
@@ -7,7 +9,9 @@ Strongly recommended to set unless the slot is always assigned.</p>
 Strongly recommended to set unless the slot is always assigned.</p>
 `,type:"string",default:'""'}],slots:[{name:"",description:`<p>An avatar image (<code>&lt;img&gt;</code> element or any <code>object-fit</code>-able element, except <code>&lt;picture&gt;</code> element.)</p>
 `}],cssProperties:[{name:"--turtle-avatar--size",description:`<p>Width and Height of the component.</p>
-`,default:'"calc(4.8 * var(--turtle-ui--unit))"'}]},{name:"turtle-balloon",description:`<p>Balloon UI component. In other words, Callout.</p>
+`,default:'"calc(4.8 * var(--turtle-ui--unit))"'}]},{name:"turtle-balloon",description:`<p>Displays a balloon UI. a.k.a. Callout.</p>
+<p>This element is static placed: no <code>position: absolute</code> or <code>position: fixed</code>.
+You need provide styles in your own to make this element a popover or a popup.</p>
 `,attributes:[{name:"tail-position",description:`<p>Where to show the balloon tail?</p>
 `,type:'"top" | "right" | "bottom" | "left"',default:'"bottom"'},{name:"tail-offset",description:`<p>Horizontal position of the tail, in ratio (0.0 ~ 1.0, where 0.0 = 0%, 1.0 = 100%).
 Ignored when <code>tail-position</code> is <code>&quot;left&quot;</code> or <code>&quot;right&quot;</code>.</p>
@@ -16,9 +20,9 @@ Ignored when <code>tail-position</code> is <code>&quot;left&quot;</code> or <cod
 Ignored when <code>tail-position</code> is <code>&quot;left&quot;</code> or <code>&quot;right&quot;</code>.</p>
 `,type:"number",default:"0.5"}]},{name:"turtle-button-group",description:`<p>Combines multiple buttons. Useful for grouping buttons by relations.</p>
 `,attributes:[{name:"evenly",description:`<p>When this attribute/property is set, each child buttons have same width.
-Make sure to specify the width.</p>
+Make sure to specify the width for this element.</p>
 `,type:"boolean",default:"false"}],properties:[{name:"evenly",attribute:"evenly",description:`<p>When this attribute/property is set, each child buttons have same width.
-Make sure to specify the width.</p>
+Make sure to specify the width for this element.</p>
 `,type:"boolean",default:"false"}]},{name:"turtle-button",description:`<p>A button UI.</p>
 `,attributes:[{name:"variant",description:`<p>Color variant of the button.
 If an unsupported value was provided, it fallbacks to <code>&quot;normal&quot;</code>.</p>
@@ -38,11 +42,12 @@ If an unsupported value was provided, it fallbacks to <code>&quot;normal&quot;</
 Specify <code>disabled</code> or <code>aria-disabled</code> attribute for the slotted element (e.g. <code>&lt;button disabled/&gt;</code>, <code>&lt;a aria-disabled=&quot;true&quot;/&gt;</code>).</p>
 `,type:"boolean",default:"false"},{name:"lightDOM",attribute:"lightdom",description:`<p>Whether to use a slotted element as a button element.
 You need to provide an Element to slot, instead of a TextFragment.</p>
-`,type:"boolean",default:"false"}],slots:[{name:"icon",description:`<p>Icon element, assuming width=height=1em.</p>
+`,type:"boolean",default:"false"}],slots:[{name:"",description:`<p>Button-like element if <code>lightdom</code> is set to <code>true</code>, TextFragment otherwise.</p>
+`},{name:"icon",description:`<p>Icon element, assuming width=height=1em.</p>
 `}],cssProperties:[{name:"--turtle-button--base-radius",description:`<p>The size of corner radius.</p>
 `,default:'"8px"'}],cssParts:[{name:"button",description:`<p><code>&lt;button&gt;</code> element in a Shadow Tree when <code>lightdom</code> is not set.</p>
 `},{name:"icon",description:`<p>A container element of the <code>icon</code> slot.</p>
-`}]},{name:"turtle-card-action",description:`<p>An action related to a <code>&lt;turtle-card&gt;</code>.</p>
+`}]},{name:"turtle-card-action",description:`<p>An action related to a specific <code>&lt;turtle-card&gt;</code>.</p>
 `,attributes:[{name:"disabled",description:`<p>Whether the element itself is disabled or not.</p>
 <p>When the <code>lightDOM</code> property is <code>true</code>, this property does not affect to anything.
 Specify <code>disabled</code> or <code>aria-disabled</code> attribute for the slotted element (e.g. <code>&lt;button disabled/&gt;</code>, <code>&lt;a aria-disabled=&quot;true&quot;/&gt;</code>).</p>
@@ -57,7 +62,7 @@ You need to provide an Element to slot, instead of a TextFragment.</p>
 `}]},{name:"turtle-card",description:`<p>A card with optional title, image, and actions.</p>
 <h2 id="limitations">Limitations</h2>
 <h3 id="picture-ignores-our-slotted-styles"><code>&lt;picture&gt;</code> ignores our <code>::slotted</code> styles</h3>
-<p>When you place <code>&lt;picture&gt;</code> element for <code>image</code> slot, due to the poor design of <code>&lt;picture&gt;</code> element,
+<p>When you place <code>&lt;picture&gt;</code> element for <code>image</code> slot, due to the unthoughtful design of <code>&lt;picture&gt;</code> element,
 you need to style <code>&lt;img&gt;</code> element inside so it does fit to the container.</p>
 <pre><code class="language-css">turtle-card &gt; picture[slot=&quot;image&quot;] &gt; img {
   width: 100%;
@@ -224,7 +229,7 @@ You MUST put non-indeterminate <code>&lt;progress&gt;</code> element to the defa
 `}],cssProperties:[{name:"--turtle-progressbar--inner-bar--color",description:`<p>The color of the inner bar.</p>
 `,default:'"hsl(var(--turtle-ui--color--tone--primary), var(--turtle-ui--color--level--4))"'},{name:"--turtle-progressbar--height",description:`<p>Height of the progress bar.</p>
 `,default:'"8px"'}],cssParts:[{name:"inner-bar",description:`<p>The inner bar indicates completed section.</p>
-`}]},{name:"turtle-radio-button",description:`<p>Radio button.</p>
+`}]},{name:"turtle-radio-button",description:`<p>Radio button UI.</p>
 `,properties:[],slots:[{name:"",description:`<p><code>&lt;input type=&quot;radio&quot;&gt;</code></p>
 `}]},{name:"turtle-selectbox",description:`<p>Select box.</p>
 `,attributes:[{name:"touched",description:`<p>Whether the user interacted to the slotted item.</p>
@@ -256,6 +261,5 @@ Same to native <code>autofocus</code> attribute.</p>
 Same to native <code>autofocus</code> attribute.</p>
 `,type:"boolean",default:"false"}],events:[{name:"timerend",description:`<p>Countdown ended.</p>
 `}]},{name:"turtle-toggle-switch",description:`<p>Toggle Switch UI for representing an on/off value.</p>
-<p><strong>NOTE:</strong> Due to browsers fire neither <code>blur</code> nor <code>change/input</code> event on unchecked radio (probably the spec defined), you can&#39;t place <code>&lt;input type=&quot;radio&quot;&gt;</code>.</p>
 `,properties:[],slots:[{name:"",description:`<p><code>&lt;input type=&quot;checkbox&quot; /&gt;</code>.</p>
 `}]}];var o={version:e,tags:t};export{o as default,t as tags,e as version};
