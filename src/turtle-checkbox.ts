@@ -15,9 +15,6 @@ type CheckState = "unchecked" | "checked" | "indeterminate";
 /**
  * A simple checkbox.
  *
- * After you changed `indeterminate` property of the slotted input, please make sure to call `sync` method on this component.
- * Otherwise the visual appearance won't update.
- *
  * @element turtle-checkbox
  *
  * @slot - `<input type="checkbox">`
@@ -145,14 +142,6 @@ export class TurtleCheckbox extends LitElement {
     ];
   }
 
-  /**
-   * @ignore
-   * Update the component's internal state based on asiggned slot contents.
-   * You need to call this method after changing `indeterminate` property of the `<input>`, since
-   * we have neither property equivalent for MutationObserver nor a change event for the property.
-   */
-  sync: () => void = () => {};
-
   @state()
   _checkState: CheckState = "unchecked";
 
@@ -186,10 +175,6 @@ export class TurtleCheckbox extends LitElement {
             attributeFilter: ["disabled", "checked", "indeterminate"],
           });
 
-          this.sync = () => {
-            this.#sync(el);
-          };
-
           return () => {
             el.removeEventListener("change", this.#onSlottedElementUpdated);
             el.removeEventListener("input", this.#onSlottedElementUpdated);
@@ -199,8 +184,6 @@ export class TurtleCheckbox extends LitElement {
             );
 
             this.#attributeSyncObserver.disconnect();
-
-            this.sync = () => {};
           };
         })}</slot
       >
