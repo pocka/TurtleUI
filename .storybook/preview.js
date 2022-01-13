@@ -19,6 +19,7 @@ import TurtleCommandPalette from "../src/turtle-command-palette?spec";
 import TurtleCommandPaletteListbox from "../src/turtle-command-palette-listbox?spec";
 import TurtleCommandPaletteOption from "../src/turtle-command-palette-option?spec";
 import TurtleDesignSystem from "../src/turtle-design-system?spec";
+import TurtleDropZone from "../src/turtle-drop-zone?spec";
 import TurtleFileInput from "../src/turtle-file-input?spec";
 import TurtleFormField from "../src/turtle-form-field?spec";
 import TurtleLabelledItem from "../src/turtle-labelled-item?spec";
@@ -49,6 +50,7 @@ const components = [
   TurtleCommandPaletteListbox,
   TurtleCommandPaletteOption,
   TurtleDesignSystem,
+  TurtleDropZone,
   TurtleFileInput,
   TurtleFormField,
   TurtleLabelledItem,

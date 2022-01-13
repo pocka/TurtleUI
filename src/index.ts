@@ -10,6 +10,7 @@ import { TurtleCommandPalette } from "./turtle-command-palette.js";
 import { TurtleCommandPaletteListbox } from "./turtle-command-palette-listbox.js";
 import { TurtleCommandPaletteOption } from "./turtle-command-palette-option.js";
 import { TurtleDesignSystem } from "./turtle-design-system.js";
+import { TurtleDropZone } from "./turtle-drop-zone.js";
 import { TurtleFileInput } from "./turtle-file-input.js";
 import { TurtleFormField } from "./turtle-form-field";
 import { TurtleLabelledItem } from "./turtle-labelled-item";
@@ -62,6 +63,7 @@ export {
   TurtleCommandPaletteListbox,
   TurtleCommandPaletteOption,
   TurtleDesignSystem,
+  TurtleDropZone,
   TurtleFileInput,
   TurtleFormField,
   TurtleLabelledItem,
@@ -143,6 +145,7 @@ export const allComponents = [
   TurtleCommandPaletteListbox,
   TurtleCommandPaletteOption,
   TurtleDesignSystem,
+  TurtleDropZone,
   TurtleFileInput,
   TurtleFormField,
   TurtleLabelledItem,
