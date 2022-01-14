@@ -129,6 +129,17 @@ element based on the input text.</p>
 `},{name:"--turtle-ui--color--tone--warning",description:`<p>H, S%</p>
 `},{name:"--turtle-ui--color--tone--danger",description:`<p>H, S%</p>
 `},{name:"--turtle-ui--color--tone--primary",description:`<p>H, S%</p>
+`}]},{name:"turtle-drop-zone",description:`<p>Drop zone UI, which allows users to drop files or DOM elements into.
+To handle the dragged/dropped files, use <code>dragover</code> and <code>drop</code> event.</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop">https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop</a></p>
+`,attributes:[{name:"disabled",description:`<p>Whether to accept a drop.</p>
+`,type:"boolean",default:"false"},{name:"border-color",description:`<p>Color of the border. Useful to indicate whether the dragging file is allowed.
+If you want more customization, set <code>border-color</code> CSS property at this element.</p>
+`,type:'"danger" | "primary" | "safe" | "warning" | "neutral"',default:'"neutral"'}],properties:[{name:"disabled",attribute:"disabled",description:`<p>Whether to accept a drop.</p>
+`,type:"boolean",default:"false"},{name:"borderColor",attribute:"border-color",description:`<p>Color of the border. Useful to indicate whether the dragging file is allowed.
+If you want more customization, set <code>border-color</code> CSS property at this element.</p>
+`,type:'"danger" | "primary" | "safe" | "warning" | "neutral"',default:'"neutral"'}],slots:[{name:"",description:`<p>Default slot, primarily for text.</p>
+`},{name:"icon",description:`<p>We set optimal <code>font-size</code> for this slot. Override if necessary.</p>
 `}]},{name:"turtle-file-input",description:`<p>File selector element.
 Unlike the native <code>&lt;input type=&quot;file&quot;&gt;</code>, this elements does not open OS file picker when a user clicks outside the button.</p>
 <p>By default, this element creates <code>&lt;input type=&quot;file&quot;&gt;</code> then click it when a user click the slotted button.
