@@ -15,7 +15,7 @@ declare global {
  *
  * @element turtle-toggle-switch
  *
- * @slot - `<input type="checkbox" />`.
+ * @slot - `<input type="checkbox" />`. This element sets `role="switch"` attribute to the slotted element if `role` attribute is not present.
  */
 export class TurtleToggleSwitch extends LitElement {
   static defaultTagName = "turtle-toggle-switch" as const;
@@ -156,6 +156,10 @@ export class TurtleToggleSwitch extends LitElement {
         ${wormhole((el: Element | HTMLInputElement) => {
           if (!("checked" in el)) {
             return;
+          }
+
+          if (!el.hasAttribute("role")) {
+            el.setAttribute("role", "switch");
           }
 
           this._disabled = el.disabled;
