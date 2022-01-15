@@ -304,5 +304,5 @@ Same to native <code>autofocus</code> attribute.</p>
 Same to native <code>autofocus</code> attribute.</p>
 `,type:"boolean",default:"false"}],events:[{name:"timerend",description:`<p>Countdown ended.</p>
 `}]},{name:"turtle-toggle-switch",description:`<p>Toggle Switch UI for representing an on/off value.</p>
-`,properties:[],slots:[{name:"",description:`<p><code>&lt;input type=&quot;checkbox&quot; /&gt;</code>.</p>
+`,properties:[],slots:[{name:"",description:`<p><code>&lt;input type=&quot;checkbox&quot; /&gt;</code>. This element sets <code>role=&quot;switch&quot;</code> attribute to the slotted element if <code>role</code> attribute is not present.</p>
 `}]}];var o={version:e,tags:t};export{o as default,t as tags,e as version};

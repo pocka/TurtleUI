@@ -2728,7 +2728,7 @@ import{r as h,e as d,s as u,p as s,i as zt,a as sr,d as ur,t as be,b as cr,l as 
         }
       `]}render(){return s`
       <slot>
-        ${x(t=>{if("checked"in t)return this._disabled=t.disabled,this._checked=t.checked,t.addEventListener("input",F(this,B,"f")),t.addEventListener("transitionstart",F(this,B,"f")),F(this,Et,"f").observe(t,{attributes:!0,attributeFilter:["disabled","checked"]}),()=>{t.removeEventListener("input",F(this,B,"f")),t.removeEventListener("transitionstart",F(this,B,"f")),F(this,Et,"f").disconnect()}})}
+        ${x(t=>{if("checked"in t)return t.hasAttribute("role")||t.setAttribute("role","switch"),this._disabled=t.disabled,this._checked=t.checked,t.addEventListener("input",F(this,B,"f")),t.addEventListener("transitionstart",F(this,B,"f")),F(this,Et,"f").observe(t,{attributes:!0,attributeFilter:["disabled","checked"]}),()=>{t.removeEventListener("input",F(this,B,"f")),t.removeEventListener("transitionstart",F(this,B,"f")),F(this,Et,"f").disconnect()}})}
       </slot>
 
       <div
@@ -3549,7 +3549,7 @@ import{r as h,e as d,s as u,p as s,i as zt,a as sr,d as ur,t as be,b as cr,l as 
         .component-description p:not(:first-child) {
           margin-top: 0.75em;
         }
-      `]}async connectedCallback(){super.connectedCallback(),this._spec=await il(()=>import("./spec.c99d3380.js"),[])}get spec(){var t;return((t=this._spec)==null?void 0:t.tags.find(e=>e.name===this.name))||null}render(){var e,r,i;if(!this.spec)return s` <span>Component definition not found.</span> `;const t=sl(this.spec.name);return s`
+      `]}async connectedCallback(){super.connectedCallback(),this._spec=await il(()=>import("./spec.72e271c5.js"),[])}get spec(){var t;return((t=this._spec)==null?void 0:t.tags.find(e=>e.name===this.name))||null}render(){var e,r,i;if(!this.spec)return s` <span>Component definition not found.</span> `;const t=sl(this.spec.name);return s`
       ${this.spec.description?s`<div class="component-description">
             ${X(this.spec.description)}
           </div>`:m}
