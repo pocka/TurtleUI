@@ -63,5 +63,6 @@
     "wc-docs": "node ./scripts/generate-component-docjson.js > ./website/src/wc/spec.json",
     "website": "vite ./website/src",
     "website:build": "vite build ./website/src --outDir '../dist'"
-  }
+  },
+  "prettier": {}
 }
