@@ -1,4 +1,4 @@
-import { css, LitElement, html } from "lit";
+import { css, LitElement, html, nothing } from "lit";
 import { property } from "lit/decorators/property.js";
 import { state } from "lit/decorators/state.js";
 import { unsafeHTML } from "lit/directives/unsafe-html.js";
@@ -72,6 +72,10 @@ export class SiteSandbox extends LitElement {
           );
         }
 
+        .toggle {
+          margin: calc(0.4 * var(--turtle-ui--unit));
+        }
+
         @media (prefers-color-scheme: dark) {
           .code {
             background-color: hsl(
@@ -96,6 +100,9 @@ export class SiteSandbox extends LitElement {
   @state()
   initialLineCount: number = 1;
 
+  @state()
+  isEditorVisible: boolean = false;
+
   override connectedCallback() {
     super.connectedCallback();
 
@@ -113,18 +120,38 @@ export class SiteSandbox extends LitElement {
 
       <label class="badge" for="shadow_editor">Live Editor</label>
 
-      <textarea
-        id="shadow_editor"
-        class="code"
-        rows=${this.initialLineCount}
-        .value=${this.code}
-        @input=${this.#syncCode}
-      />
+      ${this.isEditorVisible
+        ? html`
+            <textarea
+              id="shadow_editor"
+              class="code"
+              rows=${this.initialLineCount}
+              .value=${this.code}
+              @input=${this.#syncCode}
+            ></textarea>
+          `
+        : nothing}
+
+      <turtle-button class="toggle" @click=${this.#toggleEditor}>
+        ${this.isEditorVisible ? "Close" : "Open"} editor
+      </turtle-button>
     `;
   }
 
   #syncCode = (ev: Event) => {
     this.code = (ev.currentTarget as HTMLTextAreaElement).value;
+  };
+
+  #toggleEditor = () => {
+    this.isEditorVisible = !this.isEditorVisible;
+    requestAnimationFrame(() => {
+      const editor = this.shadowRoot?.getElementById("shadow_editor");
+      if (!editor) {
+        return;
+      }
+
+      editor.focus();
+    });
   };
 }
 
