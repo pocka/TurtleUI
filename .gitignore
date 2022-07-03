@@ -8,10 +8,10 @@ node_modules
 # You should use Yarn on this project
 package-lock.json
 
-# Yarn 2 Zero-Installs
+# Yarn 2
 # https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
+.pnp.*
 .yarn/*
-!.yarn/cache
 !.yarn/patches
 !.yarn/plugins
 !.yarn/releases
