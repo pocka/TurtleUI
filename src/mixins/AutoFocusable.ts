@@ -23,7 +23,7 @@ export function AutoFocusable<T extends Constructor<LitElement>>(
     @property({
       type: Boolean,
     })
-    autofocus: boolean = false;
+    override autofocus: boolean = false;
 
     override firstUpdated(changedProperties: PropertyValues) {
       super.firstUpdated(changedProperties);
