@@ -1804,24 +1804,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@figspec/components@npm:^0.1.1":
-  version: 0.1.9
-  resolution: "@figspec/components@npm:0.1.9"
+"@figspec/components@npm:^1.0.0":
+  version: 1.0.1
+  resolution: "@figspec/components@npm:1.0.1"
   dependencies:
-    copy-to-clipboard: ^3.0.0
-    lit-element: ^2.4.0
-  checksum: b83525877c93c705e2d0cf2592df06ca4d07dea4bbb3aebdeeb0e784c6b2a6bbcb52bf675ffda851c480f65ea379204a286dc5511080f854734f71b15c5c2389
+    lit: ^2.1.3
+  checksum: db33333ad2c3925cc8264e24b4a7b7d0e3a477eaaebbff9033f78c3e2f3273e6c7dbdfb453ee16af6d1ab21d49c2c704882aabcb1a693d2cf627b1fa2494849b
   languageName: node
   linkType: hard
 
-"@figspec/react@npm:^0.1.6":
-  version: 0.1.6
-  resolution: "@figspec/react@npm:0.1.6"
+"@figspec/react@npm:^1.0.0":
+  version: 1.0.2
+  resolution: "@figspec/react@npm:1.0.2"
   dependencies:
-    "@figspec/components": ^0.1.1
+    "@figspec/components": ^1.0.0
+    "@lit-labs/react": ^1.0.2
   peerDependencies:
-    react: ^16.14.0 || ^17.0.0
-  checksum: dfaa493841c274f563c6811c644d2bde72bda9c77478b3c5fdabe7748c0f01745a2e37fa1abe5754e76a9525b7c9c8a27c14e68074c08a01bcef41b5d1038508
+    react: ^16.14.0 || ^17.0.0 || ^18.0.0
+  checksum: b40ec22c1d465d85f28bbcd916ad1c66603555270401f8162b2c385252b40059c5bb15cc9081962521790decf910072240477a83c57ecb2d4580cf7e678e551e
   languageName: node
   linkType: hard
 
@@ -1944,6 +1944,13 @@ __metadata:
     "@jridgewell/resolve-uri": ^3.0.3
     "@jridgewell/sourcemap-codec": ^1.4.10
   checksum: b9537b9630ffb631aef9651a085fe361881cde1772cd482c257fe3c78c8fd5388d681f504a9c9fe1081b1c05e8f75edf55ee10fdb58d92bbaa8dbf6a7bd6b18c
+  languageName: node
+  linkType: hard
+
+"@lit-labs/react@npm:^1.0.2":
+  version: 1.0.6
+  resolution: "@lit-labs/react@npm:1.0.6"
+  checksum: 75150444b577180f9bfa4c5396a5a0502e02dd1e901c05d2c688c649439d1423be079b4f242f2aaeb0355e471f3081bb8d3cc91ad4ab35923fbaea6be0924ed4
   languageName: node
   linkType: hard
 
@@ -3285,9 +3292,9 @@ __metadata:
     prismjs: ^1.28.0
     react: ^17.0.2
     react-dom: ^17.0.2
-    resolve-typescript-plugin: ^1.1.1
-    storybook-addon-designs: ^6.0.1
-    storybook-dark-mode: ^1.0.8
+    resolve-typescript-plugin: ^1.2.0
+    storybook-addon-designs: ^6.3.1
+    storybook-dark-mode: ^1.1.0
     ts-loader: ^9.2.3
     typescript: ^4.7.4
     vite: ^2.9.13
@@ -5627,15 +5634,6 @@ __metadata:
   version: 0.1.1
   resolution: "copy-descriptor@npm:0.1.1"
   checksum: d4b7b57b14f1d256bb9aa0b479241048afd7f5bcf22035fc7b94e8af757adeae247ea23c1a774fe44869fd5694efba4a969b88d966766c5245fdee59837fe45b
-  languageName: node
-  linkType: hard
-
-"copy-to-clipboard@npm:^3.0.0":
-  version: 3.3.1
-  resolution: "copy-to-clipboard@npm:3.3.1"
-  dependencies:
-    toggle-selection: ^1.0.6
-  checksum: 3c7b1c333dc6a4b2e9905f52e4df6bbd34ff9f9c97ecd3ca55378a6bc1c191bb12a3252e6289c7b436e9188cff0360d393c0161626851d2301607860bbbdcfd5
   languageName: node
   linkType: hard
 
@@ -9031,15 +9029,6 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"lit-element@npm:^2.4.0":
-  version: 2.5.1
-  resolution: "lit-element@npm:2.5.1"
-  dependencies:
-    lit-html: ^1.1.1
-  checksum: c4f45d0cc84d49cc9dca2502b5e0bd14289c46a5ee331c21fb0014693541a4824887f8c2c6725310d380d713adecbe31fba1eda6f8aabc14927f524d6527f6c9
-  languageName: node
-  linkType: hard
-
 "lit-element@npm:^3.2.0":
   version: 3.2.1
   resolution: "lit-element@npm:3.2.1"
@@ -9050,7 +9039,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"lit-html@npm:^1.1.1, lit-html@npm:^1.4.1":
+"lit-html@npm:^1.4.1":
   version: 1.4.1
   resolution: "lit-html@npm:1.4.1"
   checksum: 6e1bb335cd8493700d2f1eaf1e019c2f6bf78ac641bdba5e2ff9f1545430e0fec15c6721ee1c8ca75559e1d52a1d34cdc568da46319681304299d9aff83a6346
@@ -9066,7 +9055,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"lit@npm:^2.2.7":
+"lit@npm:^2.1.3, lit@npm:^2.2.7":
   version: 2.2.7
   resolution: "lit@npm:2.2.7"
   dependencies:
@@ -11697,14 +11686,14 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"resolve-typescript-plugin@npm:^1.1.1":
-  version: 1.1.1
-  resolution: "resolve-typescript-plugin@npm:1.1.1"
+"resolve-typescript-plugin@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "resolve-typescript-plugin@npm:1.2.0"
   dependencies:
     tslib: 2.3.1
   peerDependencies:
-    webpack: ^5.0.0
-  checksum: 8dc629c8195938bf9c88e3c6c8ce6bec186cea6226935f41fe4dc5d4d72fb4e922a404592851bd5870dd2fd53e3c43a8addaf3bd7875dfb5ade6d5b2a818a0e5
+    webpack: ^4.0.0 || ^5.0.0
+  checksum: 7f481a8ea409fbadc2d5fa2ed122a52a328bd9510afebe28c942b5fc367cae4bcc4739c3f9ffbb7c2461012061bc08e23d440049448f69f87b191f1be105c7fd
   languageName: node
   linkType: hard
 
@@ -12483,18 +12472,18 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"storybook-addon-designs@npm:^6.0.1":
-  version: 6.0.1
-  resolution: "storybook-addon-designs@npm:6.0.1"
+"storybook-addon-designs@npm:^6.3.1":
+  version: 6.3.1
+  resolution: "storybook-addon-designs@npm:6.3.1"
   dependencies:
-    "@figspec/react": ^0.1.6
-  checksum: 66399a7a527b9e88e0f290e25d0d63533cb10f47b2a055e183211bfd58c9725bb0d6400b6ad32f1a6ca2fdbfff97dc79770ceafc489c174bf8c4659fad9de7b7
+    "@figspec/react": ^1.0.0
+  checksum: 63d91358540a59801028b4fe2fe61a2cad52ac2354efde0959f081379045230af4ea6dea6a8abddae2a7eb14699fd04024dec44b6fd396065e0e585d31980635
   languageName: node
   linkType: hard
 
-"storybook-dark-mode@npm:^1.0.8":
-  version: 1.0.8
-  resolution: "storybook-dark-mode@npm:1.0.8"
+"storybook-dark-mode@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "storybook-dark-mode@npm:1.1.0"
   dependencies:
     fast-deep-equal: ^3.0.0
     memoizerific: ^1.11.3
@@ -12504,7 +12493,7 @@ fsevents@^1.2.7:
     "@storybook/components": ^6.0.0
     "@storybook/core-events": ^6.0.0
     "@storybook/theming": ^6.0.0
-  checksum: 76089b72471df9bfb0433a02780620d96228280280c94911bad5556044e86d82fd6665c64e8d095b6043d2bde83e9373bf731e4b378f39303a5463e3ba7963fe
+  checksum: e1d7abbb96d1cdbe9cdba1e20aabffa6878f170e348958cc328de4183027c2052f44f6d78f82a45039f803349c7a4ec19988d42898030b2720dc591192f520e6
   languageName: node
   linkType: hard
 
@@ -13071,13 +13060,6 @@ fsevents@^1.2.7:
     regex-not: ^1.0.2
     safe-regex: ^1.1.0
   checksum: 4ed4a619059b64e204aad84e4e5f3ea82d97410988bcece7cf6cbfdbf193d11bff48cf53842d88b8bb00b1bfc0d048f61f20f0709e6f393fd8fe0122662d9db4
-  languageName: node
-  linkType: hard
-
-"toggle-selection@npm:^1.0.6":
-  version: 1.0.6
-  resolution: "toggle-selection@npm:1.0.6"
-  checksum: a90dc80ed1e7b18db8f4e16e86a5574f87632dc729cfc07d9ea3ced50021ad42bb4e08f22c0913e0b98e3837b0b717e0a51613c65f30418e21eb99da6556a74c
   languageName: node
   linkType: hard
 
